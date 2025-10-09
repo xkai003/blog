@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* one */
+.one{
+    width: 100%;
+    height: 25px;
+    background-color: black;
+}
+.one a{
+    color: #b5b4b4;
+    text-decoration: none;
+    font-size: small;
+    margin-left: 50px;
+}
+.one a:hover{
+    color: aliceblue;
+}
+/* one */
+
+/* two */
+.two{
+    width: 100%;
+    height: 60px;
+}
+.two .left{
+    height: 100%;
+    float: left;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.two .left img{
+    width: 140px;
+    height: 60px;
+}
+.two .left ul{
+    list-style: none;
+    margin-left: 40px;
+}
+.two .left ul li{
+    float: left;
+}
+.two .left ul li a{
+    margin-left: 20px;
+    font-weight: bold;
+    display: block;
+    height: 60px;
+    color: #7b7878;
+    text-decoration: none;
+    line-height: 60px;
+}
+.two .left ul li a:hover{
+    color: rgb(18, 18, 18);
+}
+/* right */
+.two .right{
+    width: 400px;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+.two .right ul{
+    list-style: none;
+}
+.two .right ul li{
+    float: left;
+}
+.two .right ul li a{
+    margin-left: 20px;
+    font-weight: bold;
+    display: block;
+    height: 60px;
+    color: #7b7878;
+    text-decoration: none;
+    line-height: 60px;
+}
+.two .right ul li a:hover{
+    color: rgb(18, 18, 18);
+}
+.two .right .right-1{
+    margin-left: 40px;
+}
+/* two */
+/* three  */
+.three {
+    width: 100%;
+    height: 450px; /* Set height to 300px */
+    background-size: cover; /* Ensure the image covers the width */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image for better alignment */
+    background-image: url(../img/HUAVEI/电脑-1.jpg);
+    display: flex;
+    /* align-items: center; */
+}
+.three p{
+    margin-top: 80px;
+    margin-left: 16%;
+    font-size: 50px;
+    font-weight: bolder;
+}
+/* three  */
+/* four  */
+.four{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.four a{
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    margin-top: 80px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.four a img{
+    width: 100px;
+    height: 100px;
+}
+.four a span{
+    color: #000;
+    font-weight: bolder;
+    
+} 
+/* four  */
+/* five */
+.five{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+}
+.five .five-1{
+    width: 60%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.five .five-1 span{
+    margin-top: 100px;
+}
+.five .five-1 .sp1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.five .five-1 span a{
+    margin-top: 500px;
+    font-weight: bolder;
+    color: rgb(107, 142, 202);
+    text-decoration: none;
+}
+.five .five-1 span a:hover{
+    color: red;
+}
+.five .five-1 img{
+    width: 400px;
+    height: 300px;
+}
+/* five */
+/* six */
+.six{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+}
+.six .six-1{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.six .six-1 .six-1-1{
+    border-radius:10%;
+    width: 380px;
+    height: 450px;
+    margin-left: 30px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.six .six-1 .six-1-1 img{
+    width: 100%;
+    height: 250px;
+}
+.six .six-1 .six-1-1 .six-1-1-1{
+    width: 80%;
+    height: 230px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.six .six-1 .six-1-1 .six-1-1-1 .a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #000;
+    font-size: 22px;
+}
+.six .six-1 .six-1-1 .six-1-1-1 span{
+    margin-top: 20px;
+}

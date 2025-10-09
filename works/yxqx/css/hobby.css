@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 导航 */
+.dh{
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    display: flex;/* flex布局 */
+    justify-content: center;/* 子盒子居中 */
+}
+.dh ul li{
+    height: 100%;
+    list-style: none;/* 去掉li标签的点 */
+    float: left;/* 各li标签横向紧挨着 */
+}
+.dh ul li a{
+    color:#f3efef;
+    text-decoration: none;
+    display: block;/* 设置a标签成盒子 */
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+.dh ul li a:hover{
+    background-color: #cf9191;
+    color:black;
+}
+/* 导航end */
+/* content 内容 */
+/* 兴趣爱好 */
+.content{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content .flex{
+    width: 70%;
+    display: flex;
+    flex-direction: column;/* 纵向排布 */
+}
+.content .one{
+    text-align: center;
+    text-decoration: solid;
+}
+.content .one span{
+    font-size: 30px;
+    border-bottom: 2px solid #2e6ec6;/* 文本的下划线 */
+}
+/* 兴趣爱好end */
+.two{
+    margin-top: 30px;
+}
+.two table{
+    border-collapse: collapse; /* 合并单元格边框 */
+}
+.two table tr,td{
+    border: 1px solid #000; /* 设置边框样式为黑色1px实线 */
+}
+.two table th {
+    background-color: #c9c7c7; /* 设置表头的背景颜色 */
+    border: 1px solid #000; /* 设置边框样式为黑色1px实线 */
+    width: 200px;
+    height: 40px;
+}
+.two table td{
+    width: 200px;
+    height: 40px;
+}
+.two table .td{
+    width: 1200px;
+    height: 40px;
+}
+/* 鼠标经过 */
+.two table tr:hover{
+    background-color: #f8d8d8;
+}
+/* 设置偶数行背景色 */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 例如浅灰色 */
+  }
+
+  /* 设置奇数行背景色 */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2; /* 例如白色 */
+  }
+/* content 内容end */
+/* 页脚 */
+.footer{ 
+    margin-top: 20px;
+}
+.footer span{ 
+    display:block;
+    margin:0 auto; 
+    line-height:26px; 
+    font-size:12px; 
+    color:#5b5b5b; 
+    text-align:center;
+}
+/* 页脚 end */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindTerm_PM2</title>
+    <link rel="stylesheet" href="./WindTerm_PM2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>使用 PM2 部署 Vue 应用指南</h1>
+        <!--  -->
+        <div class="box">
+            <li>
+                <strong>本地打包Vue项目</strong><br>首先，在您的本地计算机上进入Vue项目根目录，打开终端并执行打包命令。这会生成一个 <code class="inline">dist</code> 文件夹。
+                <div class="Board">
+                    <div class="BoardHead">
+                        <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                        <button onclick="copyToClipboard('txtone')">
+                            <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                        </button>
+                    </div>
+                    <div class="BoardText">
+                        <span id="txtone">npm run build</span>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <!--  -->
+        <div class="box">
+            <li>
+                <strong>连接服务器并创建目录</strong><br>
+                使用 SFTP 客户端（如 WinSCP）连接到您的服务器。
+                <ul>
+                    <li>主机名: <code class="inline">[您的服务器IP]</code> (例如: 47.79.40.65)</li>
+                    <li>用户名: <code class="inline">root</code> (或您的用户名)</li>
+                    <li>密码: <code class="inline">[您的密码]</code></li>
+                </ul>
+                连接成功后，进入 <code class="inline">/var/www</code> 目录，新建一个文件夹，例如 <code class="inline">Xiaomi_vue</code>。
+            </li>
+        </div>
+        <!--  -->
+        <div class="box">
+            <li>
+                <strong>上传文件</strong><br>
+                将您本地项目里刚刚生成的 <code class="inline">dist</code> 文件夹上传到服务器上的 <code class="inline">/var/www/</code> 目录中的Xiaomi_vue文件夹里。
+            </li>
+        </div>
+        <!--  -->
+        <div class="box">
+            <li>
+                <strong>使用 PM2 启动服务</strong><br>
+                使用 SSH 客户端（如 WindTerm 或 FinalShell）登录到您的服务器。然后执行以下命令来启动一个静态文件服务来托管您的Vue应用。
+                <div class="Board">
+                    <div class="BoardHead">
+                        <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                        <button onclick="copyToClipboard('txt')">
+                            <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                        </button>
+                    </div>
+                    <div class="BoardText">
+                        <span id="txt">pm2 start /usr/local/lib/node_modules/serve/build/main.js --name xiaomi_vue -- -s /var/www/Xiaomi_vue/ -l 8000</span>
+                    </div>
+                </div>
+                <small>解析：</small><br>
+                <code>pm2 start /usr/local/lib/node_modules/serve/build/main.js</code>这里告诉PM2的启动脚本的实际入口文件地址<br>
+                <code>/usr/local/lib/node_modules/serve/build/main.js</code>就是你全局安装的 serve 包里的主文件。这样做的效果和 pm2 start serve 一样，只是写成了“绝对路径调用”<br>
+                <code>--name xiaomi-vue</code>给 PM2 中的进程起名字，叫 xiaomi_vue方便区分不同项目（否则 PM2 默认用 main.js 作为名字，不好管理）<br>
+                <code>--</code>分隔符：表示后面跟的是 传给 serve 的参数，而不是 PM2 的参数<br>
+                <code>-s </code>相当于 single-page mode，单页应用模式（解决 Vue/React 前端路由刷新 404 问题）<br>
+                <code>/var/www/Xiaomi_vue/dist</code>指定要托管的目录（也就是 Vue 项目打包后的静态资源目录）<br>
+                <code>-l 8000</code>-l 相当于 listen。意思是监听 8000 端口<br>
+                <small>注意：此命令假设您已全局安装了 <code class="inline">serve</code> 包 (<code class="inline">npm install -g serve</code>)。</small>
+            </li>
+        </div>
+        <div class="box">
+            <li>
+                <strong>访问应用</strong><br>
+                一切顺利！现在您可以在浏览器中通过以下地址访问您的应用了：
+                <pre><code>http://[您的服务器IP]:8000</code></pre>
+            </li>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="./WindTerm_PM2.js"></script>
+</body>
+</html>

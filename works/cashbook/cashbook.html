@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿茂记账清单（有饼图）</title>
+    <!-- 引入开发版本的包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- 引入饼图 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/cashbook.css">
+</head>
+<body>
+    <div class="box" id="app">
+        <!-- 表格 -->
+        <div class="form">
+            <div class="box-1">
+                <span>请输入成绩</span><br>
+                科目：<input type="text" placeholder="请输入科目" v-model.trim="subject"><br>
+                分数：<input type="text" placeholder="请输入成绩" v-model.number="score"><br><br>
+                <button @click="add">添加</button>
+            </div>
+        
+            <div class="box-2" >
+                <table cellspacing="0" border="1">
+                    <tr style="background-color: rgb(174, 246, 246);">
+                        <td>编号</td>
+                        <td>科目</td>
+                        <td>成绩</td>
+                        <td>操作</td>
+                    </tr>
+                    <template v-if="list.length > 0">
+                        <tr v-for="(item,index) in list" :key="item.id">
+                            <td>{{ index+1 }}</td>
+                            <td>{{ item.subject }}</td>
+                            <td :class="{ red: item.score < 60 }">{{ item.score }}</td>
+                            <td><a href="" @click.prevent="del(item.id)">删除</a></td>
+                        </tr>
+                    </template>
+                    <tr v-else>
+                        <td colspan="4">暂无数据</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            总分：{{ totalScore }} 
+                            &nbsp;&nbsp;
+                            平均分：{{ averageScore }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 表格 end -->
+        <!-- 饼图 -->
+        <div class="echarts-box" id="main"></div>
+        <!-- 饼图 end -->
+    </div>
+    <!-- js -->
+    <script src="./js/cashbook.js"></script>
+</body>
+</html>

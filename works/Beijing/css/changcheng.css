@@ -1,0 +1,70 @@
+body{
+    background-color: #f3f39a;
+}
+/*--导航栏区--*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.one{
+    width: 100%;/*导航栏长度*/
+    height: 50px; /*导航栏高度*/
+    background-color: yellow;/*导航栏颜色*/
+}
+.one a{
+    display: block;/*把a标签设置成盒子 */
+    height: 30px;/*设置盒子高度*/
+    width: 180px;/*设置盒子长度*/
+    float: left;/*设置盒子左边挨着*/
+    color:brown;/*设置a标签的字体颜色 */
+    line-height: 50px;/*设置a标签与顶部的距离 */
+    text-align: center;/*设置a标签在该模块左右居中 */
+    text-decoration:none;/*去掉a标签的下划线*/   
+}
+
+.one a:hover {
+    height: 50px;/*鼠标悬停，放到标签上的时候的高度*/
+    background-color: #2aa559; 
+    color: #f6f3f3;
+}
+
+
+.nn img{
+    height: 520px;
+    width: 100%;
+}
+/*table栏*/
+table {
+    width: 50px;
+    border-collapse: collapse;
+    border-collapse: separate; /* 设置边框独立 */
+    border-spacing: 50px; /* 设置单元格之间的间距 */
+  }
+
+tr, td {
+  border: 1px solid hwb(0 7% 9%);
+  padding: 8px;
+  text-align: left;
+  background-color:yellow;
+}
+img{
+    width: 300px;
+    height: 250px;
+}
+table p{
+    text-align: center;
+    font-family:"黑体";
+    font-weight: bold;
+}
+/* 页脚 */
+.footer{ 
+    margin-top: 20px;
+}
+.footer span{ 
+    display:block;
+    margin:0 auto; 
+    line-height:26px; 
+    font-size:12px; 
+    color:#5b5b5b; 
+    text-align:center;
+}

@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    /* flex布局 */
+    display: flex;
+    justify-content: center;/* 水平居中 */
+    align-items: center;
+    height: 100vh;/* 100vh表示视口的100%高度，即让元素的高度与整个浏览器窗口高度相等 */
+    margin: 0;/* 去除其他样式 */
+}
+.box{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;/* 边框圆角 */
+    box-shadow: 20px 27px 5px rgba(0, 0, 0, 0.1);/*边框阴影*/
+    border: 1px solid black;/*盒子边框*/
+    padding: 20px;/* 内边距上下左右均为20px */
+    box-sizing: border-box;/*width 和 height 包含内容、内边距和边框的总和*/
+    text-align: center;/*h1文本居中*/
+}
+/*--------------------------------- box-1 ---------------------------------*/
+.box .box-1{
+    display: flex;/* 输入框与按钮紧挨 */
+    gap: 10px;/* 同时设置 行间距 和 列间距 为 10px。 */
+    margin-bottom: 20px;/*与底部距离*/
+}
+.box-1 input{
+    flex: 1;/* 表示该项目可以按比例占据 容器中剩余的空间 */
+    padding: 10px;/* 输入框的内边距上下左右均为10px */
+    font-size: 16px;/*输入框内的文字大小*/
+    border: 1px solid #ddd;/*输入框的边框*/
+    border-radius: 4px;/*输入框的边框圆角*/
+    padding: 10px 20px;/* 内边距上下为10px、左右为20px */
+}
+.box-1 button{
+    border: none;/*清除按钮边框*/
+}
+.box-1 button:hover{
+    background-color: #c0bebe;
+    cursor: pointer/* 光标变成小手 */
+}
+/*--------------------------------- box-2 ---------------------------------*/
+.box .box-2{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;/* 第一个项目与容器的起点对齐，最后一个项目与容器的终点对齐，并将 剩余空间平均分配到相邻项目之间的间距中 */
+    align-items: center;/* 垂直居中 */
+    font-size: 15px;
+    color: #171616;
+    box-shadow: 0px 1px rgba(112, 129, 139, 0.2);/*边框阴影*/
+}
+.box .box-2 button{
+    border: none;/*清除按钮边框*/
+    background-color: #fff;
+    color: #fff;
+}
+.box .box-2 button:hover{
+    color: red;
+    cursor: pointer/* 光标变成小手 */
+}
+/*--------------------------------- box-3 ---------------------------------*/
+.box .box-3{
+    display: flex;
+    justify-content: space-between;/* 第一个项目与容器的起点对齐，最后一个项目与容器的终点对齐，并将 剩余空间平均分配到相邻项目之间的间距中 */
+    align-items: center;/* 垂直居中 */
+    margin-top: 10px;/*距离底部距离*/
+    font-size: 14px;
+    color: #666;
+}
+.box .box-3 button{
+    color: #9d9999;
+    background-color: #fff;
+    border: none;/*清除按钮边框*/
+}
+.box .box-3 button:hover{
+    color: black;
+    cursor: pointer/* 光标变成小手 */
+}

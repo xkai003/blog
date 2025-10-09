@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* one */
+.one{
+    width: 100%;
+    height: 25px;
+    background-color: black;
+}
+.one a{
+    color: #b5b4b4;
+    text-decoration: none;
+    font-size: small;
+    margin-left: 50px;
+}
+.one a:hover{
+    color: aliceblue;
+}
+/* one */
+
+/* two */
+.two{
+    width: 100%;
+    height: 60px;
+}
+.two .left{
+    height: 100%;
+    float: left;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.two .left img{
+    width: 140px;
+    height: 60px;
+}
+.two .left ul{
+    list-style: none;
+    margin-left: 40px;
+}
+.two .left ul li{
+    float: left;
+}
+.two .left ul li a{
+    margin-left: 20px;
+    font-weight: bold;
+    display: block;
+    height: 60px;
+    color: #7b7878;
+    text-decoration: none;
+    line-height: 60px;
+}
+.two .left ul li a:hover{
+    color: rgb(18, 18, 18);
+}
+/* right */
+.two .right{
+    width: 400px;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+.two .right ul{
+    list-style: none;
+}
+.two .right ul li{
+    float: left;
+}
+.two .right ul li a{
+    margin-left: 20px;
+    font-weight: bold;
+    display: block;
+    height: 60px;
+    color: #7b7878;
+    text-decoration: none;
+    line-height: 60px;
+}
+.two .right ul li a:hover{
+    color: rgb(18, 18, 18);
+}
+.two .right .right-1{
+    margin-left: 40px;
+}
+/* two */
+/* 第一行图片-轮播图 */
+.carousel {
+    position: relative;
+    max-width: 100%;/*轮播图宽度*/
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+/* 第一行图片-轮播图 */
+
+/* 第二层文字 */
+.decwz{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+.decwz p{
+    font-size: 40px;
+}
+/* 第二层文字 */
+/* 第三层 */
+.third{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    background-color: #ececec;
+    border-radius:2%;
+}
+.third img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.third .third-tp{
+    display: flex;
+    flex-direction: row;
+}
+.third .third-tp .third-left img{
+    width: 380px;
+    height: 500px;
+}
+.third .third-tp .third-right{
+    display: flex;
+    flex-direction:column;
+}
+.third .third-tp .third-right img{
+    width: 400px;
+    height: 245px;
+}
+.third .third-wz{
+    width: 97%;
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+    background-color: #ececec;
+}
+.third .third-wz .third-left{
+    float: left;
+    margin-top: 15px;
+    line-height: 35px;
+}
+.third .third-wz .third-left .span1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.third .third-wz .third-right{
+    float: right;
+    margin-top: 25px;
+}
+.third .third-wz .third-right input{
+    width: 100px;
+    height: 40px;
+}
+.third .third-wz .third-right .ip1{
+    background-color:black;
+    color: aliceblue;
+}
+.third .third-wz .third-right input:hover{
+    color: black;
+    background-color:#fffdfd;
+}
+/* 第三层 */
+/* 第四层 */
+.forth{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction:row;
+    background-color: #ececec;
+}
+.forth .forth-1 a{
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    border-radius:3%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:#fffdfd;
+    color: black;
+    text-decoration:none;
+}
+.forth .forth-1 a img{
+    width: 248px;
+    height: 350px;
+    border-radius:3%;
+}
+.forth .forth-1 a .span1{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.forth .forth-1 a span{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.forth .forth-1 a .jiage{
+    font-size:21px;
+    font-weight: bold;
+}
+/* 第四层 */
+/* 第五层 */
+.fifth{
+    margin-top: 60px;
+    width: 100%;
+    height: 200px;
+    background-color: #3b3b3b;
+    
+}
+.fifth .fifth-wb{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+.fifth .fifth-wb .fifth-left{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.fifth .fifth-wb .fifth-left p{
+    margin-top: 30px;
+    font-size:21px;
+    font-weight: bold;
+    color: #f5f1f1;
+}
+.fifth .fifth-wb .fifth-left span{
+    line-height: 20px;
+    color: #bdb9b9;
+}
+.fifth .fifth-wb .fifth-left .db-span{
+    margin-top: 30px;
+    color: #e4e2e2;
+}
+/*  */
+.fifth .fifth-wb .fifth-center{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.fifth .fifth-wb .fifth-center p{
+    margin-top: 30px;
+    font-size:21px;
+    font-weight: bold;
+    color: #f5f1f1;
+}
+.fifth .fifth-wb .fifth-center a{
+    width: 80px;
+    color: #bdb9b9;
+    text-decoration: none;
+}
+.fifth .fifth-wb .fifth-center a:hover{
+    color: #f5f1f1;
+}
+/*  */
+.fifth .fifth-wb .fifth-right{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.fifth .fifth-wb .fifth-right p{
+    margin-top: 30px;
+    font-size:21px;
+    font-weight: bold;
+    color: #f5f1f1;
+}
+.fifth .fifth-wb .fifth-right a{
+    width: 80px;
+    color: #bdb9b9;
+    text-decoration: none;
+}
+.fifth .fifth-wb .fifth-right a:hover{
+    color: #f5f1f1;
+}
+/* 第五层 */

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>编组 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="电脑" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-9电脑合集" transform="translate(-1307.000000, -626.000000)">
+            <g id="编组-5" transform="translate(492.000000, 618.000000)">
+                <g id="编组-2" transform="translate(815.000000, 8.000000)">
+                    <rect id="矩形" x="0" y="0" width="80" height="80"></rect>
+                    <path d="M56.9433806,18 L56.9433806,52 M23.0566194,52 L23.0566194,18" id="形状" stroke="#222222" stroke-width="2"></path>
+                    <rect id="矩形" fill="#000000" x="38" y="13" width="4.5" height="8" rx="1"></rect>
+                    <line x1="40.3350962" y1="8.03470437" x2="40.0478709" y2="34.9652956" id="直线-2" stroke="#000000" stroke-width="2" stroke-linecap="round"></line>
+                    <path d="M57,18 C57,13.6366352 53.0490119,8.09524304 39.8860003,8.00114415 C26.7229888,7.90704527 23,13.6366352 23,18" id="路径" stroke="#222222" stroke-width="2"></path>
+                    <path d="M23,52.0232591 C23,58.5987894 25.729315,67 39.4669015,67 C53.2044879,67 57,58.5755302 57,52" id="路径" stroke="#222222" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

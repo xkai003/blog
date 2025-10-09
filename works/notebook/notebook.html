@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿茂记事本</title>
+    <!-- 引入开发版本的包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/notebook.css">
+    
+</head>
+<body>
+    <div class="box" id="app">
+        <h1>阿茂记事本</h1>
+        <!-- box-1 -->
+        <div class="box-1">
+            <!--  v-model="todoName"对应的js代码在116行 -->
+            <!-- @keyup.enter="add"表示当按下键盘的【enter】键之后也可以执行添加列表功能 -->
+            <input @keyup.enter="add" type="text" placeholder="请输入任务" v-model="todoName">
+            <button @click="add">添加任务</button><!--  @click="add"对应的js代码126~138在行 -->
+        </div>
+        <!-- box-2 -->
+        <div class="box-2" v-for="(item,index) in list" :key="item.id">
+            <span>{{ index + 1 }}、</span><label>{{item.name}}</label>
+            <button @click="del(item.id)">x</button>
+        </div>
+        <!-- box-3 -->
+        <div class="box-3" v-show="list.length > 0"> <!-- v-show="list.length > 0"：表示当信息表中没有内容时将隐藏这部分信息-->
+            <span>合计：{{ list.length}}</span>
+            <button @click="clear">清空</button><!--  @click="clear"：@click表示添加一个点击事件，对应的js代码139~142在行 -->
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script src="./js/notebook.js"></script>
+</body>
+</html>

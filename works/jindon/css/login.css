@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* one */
+.one{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+.one .box1{
+    width: 70%;
+    height: 100%;
+}
+.one .box1 a{
+    color: rgb(167, 167, 168);
+    text-decoration: none;
+}
+.one .box1 a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.one .left{
+    float: left;
+}
+.one img{
+    width: 200px;
+    height: 100px;
+}
+.one .right{
+    float: right;
+    line-height: 100px;
+}
+.one .right .icon{
+    width: 20px;
+    height: 20px;
+}
+/* one end */
+/* two */
+.two{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.two .box1{
+    width: 70%;
+    height: 100%;
+    /* position: relative; */
+    background-color: rgb(241, 241, 149);
+}
+.two .box1 .icon{
+    width: 15px;
+    height: 15px;
+}
+.two .box1 span{
+    /* position: absolute; */
+    bottom: 5px;
+    font-size:smaller;
+}
+/* two end */
+/* three */
+.three{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/登录界面背景图片.jpg);
+}
+.three .box1{
+    width: 70%;
+    height: 85%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+/* 登录部分 */
+.three .login{
+    width: 60%;
+    height: 100%;
+    /* background-color: #c1e47e; */
+    /* background-color: #e63e3e; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.three .login .flex{
+    height: 70%;
+    width: 60%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.three .flex .loginone a{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.three .flex .loginone a:hover{
+    color: #fe4141;
+    cursor: pointer;
+}
+.three .flex .logintwo{
+    display: flex;
+    flex-direction: column;
+}
+.three .flex .logintwo input{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius:10px;
+}
+.three .flex .loginthree a{
+    float: right;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+.three .flex .loginthree a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.three .flex button{
+    margin-top: 10px;
+    height: 40px;
+    color: #fff;
+    background-color: #de8282;
+    border-radius:10px;
+}
+.three .flex button:hover{
+    cursor: pointer;
+    background-color:#fe4141;
+}
+.three .flex .loginfive{
+    margin-top: 30px;
+}
+.three .flex .loginfive a{
+    text-decoration: none;
+    color: black;
+}
+.three .flex .loginfive-left{
+    float: left;
+}
+.three .flex .loginfive-left .icon{
+    width: 20px;
+    height: 20px;
+}
+.three .flex .loginfive-left a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.three .flex .loginfive-right{
+    float: right;
+}
+.three .flex .loginfive-right a:hover{
+    text-decoration: underline;
+}
+/* 登录部分 end*/
+/* 分隔线 */
+.three .Separation{
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+/* 分隔线 end */
+/* 扫码部分 */
+.three .scan{
+    width: 40%;
+    height: 100%;
+    /* background-color: #e63e3e; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.three .scan .flex{
+    height: 70%;
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.three .flex .s1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.three .scan .flex img{
+    margin: 30px 30px 30px 30px;
+}
+.three .flex .s2{
+    font-size: x-small;
+}
+.three .flex .s2 a{
+    text-decoration: none;
+}
+/* 扫码部分 end */
+/* three end */
+/* four */
+.four{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;/* 让four的子代 four-one flex居中对齐*/
+    text-align: center;/*让 box2 中的文本居中*/
+    font-size:smaller;/*字体大小*/
+}
+.four .four-one{
+    width: 70%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;/*four-one内各盒子纵向排放*/
+    margin-top: 20px;
+}
+.four .box1{
+    display: flex;
+    justify-content: center;/*让 box1 中的 ul 整体居中*/
+}
+.four .box1 li{
+    list-style: none;/* 去掉ul的圆点 */
+    float: left;/* 让ul中的各li标签紧挨着左边 */
+}
+.four .box1 li a{
+    color: black;
+    text-decoration: none;/* 去掉a标签下划线 */
+}
+.four .box1 li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.four .box2{
+    margin-top: 5px;
+}
+/* four end */

@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #43e1ed;
+}
+.header,.daohan,.content_1,.footer{
+    width: 1000px;/*整体宽度*/
+    margin: 0 auto;
+    background-color: #459eaf;/*整体背景颜色*/
+/* header */
+}
+.header{
+    height: 100px;
+    background-color: #3784bb;
+}
+.header img{
+    width: 1000px;
+    height: 100px;
+}
+
+/* daohan */
+.daohan{
+    /* 设置导航高度、背景颜色 */
+    height: 40px;
+    background-color: #4238ad;
+    
+}
+.daohan ul{
+    list-style: none;/* 去掉ul标签的圆点 */
+}
+.daohan ul li a{
+    display: block;/* 把a标签设置成盒子 */
+    height: 40px;/*设置盒子高度*/
+    width: 166.5px;/*设置盒子长度*/
+    float: left;/*设置盒子在左边依次挨着*/
+    color:rgb(252, 250, 250);/*设置a标签的字体颜色 */
+    font: bold;/* 字体加粗 */
+    font-family: 'Roboto', sans-serif;/* 字体类型 */
+    line-height: 40px;/*设置a标签与顶部的距离 */
+    text-align: center;/*设置a标签的文字在该模块左右居中 */
+    text-decoration:none;/*去掉a标签的下划线*/  
+} 
+.daohan ul li a:hover{
+    /*设置导航栏点击时的字体、背景颜色*/
+    color: #f5f1f1;
+    background-color: #884795;
+}
+/* .content_1 */
+.content_1{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.content_1 span{
+    font-size: 40px;
+    line-height: 50px;
+    height: 50px;
+}
+.content_1 .main video{
+    width: 100%;
+}
+
+/*----------------------------------------页面底部的版权声明  footer ----------------------------------------*/
+.footer{ 
+    padding-top:15px;  
+}
+.footer span{ 
+    display:block;
+    margin:0 auto; 
+    line-height:26px; 
+    font-size:12px; 
+    color:#5b5b5b; 
+    text-align:center;
+}

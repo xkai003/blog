@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    width: 100%;
+    background-color: rgb(243, 209, 177);
+    display: flex;
+    justify-content: center;
+}
+.navigation .center{
+    width: 80%;
+    height: 80px;
+    /* background-color: rgb(155, 153, 153); */
+    display: flex;
+    justify-content: space-between;
+}
+/* .navigation .left img{
+    width: 80px;
+    height: 100%;
+    border-radius:50%; 
+} */
+.navigation .right{
+    margin-left: 00px;
+    background-color: #fff;
+}
+.navigation  ul li{
+    height: 100%;
+    margin-right: 30px;
+    font-size: 20px;
+    line-height: 60px;
+    margin-top: 10px;
+    margin-left: 150px;
+    list-style: none;
+    /* background-color: #fff; */
+    float: left;
+}
+.navigation .right ul li:hover{
+    border-bottom: 5px solid red;
+}
+.navigation ul li a{
+    text-decoration: none;
+}
+.Slideshow{
+    height: 800px;
+    /* border: 1px solid red; */
+}
+.Slideshow img{
+    width: 100%;
+    height: 100%;
+}
+.Slideshow .text{
+    position:absolute;
+    top: 300px;
+    left: 100px;
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.Slideshow .text p{
+    font-size: 60px;
+    font-weight: bolder;
+    color: aqua;
+}
+.Slideshow .text span{
+    font-style: 20px;
+    color: aqua;
+}
+/* Slideshowtwo */
+.Slideshowtwo{
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.Slideshowtwo .center{
+    width: 80%;
+    /* background-color: yellow; */
+}
+.Slideshowtwo .center a{
+    display: block;
+    width: 230px;
+    height: 40px;
+    margin-top: 30px;
+    line-height: 40px;
+    margin-left: 10px;
+    float: left;
+    background-color: blue;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.Slideshowtwo .center a:hover{
+    background-color: #7cdfec;
+}
+/* Slideshowthree */
+.Slideshowthree{
+    width: 100%;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.Slideshowthree .center{
+    width: 80%;
+}
+.Slideshowthree .center .box{
+    width: 100%;
+    margin-top: 30px;
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    flex-direction: row;
+}
+.Slideshowthree .center .box img{
+    width: 600px;
+    height: 600px;
+}
+.Slideshowthree .center .box .text{
+    margin: 30px 30px 0px 30px;
+    width: 900px;
+    font-size: 30px;
+    text-align: justify;
+    text-indent: 2em;
+    
+}
+/* Slideshowfour */
+.Slideshowfour{
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    background-color: #fcf7f7;
+    display: flex;
+    justify-content: center;
+}
+.Slideshowfour .center{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    /* border: 1px solid rosybrown; */
+}
+.Slideshowfour .center .box{
+    margin-left: 90px;
+    height: 70%;
+    margin-top: 50px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.Slideshowfour .center .box:hover img{
+    transition: transform 1s linear 0s; 
+    transform: rotateY(360deg);
+    cursor: pointer;
+}
+.Slideshowfour .center .box img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+/* Slideshowfive */
+.Slideshowfive{
+    width: 100%;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+.Slideshowfive h1{
+    color: blue;
+    text-align: center;
+}
+.Slideshowfive .center{
+    width: 60%;
+    margin: 30px 0px 30px 0px;
+    /* border: 1px solid red; */
+}
+.Slideshowfive .center .box{
+    float: left;
+    width: 520px;
+    height: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+    border: 1px solid rgb(255, 115, 0);
+    padding: 30px;
+}
+.Slideshowfive .center .box .title{
+    font-family: 楷体;
+    font-weight: bolder;
+    font-size: 25px;
+    color: red;
+}
+/* 页脚 */
+.footer{ 
+    margin-top: 20px;
+}
+.footer span{ 
+    display:block;
+    margin:0 auto; 
+    line-height:26px; 
+    font-size:12px; 
+    color:#a7a4a4; 
+    text-align:center;
+}
+.footer span a{
+    color:#a7a4a4;
+    text-decoration: none;
+}
+.footer span a:hover{
+    color: red;
+}
