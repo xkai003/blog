@@ -146,7 +146,265 @@
             <div class="content">
                 <li><strong>PM2_JSON</strong></li>
                 <div class="column">
-                    持续更新中...
+                    <span>步骤一：进入WinSCP。在/etc/www/tiktok-test/api目录下创建一个 db.json 文件（db.json内容如下）</span>
+                    <div class="Board">
+                        <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                            <button onclick="copyToClipboard('txtsix')">
+                                <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                            </button>
+                        </div>
+                        <div class="BoardText">
+                            <span id="txtsix">
+                                {<br>
+                                    &emsp;"data": [<br>
+                                        &emsp;&emsp;{<br>
+                                            &emsp;&emsp;&emsp;"id": "30",<br>
+                                            &emsp;&emsp;&emsp;"status": "0",<br>
+                                            &emsp;&emsp;&emsp;"user": "GGGGGG",<br>
+                                            &emsp;&emsp;&emsp;"password": "GGGGGGs",<br>
+                                            &emsp;&emsp;&emsp;"email": "GGGGGG",<br>
+                                            &emsp;&emsp;&emsp;"emailPwd": "GGGGGG",<br>
+                                            &emsp;&emsp;&emsp;"country": "gG",<br>
+                                            &emsp;&emsp;&emsp;"time": "2025-09-30 17:12:58",<br>
+                                            &emsp;&emsp;&emsp;"reason": ""<br>
+                                        &emsp;&emsp;}<br>
+                                    &emsp;]<br>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <span>步骤二：进入WinSCP。在/etc/www/tiktok-test/api目录下创建一个 server.js文件（server.js内容如下）</span>
+                    <div class="Board">
+                        <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                            <button onclick="copyToClipboard('txtseven')">
+                                <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                            </button>
+                        </div>
+                        <div class="BoardText">
+                            <span id="txtseven">
+                                const express = require('express');<br>
+                                const cors = require('cors');<br>
+                                const fs = require('fs').promises;<br>
+                                const path = require('path');<br>
+                                <br>
+                                const app = express();<br>
+                                app.use(cors());<br>
+                                app.use(express.json());<br>
+                                <br>
+                                // 定义你的 db.json 文件的绝对路径<br>
+                                const DB_PATH = '/etc/www/tiktok-test/api/db.json';<br>
+                                <br>
+                                // =================================================================<br>
+                                // =====  API 1: 获取所有数据列表 (从db.json读取)  =====<br>
+                                // =================================================================<br>
+                                app.get('/api', async (req, res) => {<br>
+                                    &emsp;console.log(`收到 GET /api/videos 请求, 准备读取 ${DB_PATH}`);<br>
+                                    &emsp;try {<br>
+                                        &emsp;&emsp;const fileContent = await fs.readFile(DB_PATH, 'utf-8');<br>
+                                        &emsp;&emsp;const data = JSON.parse(fileContent);<br>
+                                        &emsp;&emsp;console.log(`成功读取并解析 ${DB_PATH}`);<br>
+                                        &emsp;&emsp;res.json(data);<br>
+                                    &emsp;} catch (err) {<br>
+                                        &emsp;&emsp;console.error('读取或解析 db.json 文件时出错:', err);<br>
+                                        &emsp;&emsp;res.status(500).json({ error: '无法读取数据文件' });<br>
+                                    &emsp;}<br>
+                                });
+                                <br>
+                                // =================================================================<br>
+                                // =====  API 2: 更新指定ID的状态 (写入db.json)  =====<br>
+                                // =================================================================<br>
+                                app.put('/api/:id', async (req, res) => {<br>
+                                    &emsp;const { id } = req.params;<br>
+                                    &emsp;const { status, reason } = req.body;<br>
+                                    &emsp;const numericId = parseInt(id, 10);<br>
+                                    &emsp;console.log(`收到 PUT /api/videos/${id} 请求,准备更新状态为: ${status}, 理由是: ${reason}`);<br>
+                                    &emsp;if (status === undefined) {<br>
+                                        &emsp;&emsp;return res.status(400).json({ error: '请求体中必须包含 "status" 字段' });<br>
+                                    &emsp;}<br>
+                                    &emsp;try {<br>
+                                        &emsp;&emsp;const fileContent = await fs.readFile(DB_PATH, 'utf-8');<br>
+                                        &emsp;&emsp;// 修复 #1：获取对象，然后从“data”属性中获取数组<br>
+                                        &emsp;&emsp;let dbObject = JSON.parse(fileContent);<br>
+                                        &emsp;&emsp;let videos = dbObject.data;<br>
+                                        &emsp;&emsp;let itemUpdated = false;<br>
+                                        &emsp;&emsp;// 这是新的第 51 行。它不会再崩溃。<br>
+                                        &emsp;&emsp;videos = videos.map(video => {<br>
+                                            &emsp;&emsp;&emsp;// 修复 #2：比较数字与数字<br>
+                                            &emsp;&emsp;&emsp;if (parseInt(video.id, 10) === numericId) {<br>
+                                                &emsp;&emsp;&emsp;&emsp;video.status = String(status); // 确保状态是一个字符串，以匹配 db.json<br>
+                                                &emsp;&emsp;&emsp;&emsp;video.reason = reason || ""; // 如果没传 reason 过来，默认为空字符串<br>
+                                                &emsp;&emsp;&emsp;&emsp;itemUpdated = true;<br>
+                                            &emsp;&emsp;&emsp;}<br>
+                                            &emsp;&emsp;&emsp;// 修复 #3：始终返回对象<br>
+                                            &emsp;&emsp;&emsp;return video;<br>
+                                        &emsp;&emsp;});<br>
+                                        &emsp;&emsp;if (itemUpdated) {<br>
+                                            &emsp;&emsp;&emsp;// 重新组装主对象并写回<br>
+                                            &emsp;&emsp;&emsp;dbObject.data = videos;<br>
+                                            &emsp;&emsp;&emsp;await fs.writeFile(DB_PATH, JSON.stringify(dbObject, null, 2), 'utf-8');<br>
+                                            &emsp;&emsp;&emsp;res.json({ message: '状态更新成功' });<br>
+                                        &emsp;&emsp;} else {<br>
+                                            &emsp;&emsp;&emsp;res.status(404).json({ error: `未找到 ID 为 ${id} 的视频` });<br>
+                                        &emsp;&emsp;}<br>
+                                    &emsp;} catch (error) {<br>
+                                        &emsp;&emsp;console.error('更新状态时发生服务器错误:', error);<br>
+                                        &emsp;&emsp;res.status(500).json({ error: '服务器内部错误' });<br>
+                                    &emsp;}<br>
+                                });<br>
+                                // =================================================================<br>
+                                // =====  API 3:添加一个新的 POST 路由来处理批量添加  (写入db.json)  =====<br>
+                                // =================================================================<br>
+                                app.post('/api/', async (req, res) => {<br>
+                                    &emsp;// req.body 现在应该是一个数组，比如 [{...}, {...}]<br>
+                                    &emsp;const newVideos = req.body;<br>
+                                    &emsp;// 检查传入的是否是一个数组<br>
+                                    &emsp;if (!Array.isArray(newVideos)) {<br>
+                                        &emsp;&emsp;return res.status(400).json({ error: '请求体必须是一个数组 (Request body must be an array)' });<br>
+                                    &emsp;}<br>
+                                    &emsp;console.log(`收到批量添加请求，共 ${newVideos.length} 条数据`);<br>
+                                    &emsp;try {<br>
+                                         &emsp;&emsp;const fileContent = await fs.readFile(DB_PATH, 'utf-8');<br>
+                                         &emsp;&emsp;const db = JSON.parse(fileContent);<br>
+                                         &emsp;&emsp;// 找到当前最大的 ID，以便我们生成新的 ID<br>
+                                         &emsp;&emsp;const maxId = db.data.reduce((max, item) => Math.max(max, parseInt(item.id)), 0);<br>
+                                         &emsp;&emsp;let currentId = maxId;<br>
+                                         &emsp;&emsp;let addedCount = 0;<br>
+                                         &emsp;&emsp;// 遍历前端发送过来的每一个视频对象<br>
+                                         &emsp;&emsp;newVideos.forEach(video => {<br>
+                                            &emsp;&emsp; &emsp;currentId++; // ID 自增<br>
+                                            &emsp;&emsp; &emsp;const newEntry = {<br>
+                                                &emsp;&emsp; &emsp; &emsp;id: String(currentId), // ID 确保是字符串<br>
+                                                &emsp;&emsp; &emsp; &emsp;status: "0", // 默认状态为 "0"<br>
+                                                &emsp;&emsp; &emsp; &emsp;...video // 将 video 对象里的 user, password 等属性展开<br>
+                                            &emsp;&emsp; &emsp;};<br>
+                                            &emsp;&emsp; &emsp;db.data.unshift(newEntry); // 添加到数组的最前面<br>
+                                            &emsp;&emsp; &emsp;addedCount++;<br>
+                                        &emsp;&emsp;});<br>
+                                        &emsp;&emsp;// 将更新后的数据写回 db.json 文件<br>
+                                        &emsp;&emsp;await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');<br>
+
+                                        &emsp;&emsp;console.log(`成功添加 ${addedCount} 条数据`);<br>
+                                        &emsp;&emsp;res.status(201).json({ message: '批量添加成功 (Batch add successful)', addedCount: addedCount });<br>
+                                    &emsp;} catch (error) {<br>
+                                        &emsp;&emsp;console.error('批量添加数据时出错:', error);<br>
+                                        &emsp;&emsp;res.status(500).json({ error: '服务器内部错误 (Internal Server Error)' });<br>
+                                    &emsp;}<br>
+                                });<br>
+                                // =================================================================<br>
+                                // =====  API 4: 批量添加图片  =====<br>
+                                // =================================================================<br>
+                                app.post('/api/imge', async (req, res) => {<br>
+                                    &emsp;const newItems = req.body;<br>
+                                    &emsp;if (!Array.isArray(newItems) || newItems.length === 0) {<br>
+                                        &emsp;&emsp;return res.status(400).json({ error: '请求体必须是一个非空数组' });<br>
+                                    &emsp;}<br>
+                                    
+                                    &emsp;console.log(`[POST /api/imge] 收到批量添加请求，共 ${newItems.length} 条数据`);<br>
+                                    &emsp;try {<br>
+                                        &emsp;&emsp;const fileContent = await fs.readFile(DB_PATH, 'utf-8');<br>
+                                        &emsp;&emsp;const db = JSON.parse(fileContent);<br>
+                                        &emsp;&emsp;// 确保 db.image 是一个数组，如果不存在则初始化<br>
+                                        &emsp;&emsp;if (!Array.isArray(db.image)) {<br>
+                                            &emsp;&emsp;&emsp;db.image = [];<br>
+                                        &emsp;&emsp;}<br>
+                                        &emsp;&emsp;const maxId = db.image.reduce((max, item) => Math.max(max, parseInt(item.id, 10) || 0), 0);<br>
+                                        &emsp;&emsp;let currentId = maxId;<br>
+                                        &emsp;&emsp;// 使用 map 创建所有新条目，然后一次性添加到数组中，效率稍高<br>
+                                        &emsp;&emsp;const entriesToAdd = newItems.map(item => {<br>
+                                            &emsp;&emsp;&emsp;currentId++;<br>
+                                            &emsp;&emsp;&emsp;return {<br>
+                                                &emsp;&emsp;&emsp;&emsp;id: String(currentId),<br>
+                                                &emsp;&emsp;&emsp;&emsp;...item<br>
+                                            &emsp;&emsp;&emsp;};<br>
+                                        &emsp;&emsp;});<br>
+                                        &emsp;&emsp;db.image.unshift(...entriesToAdd);<br>
+                                        &emsp;&emsp;await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');<br>
+                                        &emsp;&emsp;const addedCount = newItems.length;<br>
+                                        &emsp;&emsp;console.log(`[POST /api/imge] 成功添加 ${addedCount} 条数据`);<br>
+                                        &emsp;&emsp;res.status(201).json({ message: '批量添加成功', addedCount });<br>
+                                    &emsp;} catch (error) {<br>
+                                        &emsp;&emsp;console.error('[POST /api/imge] 批量添加数据时出错:', error);<br>
+                                        &emsp;&emsp;res.status(500).json({ error: '服务器内部错误' });<br>
+                                    &emsp;}<br>
+                                });<br>
+                                // =================================================================<br>
+                                // =====  API 5: 删除指定ID的数据 (DELETE /api/:id)  =====<br>
+                                // =================================================================<br>
+                                // ✅ 核心修正 #2：将 '/api/id' 修改为 '/api/:id'<br>
+                                app.delete('/api/:id', async (req, res) => {<br>
+                                    &emsp;const { id } = req.params; // 现在可以正确获取到 URL 中的 ID<br>
+                                    &emsp;console.log(`[DELETE /api/${id}] 收到删除请求`);<br>
+                                    &emsp;try {<br>
+                                        &emsp;&emsp;const data = await fs.readFile(DB_PATH, 'utf8');<br>
+                                        &emsp;&emsp;const db = JSON.parse(data);<br>
+                                        &emsp;&emsp;const originalLength = db.data.length;<br>
+                                        &emsp;&emsp;db.data = db.data.filter(item => item.id.toString() !== id.toString());<br>
+
+                                        &emsp;&emsp;if (db.data.length === originalLength) {<br>
+                                            &emsp;&emsp;&emsp;console.warn(`[DELETE /api/${id}] 未找到要删除的资源`);<br>
+                                            &emsp;&emsp;&emsp;return res.status(404).send({ message: '未找到要删除的资源' });<br>
+                                        &emsp;&emsp;}<br>
+
+                                        &emsp;&emsp;await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2));<br>
+
+                                        &emsp;&emsp;console.log(`[DELETE /api/${id}] 成功删除了 ID 为 ${id} 的数据`);<br>
+                                        &emsp;&emsp;res.status(200).send({ message: '删除成功' });<br>
+
+                                    &emsp;} catch (err) {<br>
+                                        &emsp;&emsp;console.error(`[DELETE /api/${id}] 删除操作失败:`, err);<br>
+                                        &emsp;&emsp;res.status(500).send({ message: '服务器内部错误', details: err.message });<br>
+                                    &emsp;}<br>
+                                });<br>
+                                // =================================================================<br>
+                                // =====  API 6: 删除指定ID的图片 (delqrcode /api/:id)  =====<br>
+                                // =================================================================<br>
+                                app.delete('/api/images/:id', async (req, res) => {<br>
+                                    &emsp;const { id } = req.params;<br>
+                                    &emsp;console.log(`[DELETE /api/images/${id}] 收到删除【图片】请求`); // 日志更清晰<br>
+                                    &emsp;try {<br>
+                                        &emsp;&emsp;const data = await fs.readFile(DB_PATH, 'utf8');<br>
+                                        &emsp;&emsp;const db = JSON.parse(data);<br>
+                                        &emsp;&emsp;const originalLength = db.image.length;<br>
+                                        &emsp;&emsp;// 注意：这里是从 db.image 中过滤<br>
+                                        &emsp;&emsp;db.image = db.image.filter(item => item.id.toString() !== id.toString());<br>
+                                        &emsp;&emsp;if (db.image.length === originalLength) {<br>
+                                            &emsp;&emsp;&emsp;console.warn(`[DELETE /api/images/${id}] 未找到要删除的图片`);<br>
+                                            &emsp;&emsp;&emsp;return res.status(404).send({ message: '未找到要删除的图片' });<br>
+                                        &emsp;&emsp;}<br>
+                                        &emsp;&emsp;await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2));<br>
+                                        &emsp;&emsp;console.log(`[DELETE /api/images/${id}] 成功删除了 ID 为 ${id} 的图片`);<br>
+                                        &emsp;&emsp;res.status(200).send({ message: '删除成功' });<br>
+                                    &emsp;} catch (err) {<br>
+                                        &emsp;&emsp;console.error(`[DELETE /api/images/${id}] 删除图片操作失败:`, err);<br>
+                                        &emsp;&emsp;res.status(500).send({ message: '服务器内部错误', details: err.message });<br>
+                                    &emsp;}<br>
+                                });<br>
+                                // --- 启动服务器 ---<br>
+                                const PORT = 3000;<br>
+                                app.listen(PORT, '0.0.0.0', () => {<br>
+                                &emsp;console.log(`\n✅ 后端服务已成功启动`);<br>
+                                &emsp;console.log(`   正在监听 http://0.0.0.0:${PORT}`);<br>
+                                &emsp;console.log(`   数据源: ${DB_PATH}`);<br>
+                                &emsp;console.log("--------------------------------------------------\n");<br>
+                                });
+                            </span>
+                        </div>
+                    </div>
+                    <span>步骤三：打开WinTerm。在/etc/www/tiktok-test/api目录下输入以下命令搭建后端API</span>
+                    <div class="Board">
+                        <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                            <button onclick="copyToClipboard('txteight')">
+                                <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                            </button>
+                        </div>
+                        <div class="BoardText">
+                            <span id="txteight">pm2 start server.js --name tiktok-test-api-3000</span>
+                        </div>
+                    </div>
+                    <span>最后：你的api接口已经搭建好了。您可以在浏览器中通过以下地址访问您的后端数据了：<code>http://[您的服务器IP]:3000</code></span>
                 </div>
             </div>
         </div>
