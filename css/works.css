@@ -155,7 +155,7 @@ body {
     /* background-color: #b18e8e; */
     /* line-height: 30px; */
     padding: 5px 0px 5px 0px;
-    max-width: 90%;
+    max-width: 80%;
     overflow-x: auto;/* 水平滚动条 */
     white-space: nowrap;
 }
