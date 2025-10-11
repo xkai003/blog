@@ -15,4 +15,11 @@
     
     // 清理临时元素
     document.body.removeChild(textArea);
+
+    // 复制成功按钮
+    const hint = document.getElementById("toast")
+    hint.style.display = "block"
+    setTimeout(() => {
+        hint.style.display = "none"
+    }, 1500);
 }

@@ -83,3 +83,17 @@ code {
     /* 关键：强制文本在同一行显示，禁止换行 */
   white-space: nowrap;
 }
+/* 复制信息成功样式 */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  /* pointer-events: none; */
+  display: none;
+}
