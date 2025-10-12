@@ -33,16 +33,14 @@
         <p>hello</p>
         <span>wellcom to my world!</span>
     </div>
-
     <div class="nrr">
         <div class="nr" id="app">
+            <!-- 分类部分 -->
+            <div class="Classification">
+                <button @click.prevent="StaticWeb(1)">vue网页</button>
+                <button @click.prevent="StaticWeb(2)">静态网页</button>
+            </div>
 
-            <!-- vue项目 -->
-            <!-- <p style="font-size: 30px; font-weight: bolder; text-align: center; margin-top: 30px;">
-                ---&nbsp;Vue项目&nbsp;（{{ VueWebList.length }}）---
-            </p> -->
-
-            <!-- Display Vue project list, but only the current page's items -->
             <a :href="item.label" v-for="item in displayedVueWebList" :key="item.id">
                 <div class="item">
                     <img :src="item.imgurl" alt="">
@@ -90,7 +88,6 @@
         itemsPerPage: 4, // 一页只能有四个
         vueCurrentPage: 1, // 当前页码
         staticCurrentPage: 1,
-        // vue website list
         VueWebList: [
             {
                 label:'https://xiaomi-vue.pages.dev/',
@@ -255,9 +252,13 @@
             const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
             const end = start + this.itemsPerPage;
             return this.VueWebList.slice(start, end);
-        }
+        },
     },
     methods: {
+        // 分类按钮
+        StaticWeb(page) {
+            this.vueCurrentPage = page
+        },
         changeVuePage(page) {
             this.vueCurrentPage = page;
             // 最小只能翻到第一页
