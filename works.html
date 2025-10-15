@@ -48,7 +48,7 @@
                         <span class="title">{{ item.title }}</span><br>
                         <span>项目时间：{{ item.time }}</span>
                         <span>技术栈：{{ item.technology }}</span>
-                        <span>后端api：</span><div class="api" v-if="item.api"><span style="color: red;" class="api">{{ item.api }}</span></div>
+                        <div class="api" v-if="item.api"><span>后端api：</span><span style="color: red;" class="api">{{ item.api }}</span></div>
                         <span>项目亮点：</span>
                         <div class="wb">
                             <p>{{ item.wb_p1 }}</p>
