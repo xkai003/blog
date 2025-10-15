@@ -35,23 +35,30 @@
 <div class="nrr"><!-- 这一行的作用是把展览台设置成一个整体，然后设置内容垂直居中 -->
     <div class="nr" id="app"><!-- 这一行的作用是固定展览台一行能容纳几个作品-->
         <!-- 利用数组的索引值来遍历，数组中可以省略id -->
-            <a :href="item.label"  v-for="item in list" :key="item.id">
-                <div class="item">
-                    <img :src="item.imgurl"  alt="">
-                    <div class="desc">
-                        <span class="title">{{ item.title }}</span><br>
-                        <span>编写时间：{{ item.time }}</span>
-                        <span>技术栈：{{ item.technology }}</span>
-                        <span>简介：</span>
-                        <span class="wb">
-                            {{ item.Introduction }}
-                        </span>
-                    </div>
+        <a :href="item.label"  v-for="item in displayedlist" :key="item.id">
+            <div class="item">
+                <img :src="item.imgurl"  alt="">
+                <div class="desc">
+                    <span class="title">{{ item.title }}</span><br>
+                    <span>编写时间：{{ item.time }}</span>
+                    <span>技术栈：{{ item.technology }}</span>
+                    <span>简介：</span>
+                    <span class="wb">
+                        {{ item.Introduction }}
+                    </span>
                 </div>
-            </a>
-        <!-- 作品列表 -->
-    </div><!-- 这一行的作用是固定展览台一行能容纳几个作品-->
-</div><!-- 这一行的作用是把这部分设置成一个整体，然后设置内容垂直居中 -->
+            </div>
+        </a>
+        <!-- 分页部分 -->
+        <div class="pagination">
+            <a href="#" @click.prevent="changeVuePage(1)" :class="{ active: vueCurrentPage === 1 }" v-if="vueTotalPages > 1">第一页</a>
+            <a href="#" @click.prevent="changeVuePage(vueCurrentPage - 1)" style="font-size: 20px;">&lt;</a>
+            <span>{{ vueCurrentPage }}</span>
+            <a href="#" @click.prevent="changeVuePage(vueCurrentPage + 1)" style="font-size: 20px;">&gt;</a>
+            <a href="#" @click.prevent="changeVuePage(vueTotalPages)" :class="{ active: vueCurrentPage === vueTotalPages }" v-if="vueTotalPages > 1">最后一页</a>
+        </div>
+    </div>
+</div>
 <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
 <button id="backToTop">
     <svg t="1757048304311" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1736" id="mx_n_1757048304312" width="30" height="30"><path d="M383.786667 640.853333a42.666667 42.666667 0 0 1-8.192 56.149334l-3.968 2.986666-64.64 42.496a42.666667 42.666667 0 0 0-16.085334 20.138667l-1.621333 5.034667L267.946667 853.333333H384a42.666667 42.666667 0 0 1 42.368 37.674667L426.666667 896a42.666667 42.666667 0 0 1-37.674667 42.368L384 938.666667H213.333333a42.666667 42.666667 0 0 1-42.325333-48.213334l0.938667-4.778666 34.56-138.666667a128.042667 128.042667 0 0 1 46.250666-70.570667l7.082667-5.12 64.853333-42.666666a42.666667 42.666667 0 0 1 59.093334 12.202666z m311.168-14.677333l4.352 2.517333 65.066666 42.794667a128 128 0 0 1 50.773334 67.2l2.346666 8.32 34.56 138.666667a42.666667 42.666667 0 0 1-36.565333 52.736L810.666667 938.666667h-170.666667a42.666667 42.666667 0 0 1-4.992-85.034667L640 853.333333h116.053333l-21.333333-85.674666a42.709333 42.709333 0 0 0-13.397333-21.888l-4.096-3.157334-64.853334-42.666666a42.666667 42.666667 0 0 1 37.76-75.861334l4.821334 2.133334z" fill="#1beff3" p-id="1737"></path><path d="M512 102.570667a85.333333 85.333333 0 0 0-60.586667 25.258666l-30.165333 30.165334a469.333333 469.333333 0 0 0-131.882667 403.2l52.48 341.290666A42.666667 42.666667 0 0 0 384 938.666667h256a42.666667 42.666667 0 0 0 42.154667-36.181334l52.48-341.333333a469.333333 469.333333 0 0 0-131.84-403.157333l-30.293334-30.293334A85.248 85.248 0 0 0 512 102.570667z m-30.421333 115.754666L512 187.946667l30.421333 30.378666 9.088 9.386667a384 384 0 0 1 98.816 320.426667L603.306667 853.333333H420.608l-46.933333-305.152a384 384 0 0 1 107.946666-329.856z" fill="#1beff3" p-id="1738"></path><path d="M512 384a42.666667 42.666667 0 0 1 42.368 37.674667L554.666667 426.666667v128a42.666667 42.666667 0 0 1-85.034667 4.992L469.333333 554.666667v-128a42.666667 42.666667 0 0 1 42.666667-42.666667z" fill="#1beff3" p-id="1739"></path></svg>
@@ -61,61 +68,112 @@
 </div>
 <script>
    const app = new Vue({                                        
-            el:'#app',                                               
-            data:{
-                // 作品列表
-                list: [
-                    { 
-                        label:'./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
-                        imgurl:'./img/vscolod_github+cloudflare.jpg',
-                        title:"本地项目上传到github上并部署到cloudflare", 
-                        time:"2025.10.11", 
-                        technology:"vscolod、github、cloudflare", 
-                        Introduction:"零基础手把手教你如何把自己的项目上传到github上并部署到cloudflare" 
-                    },
-                    { 
-                        label:'./notes/WindTerm_PM2/WindTerm_PM2.html',
-                        imgurl:'./img/pm2-logo.jpg',
-                        title:"使用 PM2 部署 Vue 应用指南", 
-                        time:"2025.07.10", 
-                        technology:"PM2", 
-                        Introduction:"零基础手把手教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式" 
-                    },
-                    { 
-                        label:'./notes/pm2+api/pm2+api.html',
-                        imgurl:'./img/PM2+API.jpg',
-                        title:"使用PM2搭建后端api接口", 
-                        time:"2025.07.10", 
-                        technology:"PM2、MySQL", 
-                        Introduction:"零基础手把手教你如何应用PM2搭建连接数据库的api接口" 
-                    },
-                    { 
-                        label:'./notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
-                        imgurl:'./img/VUE.jpg',
-                        title:"vue项目在服务器临时开启服务", 
-                        time:"2025.07.10", 
-                        technology:"PM2", 
-                        Introduction:"零基础手把手教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）" 
-                    },
-                    { 
-                        label:'./notes/vue+MySQL/vue+MySQL.html',
-                        imgurl:'./img/vue+MySQL.jpg',
-                        title:"Vue项目连接数据库(本地)", 
-                        time:"2025.07.10", 
-                        technology:"vue、MySQL", 
-                        Introduction:"零基础手把手教你vue如何链接数据库并渲染信息到页面上" 
-                    },
-                    { 
-                        label:'./notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
-                        imgurl:'./img/nginx_logo.jpg',
-                        title:"Nginx托管静态网页", 
-                        time:"2025.07.10", 
-                        technology:"Nginx", 
-                        Introduction:"nginx是一款 HTTP Web 服务器、反向代理、内容缓存、负载均衡器、TCP/UDP 代理服务器和邮件代理服务器，它可以将你的网页呈现在浏览器上供用户浏览。" 
-                    }
-                ]
-            }
-        })
+        el:'#app',                                               
+        data:{
+            itemsPerPage: 4, // 一页只能有四个
+            vueCurrentPage: 1, // 当前页码
+            staticCurrentPage: 1,
+            // 作品列表
+            list: [
+                { 
+                    label:'./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
+                    imgurl:'./img/vscolod_github+cloudflare.jpg',
+                    title:"本地项目上传到github上并部署到cloudflare", 
+                    time:"2025.10.11", 
+                    technology:"vscolod、github、cloudflare", 
+                    Introduction:"零基础手把手教你如何把自己的项目上传到github上并部署到cloudflare" 
+                },
+                { 
+                    label:'./notes/WindTerm_PM2/WindTerm_PM2.html',
+                    imgurl:'./img/pm2-logo.jpg',
+                    title:"使用 PM2 部署 Vue 应用指南", 
+                    time:"2025.07.10", 
+                    technology:"PM2", 
+                    Introduction:"零基础手把手教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式" 
+                },
+                { 
+                    label:'./notes/pm2+api/pm2+api.html',
+                    imgurl:'./img/PM2+API.jpg',
+                    title:"使用PM2搭建后端api接口", 
+                    time:"2025.07.10", 
+                    technology:"PM2、MySQL", 
+                    Introduction:"零基础手把手教你如何应用PM2搭建连接数据库的api接口" 
+                },
+                { 
+                    label:'./notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
+                    imgurl:'./img/VUE.jpg',
+                    title:"vue项目在服务器临时开启服务", 
+                    time:"2025.07.10", 
+                    technology:"PM2", 
+                    Introduction:"零基础手把手教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）" 
+                },
+                { 
+                    label:'./notes/vue+MySQL/vue+MySQL.html',
+                    imgurl:'./img/vue+MySQL.jpg',
+                    title:"Vue项目连接数据库(本地)", 
+                    time:"2025.07.10", 
+                    technology:"vue、MySQL", 
+                    Introduction:"零基础手把手教你vue如何链接数据库并渲染信息到页面上" 
+                },
+                { 
+                    label:'./notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
+                    imgurl:'./img/nginx_logo.jpg',
+                    title:"Nginx托管静态网页", 
+                    time:"2025.07.10", 
+                    technology:"Nginx", 
+                    Introduction:"nginx是一款 HTTP Web 服务器、反向代理、内容缓存、负载均衡器、TCP/UDP 代理服务器和邮件代理服务器，它可以将你的网页呈现在浏览器上供用户浏览。" 
+                }
+            ]
+        },
+        computed: {
+            // vueTotalPages：计算属性的名称，表示 "Vue 总页数"
+            // this.list.length：获取 Vue 项目列表的数组长度（即有多少个项目）
+            // this.itemsPerPage：每页显示的项目数量（在你的代码中是 4）
+            // Math.ceil()：JavaScript 内置函数，向上取整
+            // 计算示例
+            // 假设你的 Vue 项目列表有：
+
+            // 5 个项目 (list.length = 5)
+            // 每页显示 4 个 (itemsPerPage = 4)
+            // 计算过程：
+
+            // <JAVASCRIPT>
+            // 5 / 4 = 1.25
+            // Math.ceil(1.25) = 2
+            // 结果：需要 2 页
+            vueTotalPages() {
+                return Math.ceil(this.list.length / this.itemsPerPage);
+            },
+            
+            staticTotalPages() {
+                return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
+            },
+            displayedlist() {
+                const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
+                const end = start + this.itemsPerPage;
+                return this.list.slice(start, end);
+            },
+        },
+        methods: {
+            // 分类按钮
+            StaticWeb(page) {
+                this.vueCurrentPage = page
+            },
+            changeVuePage(page) {
+                this.vueCurrentPage = page;
+                // 最小只能翻到第一页
+                if(this.vueCurrentPage < 1){
+                    alert("已经是第一页了")
+                    return this.vueCurrentPage = 1
+                }
+                // 最大只能翻到最后一页
+                if(this.vueCurrentPage > this.vueTotalPages){
+                    alert("已经是最后一页了")
+                    this.vueCurrentPage = this.vueTotalPages
+                }
+            },
+        }
+    })
 </script>
 </body>
 </html>

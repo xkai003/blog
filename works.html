@@ -228,19 +228,23 @@
                 wb_p1:"这是一个爱心"
             }
         ],
-        //  静态网页列表
-        // StaticWebList: [
-        //     { 
-        //         label:'./works/jindon/index.html',
-        //         imgurl:'./img/京东log.png',
-        //         title:"京东", 
-        //         time:"2025-1-1", 
-        //         technology:"HTML、CSS、JavaScript", 
-        //         wb_p1:"1、应用前端相关知识仿写京东商城"
-        //     }
-        // ]
     },
     computed: {
+        // vueTotalPages：计算属性的名称，表示 "Vue 总页数"
+        // this.VueWebList.length：获取 Vue 项目列表的数组长度（即有多少个项目）
+        // this.itemsPerPage：每页显示的项目数量（在你的代码中是 4）
+        // Math.ceil()：JavaScript 内置函数，向上取整
+        // 计算示例
+        // 假设你的 Vue 项目列表有：
+
+        // 5 个项目 (VueWebList.length = 5)
+        // 每页显示 4 个 (itemsPerPage = 4)
+        // 计算过程：
+
+        // <JAVASCRIPT>
+        // 5 / 4 = 1.25
+        // Math.ceil(1.25) = 2
+        // 结果：需要 2 页
         vueTotalPages() {
             return Math.ceil(this.VueWebList.length / this.itemsPerPage);
         },
