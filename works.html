@@ -36,10 +36,10 @@
     <div class="nrr">
         <div class="nr" id="app">
             <!-- 分类部分 -->
-            <div class="Classification">
+            <!-- <div class="Classification">
                 <button @click.prevent="StaticWeb(1)">vue网页</button>
                 <button @click.prevent="StaticWeb(2)">静态网页</button>
-            </div>
+            </div> -->
 
             <a :href="item.label" v-for="item in displayedVueWebList" :key="item.id">
                 <div class="item">
@@ -261,9 +261,10 @@
     },
     methods: {
         // 分类按钮
-        StaticWeb(page) {
-            this.vueCurrentPage = page
-        },
+        // StaticWeb(page) {
+        //     this.vueCurrentPage = page
+        // },
+        // 上下页切换动作
         changeVuePage(page) {
             this.vueCurrentPage = page;
             // 最小只能翻到第一页
