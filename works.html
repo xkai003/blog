@@ -36,10 +36,10 @@
     <div class="nrr">
         <div class="nr" id="app">
             <!-- 分类部分 -->
-            <div class="Classification">
+            <!-- <div class="Classification">
                 <button @click.prevent="StaticWeb(1)">vue网页</button>
                 <button @click.prevent="StaticWeb(2)">静态网页</button>
-            </div>
+            </div> -->
 
             <a :href="item.label" v-for="item in displayedVueWebList" :key="item.id">
                 <div class="item">
@@ -48,7 +48,7 @@
                         <span class="title">{{ item.title }}</span><br>
                         <span>项目时间：{{ item.time }}</span>
                         <span>技术栈：{{ item.technology }}</span>
-                        <span>后端api：</span><div class="api" v-if="item.api"><span style="color: red;" class="api">{{ item.api }}</span></div>
+                        <div class="api" v-if="item.api"><span>后端api：</span><span style="color: red;" class="api">{{ item.api }}</span></div>
                         <span>项目亮点：</span>
                         <div class="wb">
                             <p>{{ item.wb_p1 }}</p>
@@ -92,7 +92,7 @@
             {
                 label:'https://xiaomi-vue.pages.dev/',
                 imgurl:'./img/小米logo.jpg',
-                title:"使用cf + github部署Vue仿小米商城", 
+                title:"使用Cloudflare Workers + github部署Vue仿小米商城", 
                 time:"2025.06-2025.07", 
                 technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
                 wb_p1:"1、利用vue框架进行网站搭建",
@@ -102,49 +102,6 @@
                 wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
                 wb_p6:"6、页面灵活运用flex弹性布局",
                 wb_p7:"7、VueRouter 多页面路由跳转"
-            },
-            { 
-                label:'https://hm-shopping.pages.dev/#/home',
-                imgurl:'./img/hm-shopping.jpg',
-                title:"使用cf + github部署Vue购物商城", 
-                time:"2025.01-2025.03", 
-                technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
-                wb_p1:"1、利用vue框架进行网站搭建",
-                wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
-                wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
-                wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
-                wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
-                wb_p6:"6、页面灵活运用flex弹性布局",
-                wb_p7:"7、VueRouter 多页面路由跳转"
-            },
-            { 
-                label:'https://tiktok-demo.pages.dev/',
-                imgurl:'./img/tiktok-vue.jpg',
-                title:"使用cf + github部署vue密码管理项目", 
-                time:"2025.09-2025.09", 
-                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                api: "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
-                wb_p1:"1、应用vue框架搭建的多页面应用程序(测试账号是：XiaoTang；密码是：123456)",
-                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
-                wb_p3:"3、应用vuex搭建多组件数据共享环境",
-                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
-                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
-                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
-                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
-            },
-            { 
-                label:'https://myclassroommanagementsystem.pages.dev/',
-                imgurl:'./img/Vue_我的课堂管理系统.jpg',
-                title:"使用cf + github部署vue我的课堂管理系统", 
-                time:"2025.03-2025.04", 
-                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                wb_p1:"1、应用vue框架搭建的多页面应用程序",
-                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
-                wb_p3:"3、应用vuex搭建多组件数据共享环境",
-                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
-                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
-                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
-                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
             },
             { 
                 label:'http://47.79.40.65:8886/',
@@ -162,6 +119,50 @@
                 wb_p7:"7、每次添加数据、更改数据、删除数据成功后都会重新刷新页面",
                 wb_p8:"8、当账号更改为封号时弹窗要求输入封号原因（默认为永久封号）。如果点击取消按钮则提示：“操作已取消，因为未提供有效理由”并取消操作；如果有输入原因就将封号原因添加到后端的db.json 文件的reason字段中，并在封号栏的对应数据盒子对应位置渲染理由",
                 wb_p9:"9、可在搜索栏搜索数据、更改数据状态、复制数据（搜索依据是：账号或密码或邮箱）"
+            },
+            { 
+                label:'https://hm-shopping.pages.dev/#/home',
+                imgurl:'./img/hm-shopping.jpg',
+                title:"使用Cloudflare Workers + github部署Vue购物商城", 
+                time:"2025.01-2025.03", 
+                technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
+                wb_p1:"1、利用vue框架进行网站搭建",
+                wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
+                wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
+                wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
+                wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
+                wb_p6:"6、页面灵活运用flex弹性布局",
+                wb_p7:"7、VueRouter 多页面路由跳转"
+            },
+            { 
+                label:'https://tiktok-demo.pages.dev/',
+                imgurl:'./img/tiktok-demo.jpg',
+                title:"使用Cloudflare Workers + github部署vue密码管理项目", 
+                time:"2025.09-2025.09", 
+                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+                api: "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
+                wb_p1:"1、应用vue框架搭建的多页面应用程序(测试账号是：XiaoTang；密码是：123456)",
+                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
+                wb_p3:"3、应用vuex搭建多组件数据共享环境",
+                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
+                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
+                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
+                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
+            },
+            { 
+                label:'https://myclassroommanagementsystem.pages.dev/',
+                imgurl:'./img/Vue_我的课堂管理系统.jpg',
+                title:"使用Cloudflare Workers + github部署vue我的课堂管理系统", 
+                time:"2025.03-2025.04", 
+                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+                api: "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json",
+                wb_p1:"1、应用vue框架搭建的多页面应用程序",
+                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
+                wb_p3:"3、应用vuex搭建多组件数据共享环境",
+                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
+                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
+                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
+                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
             },
             { 
                 label:'./works/jindon/index.html',
@@ -236,19 +237,23 @@
                 wb_p1:"这是一个用Python编写的爱心"
             }
         ],
-        //  静态网页列表
-        // StaticWebList: [
-        //     { 
-        //         label:'./works/jindon/index.html',
-        //         imgurl:'./img/京东log.png',
-        //         title:"京东", 
-        //         time:"2025-1-1", 
-        //         technology:"HTML、CSS、JavaScript", 
-        //         wb_p1:"1、应用前端相关知识仿写京东商城"
-        //     }
-        // ]
     },
     computed: {
+        // vueTotalPages：计算属性的名称，表示 "Vue 总页数"
+        // this.VueWebList.length：获取 Vue 项目列表的数组长度（即有多少个项目）
+        // this.itemsPerPage：每页显示的项目数量（在你的代码中是 4）
+        // Math.ceil()：JavaScript 内置函数，向上取整
+        // 计算示例
+        // 假设你的 Vue 项目列表有：
+
+        // 5 个项目 (VueWebList.length = 5)
+        // 每页显示 4 个 (itemsPerPage = 4)
+        // 计算过程：
+
+        // <JAVASCRIPT>
+        // 5 / 4 = 1.25
+        // Math.ceil(1.25) = 2
+        // 结果：需要 2 页
         vueTotalPages() {
             return Math.ceil(this.VueWebList.length / this.itemsPerPage);
         },
@@ -264,9 +269,10 @@
     },
     methods: {
         // 分类按钮
-        StaticWeb(page) {
-            this.vueCurrentPage = page
-        },
+        // StaticWeb(page) {
+        //     this.vueCurrentPage = page
+        // },
+        // 上下页切换动作
         changeVuePage(page) {
             this.vueCurrentPage = page;
             // 最小只能翻到第一页
