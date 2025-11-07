@@ -133,13 +133,13 @@ body {
 }
 
 .item img {
-    width: 30%;
+    width: 20%;
     /* height: 90%; */
     border-radius: 5px;
     margin: 10px;
 }
 .item .desc{
-    width: 70%;
+    width: 80%;
     margin-left: 10px;
     color: black;
     display: flex;
