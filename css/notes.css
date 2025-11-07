@@ -6,6 +6,10 @@ body {
     padding: 0;
     background-color: rgba(250, 246, 246, 0.8);
     /* background-color: #d3eec1; */
+    /* 方格背景 */
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.1) 3%, transparent 0),
+    linear-gradient(rgba(200, 200, 200, 0.1) 3%, transparent 0);
+    background-size: 20px 20px;
 }
 
 /* 隐藏的侧边栏样式 */
