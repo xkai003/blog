@@ -16,7 +16,7 @@ h1{
     align-items: center;
 }
 .box .center{
-    /* width: 60%; */
+    width: 60%;
     /* 改用限制最大长度，从而满足手机屏幕自适应 */
     max-width: 90vw;
     margin-top: 30px;
