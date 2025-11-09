@@ -92,7 +92,7 @@ body {
 .dd .dd1{
     width: 200px;
     height: 200px;
-    border: 5px solid #000;
+    border: 5px solid #c8f8f8;
     border-radius: 50%;
     margin: 50px auto;
     /*  */
@@ -101,9 +101,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-.dd .dd1 .icon1{
-    width: 150px;
-    height: 150px;
+.dd .dd1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .dd h1{
