@@ -101,7 +101,7 @@ body {
     /* background-color: #e0afaf; */
 }
 .box .center{
-    width: 60%;
+    width: 70%;
     margin: 30px auto;
     /* background-color: #bea0a0; */
 }
@@ -122,10 +122,12 @@ body {
     margin-left: -9px;
     margin-top: 40px;
     background-color: blue;
+    color: black;
     border-radius: 50%;
     float: left;
 }
 .box .center a:hover{
+    color: red;
     border: 1px solid red;
 }
 .box .center .card .small-card{
