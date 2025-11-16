@@ -33,104 +33,16 @@
     <!-- 头部 -->
 
     <!-- 展览台 -->
-    <div class="box">
+    <div class="box" id="app">
         <div class="center">
-            <div class="left_card">
-                <div class="small-card">
-                    <a href="">
-                        <div class="centen">
-                            <p>越秀公园</p>
-                        </div>
-                    </a>
+            <div class="card">
+                <div class="small-card" v-for="item in leftcard" :key="item.id">
                     <div class="round"></div>
-                </div>
-            </div>
-            <div class="right_card">
-                <div class="small-card">
-                    <div class="round"></div>
-                    <a href="">
+                    <a href="" >
                         <div class="centen">
-                            <p>圣心大教堂</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="left_card">
-                <div class="small-card">
-                    <a href="">
-                        <div class="centen">
-                            <p>粤海关</p>
-                        </div>
-                    </a>
-                    <div class="round"></div>
-                </div>
-            </div>
-            <div class="right_card">
-                <div class="small-card">
-                    <div class="round"></div>
-                    <a href="">
-                        <div class="centen">
-                            <p>十三行博物馆</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="left_card">
-                <div class="small-card">
-                    <a href="">
-                        <div class="centen">
-                            <p>白云山</p>
-                        </div>
-                    </a>
-                    <div class="round"></div>
-                </div>
-            </div>
-            <div class="right_card">
-                <div class="small-card">
-                    <div class="round"></div>
-                    <a href="">
-                        <div class="centen">
-                            <p>永庆坊</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="left_card">
-                <div class="small-card">
-                    <a href="">
-                        <div class="centen">
-                            <p>广州塔</p>
-                        </div>
-                    </a>
-                    <div class="round"></div>
-                </div>
-            </div>
-            <div class="right_card">
-                <div class="small-card">
-                    <div class="round"></div>
-                    <a href="">
-                        <div class="centen">
-                            <p>陈家祠</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="left_card">
-                <div class="small-card">
-                    <a href="">
-                        <div class="centen">
-                            <p>农讲所</p>
-                        </div>
-                    </a>
-                    <div class="round"></div>
-                </div>
-            </div>
-            <div class="right_card">
-                <div class="small-card">
-                    <div class="round"></div>
-                    <a href="">
-                        <div class="centen">
-                            <p>广州荔湾湖公园</p>
+                            <p>{{item.p}}</p>
+                            <span>{{item.span1}}</span>
+                            <span>{{item.span2}}</span>
                         </div>
                     </a>
                 </div>
@@ -144,5 +56,23 @@
     <script src="./js/backToTop.js"></script>
     <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
 </div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data:{
+            leftcard: [
+                { p:"越秀公园", span1:"时间：2025-1-1", span2:"出行：地铁越秀公园站B1口" },
+                { p:"圣心大教堂", span1:"时间：2025-1-1", span2:"出行：地铁一德路站B口" },
+                { p:"粤海关", span1:"时间：2025-1-1", span2:"出行：地铁8号线文化公园站A口" },
+                { p:"十三行博物馆", span1:"时间：2025-1-1", span2:"出行：地铁8号线文化公园站D口" },
+                { p:"广东省博物馆", span1:"时间：2025-1-1", span2:"出行：地铁apm号线大剧院站A口" },
+                { p:"流花湖", span1:"时间：2025-1-1", span2:"出行：地铁11号线站B口" },
+                { p:"广州动物园", span1:"时间：2025-1-1", span2:"出行：地铁5号线动物园站A口" },
+                { p:"沙面岛", span1:"时间：2025-1-1", span2:"出行：地铁6号线黄沙站E口" },
+                { p:"白鹅潭艺术中心", span1:"时间：2025-1-1", span2:"出行：地铁*号线芳村站B1口" },
+            ],
+        }
+    })
+</script>
 </body>
 </html>
