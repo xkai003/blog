@@ -36,7 +36,7 @@
     <div class="box" id="app">
         <div class="center">
             <div class="card">
-                <div class="small-card" v-for="item in leftcard" :key="item.id">
+                <div class="small-card" v-for="item in displayedVueWebList" :key="item.id">
                     <div class="round"></div>
                     <a href="" >
                         <div class="centen">
@@ -47,6 +47,14 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <!-- 分页部分 -->
+        <div class="pagination">
+            <a href="#" @click.prevent="changeVuePage(1)" :class="{ active: vueCurrentPage === 1 }" v-if="vueTotalPages > 1">第一页</a>
+            <a href="#" @click.prevent="changeVuePage(vueCurrentPage - 1)" style="font-size: 20px;">&lt;</a>
+            <span>{{ vueCurrentPage }}</span>
+            <a href="#" @click.prevent="changeVuePage(vueCurrentPage + 1)" style="font-size: 20px;">&gt;</a>
+            <a href="#" @click.prevent="changeVuePage(vueTotalPages)" :class="{ active: vueCurrentPage === vueTotalPages }" v-if="vueTotalPages > 1">最后一页</a>
         </div>
     </div>
     <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
@@ -60,7 +68,10 @@
     const app = new Vue({
         el: '#app',
         data:{
-            leftcard: [
+            itemsPerPage: 4, // 一页只能有四个
+            vueCurrentPage: 1, // 当前页码
+            staticCurrentPage: 1,
+            CartList: [
                 { p:"越秀公园", span1:"时间：2025-1-1", span2:"出行：地铁越秀公园站B1口" },
                 { p:"圣心大教堂", span1:"时间：2025-1-1", span2:"出行：地铁一德路站B口" },
                 { p:"粤海关", span1:"时间：2025-1-1", span2:"出行：地铁8号线文化公园站A口" },
@@ -71,7 +82,37 @@
                 { p:"沙面岛", span1:"时间：2025-1-1", span2:"出行：地铁6号线黄沙站E口" },
                 { p:"白鹅潭艺术中心", span1:"时间：2025-1-1", span2:"出行：地铁*号线芳村站B1口" },
             ],
-        }
+        },
+        computed: {
+        vueTotalPages() {
+            return Math.ceil(this.CartList.length / this.itemsPerPage);
+        },
+        
+        staticTotalPages() {
+            return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
+        },
+        displayedVueWebList() {
+            const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
+            const end = start + this.itemsPerPage;
+            return this.CartList.slice(start, end);
+        },
+    },
+    methods: {
+        // 上下页切换动作
+        changeVuePage(page) {
+            this.vueCurrentPage = page;
+            // 最小只能翻到第一页
+            if(this.vueCurrentPage < 1){
+                alert("已经是第一页了")
+                return this.vueCurrentPage = 1
+            }
+            // 最大只能翻到最后一页
+            if(this.vueCurrentPage > this.vueTotalPages){
+                alert("已经是最后一页了")
+                this.vueCurrentPage = this.vueTotalPages
+            }
+        },
+    }
     })
 </script>
 </body>
