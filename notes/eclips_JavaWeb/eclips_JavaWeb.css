@@ -1,0 +1,44 @@
+body{
+    background-color: #f4f7f9;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .center{
+    /* width: 60%; */
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 90vw;
+    margin-top: 30px;
+    background-color: #fff;
+}
+.box .content {
+    padding: 30px 50px 30px 50px;
+    border-bottom: 2px solid #e2e8f0;
+}
+.box .column{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #7c7d7e;
+}
+.box .column img{
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* 各span 行间距 */
+.box .column span{
+    line-height: 30px;
+}
