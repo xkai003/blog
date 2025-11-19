@@ -24,13 +24,18 @@
 }
 .foot a{
     display: block;
-    width: 100px;
+    width: 30%;
     font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     line-height: 50px;
     color: black;
     text-decoration: none;
-    /* background-color: #e4e4e4; */
+    white-space: nowrap;
+    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
+    /* background-color: #e4e4e4;   */
 }
 .foot a:hover{
     color: red;
