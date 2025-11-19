@@ -113,3 +113,18 @@ code {
   /* pointer-events: none; */
   display: none;
 }
+/* 回到顶部按钮样式 */
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: none; /* 默认隐藏 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+}
+#backToTop:hover {
+    background-color: #c8f2f8;
+}
