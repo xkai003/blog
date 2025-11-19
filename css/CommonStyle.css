@@ -17,7 +17,7 @@
 /* 页脚 */
 .foot{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
