@@ -104,6 +104,8 @@ body {
 }
 .nr{
     width: 80%;
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 1000px;
     /* background-color: #eeeeec; */
     border-radius: 15px;/* 边框圆角 */
     padding: 20px;
