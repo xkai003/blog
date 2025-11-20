@@ -43,14 +43,15 @@
                 <!--<button type="submit">搜索</button>--> <!-- Optional: Add a search button -->
             </div>
 
-            <a :href="item.label" v-for="item in displayedVueWebList" :key="item.id">
-                <div class="item">
+            <!-- <a :href="item.label"> -->
+                <div class="item" v-for="item in displayedVueWebList" :key="item.id">
                     <img :src="item.imgurl" alt="">
                     <div class="desc">
-                        <span class="title">{{ item.title }}</span><br>
+                        <a :href="item.label" class="title">{{ item.title }}</a><br>
+                        <!-- <span class="title">{{ item.title }}</span><br> -->
                         <span>项目时间：{{ item.time }}</span>
                         <span>技术栈：{{ item.technology }}</span>
-                        <div class="api" v-if="item.api"><span>后端api：</span><span style="color: red;" class="api">{{ item.api }}</span></div>
+                        <div class="api" v-if="item.api"><span>后端api：</span><a :href="item.api" class="api">{{ item.api }} </a></div>
                         <span>项目亮点：</span>
                         <div class="wb">
                             <p>{{ item.wb_p1 }}</p>
@@ -65,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            <!-- </a> -->
             <!-- 分页部分 -->
             <div class="pagination">
                 <a href="#" @click.prevent="changeVuePage(1)" :class="{ active: vueCurrentPage === 1 }" v-if="vueTotalPages > 1">第一页</a>
