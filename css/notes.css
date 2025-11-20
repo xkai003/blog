@@ -140,6 +140,13 @@ body {
     display: flex;
     flex-direction: column;
 }
+.item .desc a{
+    color: black;
+    text-decoration: none;
+}
+.item .desc a:hover{
+    color: red;
+}
 .item .desc .title{
     margin-top: 10px;
     font-size: 20px;

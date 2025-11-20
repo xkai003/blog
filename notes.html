@@ -43,11 +43,11 @@
             </div>
             
             <!-- 利用数组的索引值来遍历，数组中可以省略id -->
-            <a :href="item.label"  v-for="item in displayedVueWebList" :key="item.id">
-                <div class="item">
+            <!-- <a :href="item.label"> -->
+                <div class="item" v-for="item in displayedVueWebList" :key="item.id">
                     <img :src="item.imgurl"  alt="">
                     <div class="desc">
-                        <span class="title">{{ item.title }}</span><br>
+                        <a :href="item.label" class="title">{{ item.title }}</a><br>
                         <span>编写时间：{{ item.time }}</span>
                         <span>技术栈：{{ item.technology }}</span>
                         <span>简介：</span>
@@ -56,7 +56,7 @@
                         </span>
                     </div>
                 </div>
-            </a>
+            <!-- </a> -->
             <!-- 分页部分 -->
             <div class="pagination">
                 <a href="#" @click.prevent="changeVuePage(1)" :class="{ active: vueCurrentPage === 1 }" v-if="vueTotalPages > 1">第一页</a>
