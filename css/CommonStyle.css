@@ -1,0 +1,72 @@
+/* 搜索部分 */
+.search-container{
+    width: 100%;
+    height: 50px;
+    background-color: #f1d2d2;
+}
+.search-container input{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+/* 搜索部分 end */
+/* 复制成功 */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  /* pointer-events: none; */
+  display: none;
+}
+/* 复制成功 end */
+
+/* 页脚 */
+.foot{
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.foot a{
+    display: block;
+    width: 30%;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
+    /* background-color: #e4e4e4;   */
+}
+.foot a:hover{
+    color: red;
+}
+/* 页脚 end*/
+
+/* 回到顶部按钮样式 */
+#backToTop {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: none; /* 默认隐藏 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+}
+#backToTop:hover {
+    background-color: #c8f2f8;
+}
+/* 回到顶部按钮样式 end */

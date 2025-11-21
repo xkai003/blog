@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品</title>
     <link rel="stylesheet" href="./css/works.css">
+    <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
     <!-- 引入开发版本的包 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 </head>
@@ -21,6 +22,7 @@
         <a href="./index.html">首页</a>
         <a href="./works.html">作品</a>
         <a href="./notes.html">笔记</a>
+        <a href="./travel.html">旅游</a>
     </div>
     <script src="./js/index.js"></script>
 <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
@@ -35,20 +37,21 @@
     </div>
     <div class="nrr">
         <div class="nr" id="app">
-            <!-- 分类部分 -->
-            <!-- <div class="Classification">
-                <button @click.prevent="StaticWeb(1)">vue网页</button>
-                <button @click.prevent="StaticWeb(2)">静态网页</button>
-            </div> -->
+            <!-- 搜索(只在第一页显示搜索框) -->
+            <div class="search-container" v-if="this.vueCurrentPage == 1">
+                <input type="text" placeholder="请输入你要搜索的内容" v-model="searchQuery">
+                <!--<button type="submit">搜索</button>--> <!-- Optional: Add a search button -->
+            </div>
 
-            <a :href="item.label" v-for="item in displayedVueWebList" :key="item.id">
-                <div class="item">
+            <!-- <a :href="item.label"> -->
+                <div class="item" v-for="item in displayedVueWebList" :key="item.id">
                     <img :src="item.imgurl" alt="">
                     <div class="desc">
-                        <span class="title">{{ item.title }}</span><br>
+                        <a :href="item.label" class="title">{{ item.title }}</a><br>
+                        <!-- <span class="title">{{ item.title }}</span><br> -->
                         <span>项目时间：{{ item.time }}</span>
                         <span>技术栈：{{ item.technology }}</span>
-                        <div class="api" v-if="item.api"><span>后端api：</span><span style="color: red;" class="api">{{ item.api }}</span></div>
+                        <div class="api" v-if="item.api"><span>后端api：</span><a :href="item.api" class="api">{{ item.api }} </a></div>
                         <span>项目亮点：</span>
                         <div class="wb">
                             <p>{{ item.wb_p1 }}</p>
@@ -63,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            <!-- </a> -->
             <!-- 分页部分 -->
             <div class="pagination">
                 <a href="#" @click.prevent="changeVuePage(1)" :class="{ active: vueCurrentPage === 1 }" v-if="vueTotalPages > 1">第一页</a>
@@ -88,6 +91,7 @@
         itemsPerPage: 4, // 一页只能有四个
         vueCurrentPage: 1, // 当前页码
         staticCurrentPage: 1,
+        searchQuery: '', // 获取搜索输入框的信息
         VueWebList: [
             {
                 label:'https://xiaomi-vue.pages.dev/',
@@ -106,7 +110,7 @@
             { 
                 label:'http://47.79.40.65:8886/',
                 imgurl:'./img/tiktok-vue.jpg',
-                title:"vue2 + JSON 密码管理系统", 
+                title:"使用PM2部署vue2 + JSON 密码管理系统", 
                 time:"2025.08-2025.09", 
                 technology:"vue2、vuex、Node.js、JSON、axios、PM2",
                 api: "http://47.79.40.65:3000/api", 
@@ -221,6 +225,14 @@
                 wb_p1:"这是一个期末作业"
             },
             { 
+                label:'http://a.350611.xyz:8088/jiangli/index.html',
+                imgurl:'./img/Nginx托管静态简历网页.jpg',
+                title:"Nginx托管静态简历网页", 
+                time:"2023-10-18", 
+                technology:"HTML、CSS、JavaScript", 
+                wb_p1:"这是一个期末作业"
+            },
+            { 
                 label:'./works/Love/Love.html',
                 imgurl:'./img/love.jpg',
                 title:"HTML爱心", 
@@ -247,6 +259,26 @@
         ],
     },
     computed: {
+        // 搜索数据
+        filteredVueWebList() {
+            const query = this.searchQuery.toLowerCase();
+            return this.VueWebList.filter(item => {
+                return (
+                    item.title.toLowerCase().includes(query) ||
+                    item.technology.toLowerCase().includes(query) ||
+                    (item.api && item.api.toLowerCase().includes(query)) || // Check if api exists before using includes
+                    (item.wb_p1 && item.wb_p1.toLowerCase().includes(query)) ||
+                    (item.wb_p2 && item.wb_p2.toLowerCase().includes(query)) ||
+                    (item.wb_p3 && item.wb_p3.toLowerCase().includes(query)) ||
+                    (item.wb_p4 && item.wb_p4.toLowerCase().includes(query)) ||
+                    (item.wb_p5 && item.wb_p5.toLowerCase().includes(query)) ||
+                    (item.wb_p6 && item.wb_p6.toLowerCase().includes(query)) ||
+                    (item.wb_p7 && item.wb_p7.toLowerCase().includes(query))||
+                    (item.wb_p8 && item.wb_p8.toLowerCase().includes(query))||
+                    (item.wb_p9 && item.wb_p9.toLowerCase().includes(query))
+                );
+            });
+        },
         // vueTotalPages：计算属性的名称，表示 "Vue 总页数"
         // this.VueWebList.length：获取 Vue 项目列表的数组长度（即有多少个项目）
         // this.itemsPerPage：每页显示的项目数量（在你的代码中是 4）
@@ -263,7 +295,7 @@
         // Math.ceil(1.25) = 2
         // 结果：需要 2 页
         vueTotalPages() {
-            return Math.ceil(this.VueWebList.length / this.itemsPerPage);
+            return Math.ceil(this.filteredVueWebList.length  / this.itemsPerPage);
         },
         
         staticTotalPages() {
@@ -272,14 +304,10 @@
         displayedVueWebList() {
             const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
             const end = start + this.itemsPerPage;
-            return this.VueWebList.slice(start, end);
+            return this.filteredVueWebList.slice(start, end); // Use filtered list
         },
     },
     methods: {
-        // 分类按钮
-        // StaticWeb(page) {
-        //     this.vueCurrentPage = page
-        // },
         // 上下页切换动作
         changeVuePage(page) {
             this.vueCurrentPage = page;

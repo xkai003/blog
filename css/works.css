@@ -6,6 +6,10 @@ body {
     padding: 0;
     background-color: rgba(250, 246, 246, 0.8);
     /* background-color: #d3eec1; */
+    /* 方格背景 */
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.1) 3%, transparent 0),
+    linear-gradient(rgba(200, 200, 200, 0.1) 3%, transparent 0);
+    background-size: 20px 20px;
 }
 
 /* 隐藏的侧边栏样式 */
@@ -100,21 +104,12 @@ body {
 }
 .nr{
     width: 80%;
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 1000px;
     /* background-color: #eeeeec; */
     border-radius: 15px;/* 边框圆角 */
     padding: 20px;
 }
-/* 分类部分 */
-/* .Classification{
-    width: 100%;
-    height: 50px;
-}
-.Classification button{
-    width: 100px;
-    height: 100%;
-    margin-left: 30px;
-} */
-
 .nr a{
     text-decoration: none;
 }
@@ -133,17 +128,24 @@ body {
 }
 
 .item img {
-    width: 30%;
+    width: 20%;
     /* height: 90%; */
     border-radius: 5px;
     margin: 10px;
 }
 .item .desc{
-    width: 70%;
+    width: 80%;
     margin-left: 10px;
     color: black;
     display: flex;
     flex-direction: column;
+}
+.item .desc a{
+    color: black;
+    text-decoration: none;
+}
+.item .desc a:hover{
+    color: red;
 }
 .item .desc .title{
     margin-top: 10px;
@@ -165,9 +167,10 @@ body {
     height: 100px;
     /* background-color: #b18e8e; */
     /* line-height: 30px; */
-    padding: 5px 0px 5px 0px;
-    max-width: 80%;
-    overflow-x: auto;/* 水平滚动条 */
+    /* padding: 5px 0px 5px 0px; */
+    max-width: 90%;
+    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
     white-space: nowrap;
 }
 /* 展览台 */

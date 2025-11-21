@@ -16,13 +16,14 @@ h1{
     align-items: center;
 }
 .box .center{
-    width: 60%;
+    /* width: 60%; */
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 90vw;
     margin-top: 30px;
     background-color: #fff;
 }
 .box .content {
     padding: 30px 50px 30px 50px;
-    border-bottom: 2px solid #e2e8f0;
 }
 .box .column{
     margin-top: 10px;
@@ -91,18 +92,4 @@ code {
     /* 关键：强制文本在同一行显示，禁止换行 */
     /* white-space:normal; */
     white-space:unset;
-}
-/* 复制信息成功样式 */
-.toast {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  z-index: 9999;
-  /* pointer-events: none; */
-  display: none;
 }
