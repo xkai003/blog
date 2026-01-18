@@ -97,81 +97,89 @@
         staticCurrentPage: 1,
         searchQuery: '', // 获取搜索输入框的信息
         VueWebList: [
-            {
-                label:'https://xiaomi-vue.pages.dev/',
-                imgurl:'./img/小米logo.jpg',
-                title:"使用Cloudflare Workers + github部署Vue仿小米商城", 
-                time:"2025.06-2025.07", 
-                technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
-                wb_p1:"1、利用vue框架进行网站搭建",
-                wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
-                wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
-                wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
-                wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
-                wb_p6:"6、页面灵活运用flex弹性布局",
-                wb_p7:"7、VueRouter 多页面路由跳转"
-            },
-            { 
-                label:'http://47.79.40.65:8886/',
-                imgurl:'./img/tiktok-vue.jpg',
-                title:"使用PM2部署vue2 + JSON 密码管理系统", 
-                time:"2025.08-2025.09", 
-                technology:"vue2、vuex、Node.js、JSON、axios、PM2",
-                api: "http://47.79.40.65:3000/api", 
-                wb_p1:"1、可以收起、展开数据列表。适配电脑和移动端",
-                wb_p2:"2、当数据状态码更新，该项数据自动移到新状态栏中，其状态码也同步更改颜色",
-                wb_p3:"3、可通过对应按钮一键复制信息",
-                wb_p4:"4、可以在线新增数据，并同步数据到后端db.json文件中。在线添加数据时自动获取时间",
-                wb_p5:"5、确认添加数据后会弹窗提示哪一行数据错误（账号为：user000行出错了）。并自动跳过该行数据",
-                wb_p6:"6、每次更改状态、删除数据时都会弹窗（确定/取消）",
-                wb_p7:"7、每次添加数据、更改数据、删除数据成功后都会重新刷新页面",
-                wb_p8:"8、当账号更改为封号时弹窗要求输入封号原因（默认为永久封号）。如果点击取消按钮则提示：“操作已取消，因为未提供有效理由”并取消操作；如果有输入原因就将封号原因添加到后端的db.json 文件的reason字段中，并在封号栏的对应数据盒子对应位置渲染理由",
-                wb_p9:"9、可在搜索栏搜索数据、更改数据状态、复制数据（搜索依据是：账号或密码或邮箱）"
-            },
-            { 
-                label:'https://hm-shopping.pages.dev/#/home',
-                imgurl:'./img/hm-shopping.jpg',
-                title:"使用Cloudflare Workers + github部署Vue购物商城", 
-                time:"2025.01-2025.03", 
-                technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
-                wb_p1:"1、利用vue框架进行网站搭建",
-                wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
-                wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
-                wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
-                wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
-                wb_p6:"6、页面灵活运用flex弹性布局",
-                wb_p7:"7、VueRouter 多页面路由跳转"
-            },
-            { 
-                label:'https://tiktok-demo.pages.dev/',
-                imgurl:'./img/tiktok-demo.jpg',
-                title:"使用Cloudflare Workers + github部署vue密码管理项目", 
-                time:"2025.09-2025.09", 
-                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                api: "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
-                wb_p1:"1、应用vue框架搭建的多页面应用程序(测试账号是：XiaoTang；密码是：123456)",
-                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
-                wb_p3:"3、应用vuex搭建多组件数据共享环境",
-                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
-                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
-                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
-                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
-            },
-            { 
-                label:'https://myclassroommanagementsystem.pages.dev/',
-                imgurl:'./img/Vue_我的课堂管理系统.jpg',
-                title:"使用Cloudflare Workers + github部署vue我的课堂管理系统", 
-                time:"2025.03-2025.04", 
-                technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                api: "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json",
-                wb_p1:"1、应用vue框架搭建的多页面应用程序",
-                wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
-                wb_p3:"3、应用vuex搭建多组件数据共享环境",
-                wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
-                wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
-                wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
-                wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
-            },
+            // {
+            //     label:'https://xiaomi-vue.pages.dev/',
+            //     imgurl:'./img/小米logo.jpg',
+            //     title:"使用Cloudflare Workers + github部署Vue仿小米商城", 
+            //     time:"2025.06-2025.07", 
+            //     technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
+            //     wb_p1:"1、利用vue框架进行网站搭建",
+            //     wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
+            //     wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
+            //     wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
+            //     wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
+            //     wb_p6:"6、页面灵活运用flex弹性布局",
+            //     wb_p7:"7、VueRouter 多页面路由跳转"
+            // },
+            // { 
+            //     label:'http://47.79.40.65:8886/',
+            //     imgurl:'./img/tiktok-vue.jpg',
+            //     title:"使用PM2部署vue2 + JSON 密码管理系统", 
+            //     time:"2025.08-2025.09", 
+            //     technology:"vue2、vuex、Node.js、JSON、axios、PM2",
+            //     api: "http://47.79.40.65:3000/api", 
+            //     wb_p1:"1、可以收起、展开数据列表。适配电脑和移动端",
+            //     wb_p2:"2、当数据状态码更新，该项数据自动移到新状态栏中，其状态码也同步更改颜色",
+            //     wb_p3:"3、可通过对应按钮一键复制信息",
+            //     wb_p4:"4、可以在线新增数据，并同步数据到后端db.json文件中。在线添加数据时自动获取时间",
+            //     wb_p5:"5、确认添加数据后会弹窗提示哪一行数据错误（账号为：user000行出错了）。并自动跳过该行数据",
+            //     wb_p6:"6、每次更改状态、删除数据时都会弹窗（确定/取消）",
+            //     wb_p7:"7、每次添加数据、更改数据、删除数据成功后都会重新刷新页面",
+            //     wb_p8:"8、当账号更改为封号时弹窗要求输入封号原因（默认为永久封号）。如果点击取消按钮则提示：“操作已取消，因为未提供有效理由”并取消操作；如果有输入原因就将封号原因添加到后端的db.json 文件的reason字段中，并在封号栏的对应数据盒子对应位置渲染理由",
+            //     wb_p9:"9、可在搜索栏搜索数据、更改数据状态、复制数据（搜索依据是：账号或密码或邮箱）"
+            // },
+            // { 
+            //     label:'https://hm-shopping.pages.dev/#/home',
+            //     imgurl:'./img/hm-shopping.jpg',
+            //     title:"使用Cloudflare Workers + github部署Vue购物商城", 
+            //     time:"2025.01-2025.03", 
+            //     technology:"HTML、CSS、JavaScript、vue3、vueRouter", 
+            //     wb_p1:"1、利用vue框架进行网站搭建",
+            //     wb_p2:"2、熟练运用HTML、css、javascript对网页页面做美化处理",
+            //     wb_p3:"3、运用vue3组件化拆分技术把页面拆成多个组件",
+            //     wb_p4:"4、运用v-for 进行商品、导航部分数据渲染",
+            //     wb_p5:"5、运用v-show动态控制元素的显示和隐藏",
+            //     wb_p6:"6、页面灵活运用flex弹性布局",
+            //     wb_p7:"7、VueRouter 多页面路由跳转"
+            // },
+            // { 
+            //     label:'https://tiktok-demo.pages.dev/',
+            //     imgurl:'./img/tiktok-demo.jpg',
+            //     title:"使用Cloudflare Workers + github部署vue密码管理项目", 
+            //     time:"2025.09-2025.09", 
+            //     technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+            //     api: "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
+            //     wb_p1:"1、应用vue框架搭建的多页面应用程序(测试账号是：XiaoTang；密码是：123456)",
+            //     wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
+            //     wb_p3:"3、应用vuex搭建多组件数据共享环境",
+            //     wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
+            //     wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
+            //     wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
+            //     wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
+            // },
+            // { 
+            //     label:'https://myclassroommanagementsystem.pages.dev/',
+            //     imgurl:'./img/Vue_我的课堂管理系统.jpg',
+            //     title:"使用Cloudflare Workers + github部署vue我的课堂管理系统", 
+            //     time:"2025.03-2025.04", 
+            //     technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+            //     api: "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json",
+            //     wb_p1:"1、应用vue框架搭建的多页面应用程序",
+            //     wb_p2:"2、应用vue-router来实现导航跳转和路由重定向功能",
+            //     wb_p3:"3、应用vuex搭建多组件数据共享环境",
+            //     wb_p4:"4、后端通过node.js拿到数据库信息并打包成一个本地的api接口供前端访问",
+            //     wb_p5:"5、前端通过axios请求并拿到后端传过来的数据。最后将数据渲染到页面中",
+            //     wb_p6:"6、本站共提供三种身份登录：数据库验证登录、管理员验证登录、游客登陆",
+            //     wb_p7:"7、当登陆账户是管理员XiaoTang时显示用户信息导航项，否则就没有显示"
+            // },
+            // { 
+            //     label:'http://a.350611.xyz:8088/jiangli/index.html',
+            //     imgurl:'./img/Nginx托管静态简历网页.jpg',
+            //     title:"Nginx托管静态简历网页", 
+            //     time:"2023-10-18", 
+            //     technology:"HTML、CSS、JavaScript", 
+            //     wb_p1:"这是一个期末作业"
+            // },
             { 
                 label:'./works/jindon/index.html',
                 imgurl:'./img/京东log.png',
@@ -229,14 +237,6 @@
                 wb_p1:"这是一个期末作业"
             },
             { 
-                label:'http://a.350611.xyz:8088/jiangli/index.html',
-                imgurl:'./img/Nginx托管静态简历网页.jpg',
-                title:"Nginx托管静态简历网页", 
-                time:"2023-10-18", 
-                technology:"HTML、CSS、JavaScript", 
-                wb_p1:"这是一个期末作业"
-            },
-            { 
                 label:'./works/Love/Love.html',
                 imgurl:'./img/love.jpg',
                 title:"HTML爱心", 
@@ -268,18 +268,18 @@
             const query = this.searchQuery.toLowerCase();
             return this.VueWebList.filter(item => {
                 return (
-                    item.title.toLowerCase().includes(query) ||
-                    item.technology.toLowerCase().includes(query) ||
-                    (item.api && item.api.toLowerCase().includes(query)) || // Check if api exists before using includes
-                    (item.wb_p1 && item.wb_p1.toLowerCase().includes(query)) ||
-                    (item.wb_p2 && item.wb_p2.toLowerCase().includes(query)) ||
-                    (item.wb_p3 && item.wb_p3.toLowerCase().includes(query)) ||
-                    (item.wb_p4 && item.wb_p4.toLowerCase().includes(query)) ||
-                    (item.wb_p5 && item.wb_p5.toLowerCase().includes(query)) ||
-                    (item.wb_p6 && item.wb_p6.toLowerCase().includes(query)) ||
-                    (item.wb_p7 && item.wb_p7.toLowerCase().includes(query))||
-                    (item.wb_p8 && item.wb_p8.toLowerCase().includes(query))||
-                    (item.wb_p9 && item.wb_p9.toLowerCase().includes(query))
+                    item.title.toLowerCase().includes(query)
+                    // item.technology.toLowerCase().includes(query) ||
+                    // (item.api && item.api.toLowerCase().includes(query)) || // Check if api exists before using includes
+                    // (item.wb_p1 && item.wb_p1.toLowerCase().includes(query)) ||
+                    // (item.wb_p2 && item.wb_p2.toLowerCase().includes(query)) ||
+                    // (item.wb_p3 && item.wb_p3.toLowerCase().includes(query)) ||
+                    // (item.wb_p4 && item.wb_p4.toLowerCase().includes(query)) ||
+                    // (item.wb_p5 && item.wb_p5.toLowerCase().includes(query)) ||
+                    // (item.wb_p6 && item.wb_p6.toLowerCase().includes(query)) ||
+                    // (item.wb_p7 && item.wb_p7.toLowerCase().includes(query))||
+                    // (item.wb_p8 && item.wb_p8.toLowerCase().includes(query))||
+                    // (item.wb_p9 && item.wb_p9.toLowerCase().includes(query))
                 );
             });
         },

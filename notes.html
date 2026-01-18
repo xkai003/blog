@@ -160,18 +160,18 @@
                 const query = this.searchQuery.toLowerCase();
                 return this.VueWebList.filter(item => {
                     return (
-                        item.title.toLowerCase().includes(query) ||
-                        item.technology.toLowerCase().includes(query) ||
-                        (item.api && item.api.toLowerCase().includes(query)) || // Check if api exists before using includes
-                        (item.wb_p1 && item.wb_p1.toLowerCase().includes(query)) ||
-                        (item.wb_p2 && item.wb_p2.toLowerCase().includes(query)) ||
-                        (item.wb_p3 && item.wb_p3.toLowerCase().includes(query)) ||
-                        (item.wb_p4 && item.wb_p4.toLowerCase().includes(query)) ||
-                        (item.wb_p5 && item.wb_p5.toLowerCase().includes(query)) ||
-                        (item.wb_p6 && item.wb_p6.toLowerCase().includes(query)) ||
-                        (item.wb_p7 && item.wb_p7.toLowerCase().includes(query))||
-                        (item.wb_p8 && item.wb_p8.toLowerCase().includes(query))||
-                        (item.wb_p9 && item.wb_p9.toLowerCase().includes(query))
+                        item.title.toLowerCase().includes(query)
+                        // item.technology.toLowerCase().includes(query) ||
+                        // (item.api && item.api.toLowerCase().includes(query)) || // Check if api exists before using includes
+                        // (item.wb_p1 && item.wb_p1.toLowerCase().includes(query)) ||
+                        // (item.wb_p2 && item.wb_p2.toLowerCase().includes(query)) ||
+                        // (item.wb_p3 && item.wb_p3.toLowerCase().includes(query)) ||
+                        // (item.wb_p4 && item.wb_p4.toLowerCase().includes(query)) ||
+                        // (item.wb_p5 && item.wb_p5.toLowerCase().includes(query)) ||
+                        // (item.wb_p6 && item.wb_p6.toLowerCase().includes(query)) ||
+                        // (item.wb_p7 && item.wb_p7.toLowerCase().includes(query))||
+                        // (item.wb_p8 && item.wb_p8.toLowerCase().includes(query))||
+                        // (item.wb_p9 && item.wb_p9.toLowerCase().includes(query))
                     );
                 });
             },
