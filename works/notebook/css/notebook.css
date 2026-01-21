@@ -24,13 +24,13 @@ body{
     gap: 10px;/* 同时设置 行间距 和 列间距 为 10px。 */
     margin-bottom: 20px;/*与底部距离*/
 }
-.box-1 input{
+.box-1 textarea{
     flex: 1;/* 表示该项目可以按比例占据 容器中剩余的空间 */
-    padding: 10px;/* 输入框的内边距上下左右均为10px */
+    /* padding: 10px;输入框的内边距上下左右均为10px */
     font-size: 16px;/*输入框内的文字大小*/
     border: 1px solid #ddd;/*输入框的边框*/
     border-radius: 4px;/*输入框的边框圆角*/
-    padding: 10px 20px;/* 内边距上下为10px、左右为20px */
+    /* padding: 10px 20px;内边距上下为10px、左右为20px */
 }
 .box-1 button{
     border: none;/*清除按钮边框*/
@@ -41,18 +41,31 @@ body{
 }
 /*--------------------------------- box-2 ---------------------------------*/
 .box .box-2{
-    height: 30px;
+    height: 100%;
+    padding:  10px 0px;
     display: flex;
     justify-content: space-between;/* 第一个项目与容器的起点对齐，最后一个项目与容器的终点对齐，并将 剩余空间平均分配到相邻项目之间的间距中 */
     align-items: center;/* 垂直居中 */
     font-size: 15px;
     color: #171616;
-    box-shadow: 0px 1px rgba(112, 129, 139, 0.2);/*边框阴影*/
+    border-bottom: 1px solid rgba(112, 129, 139, 0.2);
+    text-align: justify;
+    /* box-shadow: 0px 1px rgba(112, 129, 139, 0.2);边框阴影 */
+    /* background-color: #ddb2b2; */
 }
+.box .overi{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.box .overi::-webkit-scrollbar{
+  display: none;
+}
+
 .box .box-2 button{
+    width: 50px;
     border: none;/*清除按钮边框*/
     background-color: #fff;
-    color: #fff;
+    color: rgba(112, 129, 139, 0.2);
 }
 .box .box-2 button:hover{
     color: red;

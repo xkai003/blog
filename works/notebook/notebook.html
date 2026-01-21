@@ -11,18 +11,21 @@
 </head>
 <body>
     <div class="box" id="app">
-        <h1>阿茂记事本</h1>
+        <h1>小凯记事本</h1>
         <!-- box-1 -->
         <div class="box-1">
             <!--  v-model="todoName"对应的js代码在116行 -->
             <!-- @keyup.enter="add"表示当按下键盘的【enter】键之后也可以执行添加列表功能 -->
-            <input @keyup.enter="add" type="text" placeholder="请输入任务" v-model="todoName">
+             <textarea placeholder="请输入任务。以“<br>”换行" v-model="todoName"></textarea>
+            <!-- <input @keyup.enter="add" type="text" placeholder="请输入任务" v-model="todoName"> -->
             <button @click="add">添加任务</button><!--  @click="add"对应的js代码126~138在行 -->
         </div>
         <!-- box-2 -->
-        <div class="box-2" v-for="(item,index) in list" :key="item.id">
-            <span>{{ index + 1 }}、</span><label>{{item.name}}</label>
-            <button @click="del(item.id)">x</button>
+        <div class="overi">
+            <div class="box-2" v-for="(item,index) in list" :key="item.id">
+                <span>{{ index + 1 }}、</span><label v-html="item.name"></label>
+                <button @click="del(item.id)">x</button>
+            </div>
         </div>
         <!-- box-3 -->
         <div class="box-3" v-show="list.length > 0"> <!-- v-show="list.length > 0"：表示当信息表中没有内容时将隐藏这部分信息-->
