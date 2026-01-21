@@ -5,7 +5,7 @@ const app = new Vue({
         todoName: '', 
         // 添加一个数组来存储数据
         list: JSON.parse(localStorage.getItem("taskList")) || [
-            { id: 1, name: '跑步100米' },
+            { id: 1, name: '跑步100米' }
         ]
     },
     methods: {
