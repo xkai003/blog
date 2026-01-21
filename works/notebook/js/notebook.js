@@ -4,7 +4,9 @@ const app = new Vue({
         // 清空输入框内容
         todoName: '', 
         // 添加一个数组来存储数据
-        list: JSON.parse(localStorage.getItem("taskList"))
+        list: JSON.parse(localStorage.getItem("taskList")) || [
+            { id: 1, name: '跑步100米' },
+        ]
     },
     methods: {
         del(id) {
