@@ -22,6 +22,15 @@
         </div>
         <!-- box-2 -->
         <div class="overi">
+            <div class="Nodata" v-if="this.list.length == 0">
+                <span class="title">说明</span>
+                <span>1、此项目是一个纯前端项目</span>
+                <span>2、您添加的所有任务都是存储在本地</span>
+                <span>3、您可以删除指定任务，也可以一键清空所有任务</span>
+                <span>4、不管用哪一种删除方式，一旦删除任务之后不可恢复</span>
+                <span></span>
+            </div>
+            <!-- <span v-if="this.list.length == 0">1</span> -->
             <div class="box-2" v-for="(item,index) in list" :key="item.id">
                 <span>{{ index + 1 }}、</span><label v-html="item.name"></label>
                 <button @click="del(item.id)">x</button>
