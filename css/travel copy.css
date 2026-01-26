@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+}
+/* 头部 */
+.herd{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+.herd p{
+    font-weight: bold;
+    font-size: 100px;
+    color: rgb(236, 210, 210);
+    font-family:sans-serif;
+}
+.herd span{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* 头部 */
+/* 展览台 */
+.box{
+    width: 100%;
+    padding: 30px 0px ;
+    /* background-color: #e0afaf; */
+}
+.box .center{
+    width: 80%;
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 1000px;
+    width: 70%;
+    margin: 30px auto;
+    /* background-color: #bea0a0; */
+}
+/* .card */
+.box .center .card a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    margin: 0px 30px 0px 30px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+.box .center .round{
+    width: 15px;
+    height: 15px;
+    /* margin-right: -9px; */
+    margin-left: -9px;
+    margin-top: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    float: left;
+}
+.box .center a{
+    text-decoration: none;
+    color: black;
+}
+.box .center a:hover{
+    color: red;
+    border: 1px solid red;
+}
+.box .center .card .small-card{
+    width: 100%;
+    height: 100px;
+    border-left: 4px solid red;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.box .center .centen{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.box .center .centen p{
+    text-align: center;
+}
+/* .card end*/
+/* 展览台 */
+/* 回到顶部按钮样式 */
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: none; /* 默认隐藏 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#backToTop:hover {
+    background-color: #c8f2f8;
+}
+
+
+
+

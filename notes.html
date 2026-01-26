@@ -76,6 +76,7 @@
                 <a href="#" @click.prevent="changeVuePage(vueCurrentPage + 1)" style="font-size: 20px;">&gt;</a>
                 <a href="#" @click.prevent="changeVuePage(vueTotalPages)" :class="{ active: vueCurrentPage === vueTotalPages }" v-if="vueTotalPages > 1">最后一页</a>
             </div>
+            <!-- 分页部分 end-->
         </div>
     </div>
     <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
