@@ -40,6 +40,13 @@ body{
     cursor: pointer/* 光标变成小手 */
 }
 /*--------------------------------- box-2 ---------------------------------*/
+.box .overi{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.box .overi::-webkit-scrollbar{
+  display: none;
+}
 .box .box-2{
     height: 100%;
     padding:  10px 0px;
@@ -53,14 +60,12 @@ body{
     /* box-shadow: 0px 1px rgba(112, 129, 139, 0.2);边框阴影 */
     /* background-color: #ddb2b2; */
 }
-.box .overi{
-    max-height: 300px;
-    overflow-y: auto;
+.box .box-2:hover{
+    background-color: #f5f3f3;
 }
-.box .overi::-webkit-scrollbar{
-  display: none;
+.box .box-2:hover button{
+    background-color: #f5f3f3;
 }
-
 .box .box-2 button{
     width: 50px;
     border: none;/*清除按钮边框*/
