@@ -90,7 +90,58 @@ body {
     left: 0px;
     color: #111;
 }
-/* -----------------------侧边栏导航栏----------------------- */
+/* -----------------------侧边栏导航栏 end----------------------- */
+/* 头部 */
+.herd{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding-top: 60px;
+    /* background-color: rgb(228, 172, 135); */
+}
+.herd p{
+    font-weight: bold;
+    font-size: 60px;
+    color: rgb(247, 166, 166);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.herd span{
+    color: #bfbfbf;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* 头部 */
+/* 图标部分 */
+.iconbox{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.iconbox .icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    fill: #bfbfbf;
+}
+.iconbox .icon:hover{
+    fill: #ac9898;
+}
+.iconbox button{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+}
+.iconbox button .icon{
+    width: 30px;
+    height: 30px;
+    fill: #bfbfbf;
+}
+.iconbox button:hover{
+    cursor: pointer;
+}
+/* 图标部分 end*/
+
 /* 搜索部分 */
 .search-container{
     width: 100%;
