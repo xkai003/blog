@@ -49,8 +49,25 @@
         <div class="nr" id="app"><!-- 这一行的作用是固定展览台一行能容纳几个作品-->
             <!-- 搜索(只在第一页显示搜索框) -->
             <div class="search-container" v-if="this.vueCurrentPage == 1">
-                <input type="text" placeholder="请输入你要搜索的内容" v-model="searchQuery">
+                <div class="inp">
+                    <input type="text" placeholder="请输入你要搜索的内容" v-model="searchQuery">
+                    <button @click="clearinput()">
+                        <svg t="1768740703156" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3772"><path d="M14.08 919.296L919.424 14.208l90.496 90.496L104.704 1009.92z" p-id="3773"></path><path d="M104.704 14.08l905.088 905.216-90.496 90.496L14.08 104.704z" p-id="3774"></path></svg>                    
+                    </button>
+                </div>
+                <div class="classification" v-if="this.vueCurrentPage == 1 && this.searchQuery == ''">
+                    <span>热搜榜：</span>
+                    <button @click="hotsearchwords(`服务器`)">服务器</button>
+                </div>
+                <!-- <p>搜索<span>{{ searchQuery }}</span>，共找到 <span>{{ displayedVueWebList.length }}</span>个文章</p> -->
                 <!--<button type="submit">搜索</button>--> <!-- Optional: Add a search button -->
+                <div class="search-prompt" v-if="this.searchQuery !== ''">
+                    <span>搜索关键词:</span>
+                    <span class="red">{{ searchQuery }}</span>
+                    <span>, 共找到</span>
+                    <span class="red">{{ filteredVueWebList.length }}</span>
+                    <span>条数据</span>
+                </div>
             </div>
             
             <!-- 利用数组的索引值来遍历，数组中可以省略id -->
@@ -226,6 +243,14 @@
                     this.vueCurrentPage = this.vueTotalPages
                 }
             },
+            // 清空输入框
+            clearinput() {
+                this.searchQuery = ''
+            },
+            // 热搜榜
+            hotsearchwords(word) {
+                this.searchQuery = word
+            }
         }
     })
 </script>

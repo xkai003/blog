@@ -145,18 +145,72 @@ body {
 }
 /* 图标部分 end*/
 
-/* 搜索部分 */
+/* 作品及笔记页的搜索部分 */
 .search-container{
+    /* width: 100%; */
+    height: 100px;
+    /* background-color: #f1d2d2; */
+    /* border: 1px solid red; */
+}
+.search-container .inp{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgba(219, 214, 214, 0.63);
+}
+.search-container .inp input{
+    width: 90%;
     height: 50px;
-    background-color: #f1d2d2;
-}
-.search-container input{
-    width: 100%;
-    height: 100%;
     font-size: 20px;
+    border: none;
 }
-/* 搜索部分 end */
+.search-container .inp button{
+    width: 10%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.search-container .inp button .icon{
+    width: 15px;
+    height: 15px;
+    fill: rgba(219, 214, 214, 0.63);
+}
+.search-container .inp button:hover .icon{
+    fill: red;
+}
+.search-prompt{
+    margin-top: 10px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgba(219, 214, 214, 0.63);
+    color: #888;
+}
+.search-prompt .red{
+    margin: 0px 5px 0px 5px;
+    color: red;
+}
+.classification{
+    /* display: flex;
+    flex-direction: row; */
+    max-width: 100%;
+    white-space: nowrap; /* 禁止换行 */
+    overflow-x: auto;  /* 超出部分显示水平滑动条 */
+    color: rgba(189, 177, 177, 0.8);
+}
+.classification button{
+    line-height: 30px;
+    margin-right: 10px;
+    border: none;
+    background-color: #fff;
+    color: rgba(189, 177, 177, 0.8);
+}
+.classification button:hover{
+    cursor: pointer;
+    color: red;
+}
+/* 作品及笔记页的搜索部分 end */
 /* 分页部分 */
 .pagination{
     width: 100%;
