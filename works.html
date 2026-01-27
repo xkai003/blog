@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
     <!-- 引入开发版本的包 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-    
+
 </head>
 <body>
     
@@ -85,7 +85,7 @@
                         {{ item.look }}
                     </span>
                     <span>技术栈：{{ item.technology }}</span>
-                    <span class="api" v-if="item.api">后端api：<a :href="item.api">{{ item.api }}</a></span>
+                    <span class="api" v-if="item.api">后端api：<a :href="item.api">查看详情</a></span>
                     <span v-if="item.instructions">说明：{{ item.instructions }}</span>
                     <a :href="item.label">进入 →</a>
                 </div>

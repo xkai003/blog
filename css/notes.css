@@ -47,6 +47,9 @@
     color: black;
     display: flex;
     flex-direction: column;
+    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
+    white-space: nowrap;
 }
 .item .desc a{
     color: black;
