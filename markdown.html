@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> <!-- 改为中文更贴合场景 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown 笔记</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/markdown.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./js/markdown.js"></script>
+</head>
+<style>
+        /* 全局样式重置 & 基础配置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+
+        /* 核心容器：左右布局（桌面端）/ 上下布局（移动端） */
+        .layout-container {
+            display: flex;
+            flex-direction: row; /* 桌面端左右排列 */
+            width: 100%;
+            min-height: 100vh;
+            max-width: 1400px; /* 限制最大宽度，避免大屏拉伸 */
+            margin: 0 auto;
+        }
+
+        /* 左侧文件列表区域 */
+        .sidebar {
+            width: 280px; /* 桌面端固定宽度 */
+            background-color: #fff;
+            border-right: 1px solid #e2e8f0;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        /* 左侧头部（切换按钮） */
+        .sidebar-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-header button {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #4299e1;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        .sidebar-header button:hover {
+            background-color: #3182ce;
+            box-shadow: 0 2px 8px rgba(66, 153, 225, 0.3);
+        }
+        .sidebar-header button:active {
+            background-color: #2b6cb0;
+            transform: scale(0.98);
+        }
+
+        /* 左侧文件列表容器 */
+        .filelist {
+            flex: 1; /* 占满左侧剩余高度 */
+            padding: 16px 20px;
+            overflow-y: auto; /* 列表过长时滚动 */
+        }
+
+        /* 文件列表项 */
+        .file-item {
+            margin: 6px 0;
+            padding: 10px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #4a5568;
+        }
+        .file-item:hover {
+            color: #2d3748;
+            background-color: #f0f8fb;
+            border-color: #bee3f8;
+            transform: translateY(-1px);
+        }
+        .file-item:active {
+            color: #2b6cb0;
+            background-color: #e8f4f8;
+            transform: translateY(0);
+        }
+        .file-item.active {
+            background-color: #e8f4f8;
+            border-color: #4299e1;
+            color: #2b6cb0;
+            font-weight: 500;
+        }
+
+        /* 右侧Markdown内容区域 */
+        .content-area {
+            flex: 1; /* 占满剩余宽度 */
+            background-color: #fff;
+            min-height: 100vh;
+            overflow-y: auto; /* 内容过长时滚动 */
+        }
+        .markdown-content {
+            padding: 32px 40px;
+            line-height: 1.8;
+            font-size: 16px;
+            max-width: 900px; /* 内容区限制宽度，提升阅读体验 */
+            margin: 0 auto;
+        }
+
+        /* Markdown 内容样式细化 */
+        .markdown-content h1 {
+            font-size: 2rem;
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        .markdown-content h2 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .markdown-content h3 {
+            font-size: 1.25rem;
+            color: #2d3748;
+        }
+        .markdown-content p {
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        .markdown-content pre {
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+        .markdown-content code {
+            background-color: #f7fafc;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            color: #e53e3e;
+        }
+        .markdown-content a {
+            color: #4299e1;
+            text-decoration: none;
+            border-bottom: 1px dotted #4299e1;
+        }
+        .markdown-content a:hover {
+            color: #2b6cb0;
+            border-bottom: 1px solid #2b6cb0;
+        }
+
+        /* 错误提示样式 */
+        .error {
+            color: #e53e3e;
+            padding: 16px;
+            background-color: #fef7fb;
+            border-radius: 8px;
+            border-left: 4px solid #e53e3e;
+            margin: 20px 0;
+        }
+
+        /* 响应式适配：移动端（768px以下） */
+        @media (max-width: 768px) {
+            .layout-container {
+                flex-direction: column; /* 切换为上下布局 */
+            }
+            .sidebar {
+                width: 100%; /* 左侧占满宽度 */
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .filelist {
+                max-height: 200px; /* 移动端列表限制高度，避免占满屏幕 */
+            }
+            .markdown-content {
+                padding: 20px 16px;
+                font-size: 15px;
+                max-width: 100%;
+            }
+            .markdown-content h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+<body>
+    <div class="box">
+        <div class="center">
+            <div class="head">
+                <button onclick="showlist()">文件列表</button>
+                <div class="filelist" id="filelist">
+                    <div id="file-list-container"></div> <!-- 移除多余的a标签，改为div -->
+                </div>
+            </div>
+            <!-- Markdown 内容展示区域 -->
+            <div class="markdown-content" id="markdown-container"></div>
+        </div>
+    </div>
+
+    <!-- 补充必要的JS（确保showlist函数正常工作） -->
+    <script>
+        // 切换文件列表显示/隐藏
+        function showlist() {
+            const filelist = document.getElementById("filelist");
+            if (!filelist) {
+                console.warn("未找到ID为filelist的元素");
+                return;
+            }
+            const currentDisplay = filelist.style.display;
+            if (currentDisplay === "block" || currentDisplay === "") {
+                filelist.style.display = "none";
+            } else {
+                filelist.style.display = "block";
+            }
+        }
+
+        // 保留原有Markdown加载逻辑（如果markdown.js中已定义，可删除）
+        const mdFiles = ['notes.md', 'work.md'];
+        const DEFAULT_FILE = mdFiles[0] || '';
+
+        window.onload = function() {
+            renderFileList();
+            loadMarkdownFile(DEFAULT_FILE);
+        };
+
+        function renderFileList() {
+            const listContainer = document.getElementById('file-list-container');
+            if (!listContainer) return;
+
+            if (mdFiles.length === 0) {
+                listContainer.innerHTML = '<p style="color:#718096; text-align:center; padding:8px;">暂无Markdown文件</p>';
+                return;
+            }
+
+            const fileItems = mdFiles.map(file => 
+                `<div class="file-item" onclick="loadMarkdownFile('${file}')">${file}</div>`
+            ).join('');
+            listContainer.innerHTML = fileItems;
+        }
+
+        async function loadMarkdownFile(filename) {
+            const container = document.getElementById('markdown-container');
+            if (!container) return;
+            if (!filename) {
+                container.innerHTML = '<div class="error">请选择要加载的Markdown文件</div>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`./md/${filename}`);
+                if (!response.ok) {
+                    throw new Error(`文件不存在或加载失败 (${response.status})`);
+                }
+                const markdownText = await response.text();
+                const htmlContent = marked.parse(markdownText);
+                container.innerHTML = htmlContent;
+
+                // 可选：给选中的文件项添加active样式
+                const fileItems = document.querySelectorAll('.file-item');
+                fileItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.textContent === filename) {
+                        item.classList.add('active');
+                    }
+                });
+
+            } catch (error) {
+                container.innerHTML = `<div class="error">加载 ${filename} 失败：${error.message}</div>`;
+                console.error('加载错误:', error);
+            }
+        }
+    </script>
+</body>
+</html>
