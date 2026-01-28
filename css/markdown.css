@@ -17,10 +17,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* 顶部对齐，避免内容居中挤压 */
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
 }
 /* 核心内容容器 */
 .center {
+    /* display: flex;
+    flex-direction: row; */
     width: 100%;
     max-width: 900px; /* 适度加宽，提升阅读宽度 */
     background-color: #fff; /* 白色卡片底，突出内容 */
@@ -30,6 +32,9 @@ body {
 }
 /* 头部区域 */
 .head {
+    /* position: fixed; */
+    width: 100%;
+    max-width: 900px; /* 适度加宽，提升阅读宽度 */
     padding: 16px 24px;
     background-color: #e8f4f8; /* 清新的浅蓝底色，替代原浅黄色 */
     border-bottom: 1px solid #e3f2fd;
@@ -53,10 +58,12 @@ body {
 }
 .head button:active {
     background-color: #2b6cb0; /* 点击更深 */
-    transform: scale(0.98); /* 轻微缩放，模拟按压感 */
+    /* transform: scale(0.98); 轻微缩放，模拟按压感 */
 }
 /* 文件列表容器 */
 .filelist {
+    max-height: 300px;
+    overflow-y: auto;
     display: none;
     padding: 16px 24px;
     background-color: #fafafa;
