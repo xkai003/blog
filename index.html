@@ -11,28 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 </head>
 <body>
-    <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
-    <!-- 触发显示导航栏的按钮 -->
-    <!-- <div id="sidebarToggle" class="toggle-btn">☰</div> -->
-
-    <!-- 隐形的侧边导航栏 -->
-    <!-- <div id="mySidebar" class="sidebar">           
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <img src="./img/头像.jpg" alt="">
-        <a href="./index.html">首页</a>
-        <a href="./works.html">作品</a>
-        <a href="./notes.html">笔记</a>
-        <a href="./travel.html">旅游</a> -->
-        <!--  -->
-        <!-- <a href="http://47.79.40.65:8006/" class="switch" title="切换回Vue版本">
-            <svg t="1763776418514" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5640" ><path d="M96 448h832a32 32 0 0 0 22.6-54.6l-224-224a32 32 0 0 0-45.2 45.2L850.7 384H96a32 32 0 0 0 0 64zM928 576H96a32 32 0 0 0-22.6 54.6l224 224a31.9 31.9 0 0 0 45.2 0 31.9 31.9 0 0 0 0-45.2L173.3 640H928a32 32 0 1 0 0-64z" p-id="5641"></path></svg>
-        </a>
-    </div>
-    <script src="./js/index.js"></script> -->
-<!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
-
-
-
 <!----------------------------------------------------------------------------------- 正文 ----------------------------------------------------------------------------------->
 
 <div class="body">
@@ -54,7 +32,7 @@
       </div>
     </div>
 
-    <div class="center" >
+    <div class="center">
       <!-- Banner -->
       <div class="banner">
         <div class="banner-content">
@@ -91,11 +69,11 @@
             <span class="section-title">精选作品</span>
             <span class="section-desc">Projects</span>
           </div>
-          <a href="./works.html" class="more-link">查看更多（）<span class="arrow">→</span></a>
+          <a href="./works.html" class="more-link">查看更多<span class="arrow">→</span></a>
         </div>
         <div class="scroll-container">
           <!-- <a :href="item.label" v-for="item in workslist.slice(0, 4)" :key="item.id" class="card-link" @click.prevent="workslook(item)"> -->
-          <a :href="item.label" class="card-link">
+          <a href="https://imitateboos.pages.dev/" class="card-link">
             <div class="card">
               <div class="card-img">
                 <img src="./img/index/BOOS.jpg" alt="封面">
@@ -103,6 +81,56 @@
               </div>
               <div class="card-content">
                 <h3 class="card-title">仿BOOS直聘</h3>
+                <div class="card-meta">
+                  <div class="meta-item">
+                    <!-- 精选作品盒子的时间 -->
+                    <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
+                    <span>2025.12-2025.12</span>
+                    <!-- 精选作品盒子的浏览量 -->
+                    <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="card-tags">
+                  <span class="tag">技术栈：HTML、CSS、JavaScript、vue3、vueRouter</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--  -->
+          <a href="https://xiaomi-vue.pages.dev/" class="card-link">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/index/xiaomilogo.jpg" alt="封面">
+                <div class="img-overlay"></div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">仿小米商城</h3>
+                <div class="card-meta">
+                  <div class="meta-item">
+                    <!-- 精选作品盒子的时间 -->
+                    <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
+                    <span>2025.06-2025.07</span>
+                    <!-- 精选作品盒子的浏览量 -->
+                    <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="card-tags">
+                  <span class="tag">技术栈：HTML、CSS、JavaScript、vue3、vueRouter</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--  -->
+          <a href="https://hm-shopping.pages.dev/#/home" class="card-link">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/index/HMshopping.jpg" alt="封面">
+                <div class="img-overlay"></div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">黑马购物商城</h3>
                 <div class="card-meta">
                   <div class="meta-item">
                     <!-- 精选作品盒子的时间 -->
@@ -120,76 +148,26 @@
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link">
+          <a href="https://tiktok-demo.pages.dev/" class="card-link">
             <div class="card">
               <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
+                <img src="./img/index/PasswordManagementSystem.jpg" alt="封面">
                 <div class="img-overlay"></div>
               </div>
               <div class="card-content">
-                <h3 class="card-title">仿BOOS直聘</h3>
+                <h3 class="card-title">密码管理系统</h3>
                 <div class="card-meta">
                   <div class="meta-item">
                     <!-- 精选作品盒子的时间 -->
                     <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                    <span>2025-12-10</span>
+                    <span>2025.09-2025.09</span>
                     <!-- 精选作品盒子的浏览量 -->
                     <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                     <span>10</span>
                   </div>
                 </div>
                 <div class="card-tags">
-                  <span class="tag">技术栈：HTML、CSS、JavaScript、vue3、vueRouter</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--  -->
-          <a :href="item.label" class="card-link">
-            <div class="card">
-              <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
-                <div class="img-overlay"></div>
-              </div>
-              <div class="card-content">
-                <h3 class="card-title">仿BOOS直聘</h3>
-                <div class="card-meta">
-                  <div class="meta-item">
-                    <!-- 精选作品盒子的时间 -->
-                    <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                    <span>2025-12-10</span>
-                    <!-- 精选作品盒子的浏览量 -->
-                    <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
-                    <span>10</span>
-                  </div>
-                </div>
-                <div class="card-tags">
-                  <span class="tag">技术栈：HTML、CSS、JavaScript、vue3、vueRouter</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--  -->
-          <a :href="item.label" class="card-link">
-            <div class="card">
-              <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
-                <div class="img-overlay"></div>
-              </div>
-              <div class="card-content">
-                <h3 class="card-title">仿BOOS直聘</h3>
-                <div class="card-meta">
-                  <div class="meta-item">
-                    <!-- 精选作品盒子的时间 -->
-                    <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                    <span>2025-12-10</span>
-                    <!-- 精选作品盒子的浏览量 -->
-                    <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
-                    <span>10</span>
-                  </div>
-                </div>
-                <div class="card-tags">
-                  <span class="tag">技术栈：HTML、CSS、JavaScript、vue3、vueRouter</span>
+                  <span class="tag">技术栈：vue2、vueRouter、vuex、Node.js、MySQL、axios</span>
                 </div>
               </div>
             </div>
@@ -204,86 +182,86 @@
             <span class="section-title">学习笔记</span>
             <span class="section-desc">Notes</span>
           </div>
-          <a href="./notes.html" class="more-link">查看更多（）<span class="arrow">→</span></a>
+          <a href="./notes.html" class="more-link">查看更多<span class="arrow">→</span></a>
         </div>
         <div class="scroll-container">
           <!-- v-for="item in noteslist.slice(0, 4)" 限制只显示前四条数据 -->
           <!-- <a :href="item.label" v-for="item in noteslist.slice(0, 4)" :key="item.id" class="card-link" @click.prevent="noteslook(item)"> -->
-          <a :href="item.label" class="card-link">
+          <a href="./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html" class="card-link">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
-                <h3 class="card-title">项目部署指南</h3>
+                <h3 class="card-title">本地项目上传到github上并部署到cloudflare</h3>
                 <div class="card-meta">
                     <!-- 学习笔记盒子的时间 -->
                   <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                  <span>2026-2-1</span>
+                  <span>2025.10.11</span>
                   <!-- 学习笔记盒子的浏览量 -->
                   <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" style="margin-left: 5px;" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                   <span>3</span>
                 </div>
                 <div class="card-tags">
-                  <span class="tag secondary">项目部署指南</span>
+                  <span class="tag secondary">vscolod、github、cloudflare</span>
                 </div>
               </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link">
+          <a href="./notes/WindTerm_PM2/WindTerm_PM2.html" class="card-link">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
-                <h3 class="card-title">项目部署指南</h3>
+                <h3 class="card-title">使用 PM2 部署 Vue 应用指南</h3>
                 <div class="card-meta">
                     <!-- 学习笔记盒子的时间 -->
                   <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                  <span>2026-2-1</span>
+                  <span>2025.07.10</span>
                   <!-- 学习笔记盒子的浏览量 -->
                   <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" style="margin-left: 5px;" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                   <span>3</span>
                 </div>
                 <div class="card-tags">
-                  <span class="tag secondary">项目部署指南</span>
+                  <span class="tag secondary">PM2</span>
                 </div>
               </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link">
+          <a href="./notes/pm2+api/pm2+api.html" class="card-link">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
-                <h3 class="card-title">项目部署指南</h3>
+                <h3 class="card-title">使用PM2搭建后端api接口</h3>
                 <div class="card-meta">
                     <!-- 学习笔记盒子的时间 -->
                   <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                  <span>2026-2-1</span>
+                  <span>2025.07.10</span>
                   <!-- 学习笔记盒子的浏览量 -->
                   <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" style="margin-left: 5px;" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                   <span>3</span>
                 </div>
                 <div class="card-tags">
-                  <span class="tag secondary">项目部署指南</span>
+                  <span class="tag secondary">PM2、MySQL</span>
                 </div>
               </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link">
+          <a href="https://md-myblog.pages.dev/" class="card-link">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
-                <h3 class="card-title">项目部署指南</h3>
+                <h3 class="card-title">MarkDown笔记</h3>
                 <div class="card-meta">
                     <!-- 学习笔记盒子的时间 -->
                   <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                  <span>2026-2-1</span>
+                  <span>2025.07.10</span>
                   <!-- 学习笔记盒子的浏览量 -->
                   <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" style="margin-left: 5px;" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                   <span>3</span>
                 </div>
                 <div class="card-tags">
-                  <span class="tag secondary">项目部署指南</span>
+                  <span class="tag secondary">MarkDown笔记</span>
                 </div>
               </div>
             </div>
@@ -298,72 +276,59 @@
             <span class="section-title">旅行足迹</span>
             <span class="section-desc">Travel</span>
           </div>
-          <a href="./travel.html" class="more-link">查看更多（）<span class="arrow">→</span></a>
+          <a href="./travel.html" class="more-link">查看更多<span class="arrow">→</span></a>
         </div>
         <div class="scroll-container">
           <!-- v-for="item in travellist.slice(0, 4)" 限制只显示前四条数据 -->
           <!-- <a :href="item.label" v-for="item in travellist.slice(0, 4)" :key="item.id" class="card-link travel-link"> -->
-          <a :href="item.label" class="card-link travel-link">
+          <a href="" class="card-link travel-link">
             <div class="card travel-card">
               <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
+                <img src="https://www.yuexiu.gov.cn/img/0/764/764154/8664487.png" alt="封面">
               </div>
               <div class = "travel-info">
-              <h3 class="location">地名</h3>
-              <p class="city">城市</p>
-                <p class="station">路线</p>
+              <h3 class="location">越秀公园</h3>
+              <p class="city">广州</p>
+                <p class="station">地铁越秀公园站B1口</p>
                 </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link travel-link">
+          <a href="" class="card-link travel-link">
             <div class="card travel-card">
               <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
+                <img src="https://www.yuexiu.gov.cn/img/0/764/764782/8665100.png" alt="封面">
               </div>
               <div class = "travel-info">
-              <h3 class="location">地名</h3>
-              <p class="city">城市</p>
-                <p class="station">路线</p>
+              <h3 class="location">圣心大教堂</h3>
+              <p class="city">广州</p>
+                <p class="station">地铁一德路站B口</p>
                 </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link travel-link">
+          <a href="" class="card-link travel-link">
             <div class="card travel-card">
               <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
+                <img src="https://aos-comment.amap.com/B0FFMEK0R5/comment/e9ede5b444706eec53044ca4c14cd049_2048_2048_80.jpg" alt="封面">
               </div>
               <div class = "travel-info">
-              <h3 class="location">地名</h3>
-              <p class="city">城市</p>
-                <p class="station">路线</p>
+              <h3 class="location">粤海关</h3>
+              <p class="city">广州</p>
+                <p class="station">地铁8号线文化公园站A口</p>
                 </div>
             </div>
           </a>
           <!--  -->
-          <a :href="item.label" class="card-link travel-link">
+          <a href="" class="card-link travel-link">
             <div class="card travel-card">
               <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
+                <img src="https://huacheng.gz-cmc.com/upload/news/image/2022/12/01/38c405194bd4459783bdc76bccea358a.jpeg" alt="封面">
               </div>
               <div class = "travel-info">
-              <h3 class="location">地名</h3>
-              <p class="city">城市</p>
-                <p class="station">路线</p>
-                </div>
-            </div>
-          </a>
-          <!--  -->
-          <a :href="item.label" class="card-link travel-link">
-            <div class="card travel-card">
-              <div class="card-img">
-                <img src="./img/index/BOOS.jpg" alt="封面">
-              </div>
-              <div class = "travel-info">
-              <h3 class="location">地名</h3>
-              <p class="city">城市</p>
-                <p class="station">路线</p>
+              <h3 class="location">广东省博物馆</h3>
+              <p class="city">广州</p>
+                <p class="station">地铁apm号线大剧院站A口</p>
                 </div>
             </div>
           </a>
