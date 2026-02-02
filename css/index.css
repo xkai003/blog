@@ -476,12 +476,52 @@
     padding-right: 0;
   }
 }
-
+/* 工具栏 */
+.home-tool-bar{
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #cac9c9;
+  overflow: hidden;
+}
+.home-tool-bar button{
+  border: none;
+  background-color: white;
+}
+.home-tool-bar button:hover{
+  cursor: pointer;
+}
+.home-tool-bar .home-tool-bar-box{
+  padding: 5px;
+  border-bottom: 1px solid #cac9c9;
+}
+.desc {
+    opacity: 0;  /*默认隐藏 */
+    position: fixed; /* 绝对定位，基于 li 的相对定位 */
+    right: 60px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    background-color: #f3f2f2;
+}
+.home-tool-bar .home-tool-bar-box:hover .desc {
+    opacity: 1; /* 悬停时显示 */
+    visibility: visible;
+}
 /* 页脚 */
 .indexfoot {
-    /* margin: 0 auto; */
-    line-height: 30px;
-    font-size: 15px;
-    color: #cac9c9;
-    text-align: center;
+  /* margin: 0 auto; */
+  line-height: 30px;
+  font-size: 15px;
+  color: #cac9c9;
+  text-align: center;
 }

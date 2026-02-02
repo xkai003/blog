@@ -1,0 +1,69 @@
+.chat{
+    width: 100%;
+    height: 900px;
+    margin-top: 30px;
+    /* border:1px solid red */
+}
+.chat header, nav, footer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.chat  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0077cc;
+}
+  
+.chat .chat-box {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    height: 600px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+  
+.chat .bot {
+    background-color: #e0f7fa;
+    padding: 5px;
+    border-radius: 5px;
+}
+  
+.chat .user {
+    background-color: #ffe0b2;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: right;
+}
+.chat input{
+    margin-left: 20%;
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 30px;
+}
+.chat button{
+    width: 100px;
+    height: 43px;
+    border-radius: 20px;
+}
+.chat button:hover{
+    background-color: #a9ebf7;
+    cursor: pointer;
+}
+.chat .rmht{
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.chat .rmht div{
+    width: 100px;
+    float: left;
+}
+.chat .rmht .card{
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fac1c1;
+}

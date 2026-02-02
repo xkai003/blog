@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <link rel="stylesheet" href="./robot.css">
+</head>
+<body>
+    <div class="chat">
+        <header><h1>智能机器人聊天</h1></header>
+        <main> 
+            <div class="chat-box" id="chatBox">
+                <p class="bot">你好，我是你的智能助手小凯！</p>
+            </div>
+            <input type="text" id="userInput" placeholder="想和我聊点什么呢...">
+            <button onclick="sendMessage()">发送</button>
+            <div class="rmht">
+                <div><span>热门问答:</span></div>
+                <div class="card"><span>你好</span></div>
+                <div class="card"><span>你是谁</span></div>
+                <div class="card"><span>我是谁</span></div>
+                <div class="card"><span>你真可爱</span></div>
+                <div class="card"><span>你会什么</span></div>
+                <div class="card"><span>再见</span></div>
+            </div>
+        </main>
+    </div>
+    <!-- js -->
+    <script src="./robot.js"></script>
+</body>
+</html>
