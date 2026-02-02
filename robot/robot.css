@@ -3,6 +3,8 @@
     height: 900px;
     margin-top: 30px;
     /* border:1px solid red */
+    display: flex;
+    flex-direction: column;
 }
 .chat header, nav, footer {
     text-align: center;
@@ -17,24 +19,31 @@
   
 .chat .chat-box {
     border: 1px solid #ccc;
-    background: #fff;
-    padding: 10px;
+    /* background: #fff; */
+    /* padding: 10px; */
     height: 600px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
+    /* overflow-y: scroll; */
+    /* margin-bottom: 10px; */
+    display: flex;
+    flex-direction: column;
 }
-  
-.chat .bot {
-    background-color: #e0f7fa;
-    padding: 5px;
-    border-radius: 5px;
-}
-  
-.chat .user {
-    background-color: #ffe0b2;
-    padding: 5px;
-    border-radius: 5px;
+.chat .chat-a{
+    width: 100%;
     text-align: right;
+    background-color: #f8adad;
+}
+.chat .user {
+    width: 300px;
+    background-color: #9bee4d;
+    padding: 10px;
+    border-radius: 5px;
+}
+.chat .bot {
+    width: 300px;
+    margin-top: 20px;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
 }
 .chat input{
     margin-left: 20%;

@@ -1,28 +1,45 @@
 function sendMessage() {
-    const input = document.getElementById('userInput');
-    const chatBox = document.getElementById('chatBox');
-  
-    if (input.value.trim() !== "") {
-      const userMsg = document.createElement('p');
-      userMsg.className = 'user';
-      userMsg.textContent = "我：" + input.value;
-      chatBox.appendChild(userMsg);
-  
-      const botMsg = document.createElement('p');
-      botMsg.className = 'bot';
-      botMsg.innerHTML = "机器人：" + getBotReply(input.value);
-      chatBox.appendChild(botMsg);
-  
-      input.value = "";
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
+  const input = document.getElementById('userInput');
+  const chatBox = document.getElementById('chatBox');
+
+  if (input.value.trim() !== "") {
+    const userMsg = document.createElement('p');
+    userMsg.className = 'user';
+    userMsg.textContent = "我：" + input.value;
+    chatBox.appendChild(userMsg);
+
+    const botMsg = document.createElement('p');
+    botMsg.className = 'bot';
+    botMsg.innerHTML = "机器人：" + getBotReply(input.value);
+    chatBox.appendChild(botMsg);
+
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
   }
-  
+}
+const works = [
+  {
+    label:'https://imitateboos.pages.dev/',
+    look: "0",
+    title:"仿BOOS直聘", 
+    time:"2025.12-2025.12", 
+    technology:"HTML、CSS、JavaScript、vue3、vueRouter"
+  },
+  {
+    label:'https://xiaomi-vue.pages.dev/',
+    look: "0",
+    title:"仿小米商城", 
+    time:"2025.06-2025.07", 
+    technology:"HTML、CSS、JavaScript、vue3、vueRouter"
+  },
+]
   function getBotReply(msg) {
     if (msg.includes("你好")) return "你好呀！很高兴见到你。";
-    if (msg.includes("你是谁")) return "我是你的智能机器人助手呀。";
+    if (msg.includes("你是谁")) return "我是你的语音助手小凯呀。";
     if (msg.includes("我是谁")) return "你的唐茂凯呀。哦对了，你还告诉我你是广州华商职业学院23级网络技术1班的学生呢。哈哈^-^";
     if (msg.includes("你真可爱")) return "哈哈，谢谢你的夸奖^-^，我觉得你也很棒。今天有什么新鲜事和我分享吗？";
+    if (msg.includes("帮我查一下作品仿BOOS直聘的所有信息")) return "好的，这就帮你查询";
+    if(msg.includes("这个博客里一共有几个作品")) return `一共有<span style="color: red; margin: 5px">${works.length}</span>条作品`;
     if (msg.includes("你会什么")) return "我会的东西可多着呢^-^<br/>" +
     "📚 知识问答：能为你提供科技、文化、历史等多领域的信息，解答各种问题。<br/>" +
     "🛠 生活助手：可以控制智能家居，还能设置闹钟、提醒，也能查询天气、播放音乐。<br/>" +
@@ -32,4 +49,3 @@ function sendMessage() {
     if (msg.includes(".")) return "第一行内容<br/>" 
     return "对不起，我还在学习中，请再试一次。";
   }
-  
