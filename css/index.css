@@ -502,17 +502,42 @@
   padding: 5px;
   border-bottom: 1px solid #cac9c9;
 }
-.desc {
-    opacity: 0;  /*默认隐藏 */
+.desc{
+    opacity: 0;  /* 默认隐藏 */
     position: fixed; /* 绝对定位，基于 li 的相对定位 */
-    right: 60px;
+    right: 70px;
     padding: 8px;
     border-radius: 5px;
     text-align: center;
     color: black;
     font-size: 15px;
     background-color: #f3f2f2;
+    display: flex;
+    flex-direction: row;
 }
+/* ---- 三角形 ---- */
+/* 通用样式，方便展示 */
+.triangle-container {
+  position: fixed; /* 绝对定位*/
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  /* background-color: #63ee39; */
+}
+/* 基础三角形样式 */
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+/* 向右的三角形 */
+.triangle-right {
+  margin-top: -5px;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent #f3f2f2;
+}
+/* ---- 三角形 end ---- */
+/*  */
 .home-tool-bar .home-tool-bar-box:hover .desc {
     opacity: 1; /* 悬停时显示 */
     visibility: visible;
