@@ -503,7 +503,8 @@
   border-bottom: 1px solid #cac9c9;
 }
 .desc{
-    opacity: 0;  /* 默认隐藏 */
+    opacity: 0; /* 初始隐藏 */
+    visibility: hidden; /* 防止隐藏时占用空间 */
     position: fixed; /* 绝对定位，基于 li 的相对定位 */
     right: 70px;
     padding: 8px;
@@ -514,6 +515,7 @@
     background-color: #f3f2f2;
     display: flex;
     flex-direction: row;
+    /* transition: opacity 0.5s ease; 平滑显示/隐藏 */
 }
 /* ---- 三角形 ---- */
 /* 通用样式，方便展示 */
