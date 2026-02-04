@@ -30,7 +30,7 @@
     <script src="./js/index.js"></script>
 <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
 <div class="body">
-    <div class="travel-container">
+    <div class="travel-container"  id="app">
         <div class="header">
             <h1>旅行足迹</h1>
             <p>世界那么大，我想去看看</p>
@@ -50,11 +50,10 @@
                 <span class="stat-label">国家</span>
             </div>
         </div>
-
-        <div class="travel-grid" id="app">
-            <div class="travel-card" v-for="item in travellist" :key="item.id">
+        <a href="" class="travel-grid"  onclick="alert(`你好`)">
+            <div class="travel-card" v-for="item in travellist">
                 <div class="place-image">
-                    <img :src="item.image" alt="">
+                    <img :src="item.image" alt="封面">
                 </div>
                 <div class="place-info">
                     <h3>{{ item.name }}</h3>
@@ -63,7 +62,7 @@
                     <p class="description">{{ item.description }}</p>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 <script>
@@ -86,35 +85,35 @@
             ],
         },
         computed: {
-        vueTotalPages() {
-            return Math.ceil(this.CartList.length / this.itemsPerPage);
+            vueTotalPages() {
+                return Math.ceil(this.CartList.length / this.itemsPerPage);
+            },
+            
+            staticTotalPages() {
+                return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
+            },
+            displayedVueWebList() {
+                const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
+                const end = start + this.itemsPerPage;
+                return this.CartList.slice(start, end);
+            },
         },
-        
-        staticTotalPages() {
-            return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
-        },
-        displayedVueWebList() {
-            const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
-            const end = start + this.itemsPerPage;
-            return this.CartList.slice(start, end);
-        },
-    },
-    methods: {
-        // 上下页切换动作
-        changeVuePage(page) {
-            this.vueCurrentPage = page;
-            // 最小只能翻到第一页
-            if(this.vueCurrentPage < 1){
-                alert("已经是第一页了")
-                return this.vueCurrentPage = 1
-            }
-            // 最大只能翻到最后一页
-            if(this.vueCurrentPage > this.vueTotalPages){
-                alert("已经是最后一页了")
-                this.vueCurrentPage = this.vueTotalPages
-            }
-        },
-    }
+        methods: {
+            // 上下页切换动作
+            changeVuePage(page) {
+                this.vueCurrentPage = page;
+                // 最小只能翻到第一页
+                if(this.vueCurrentPage < 1){
+                    alert("已经是第一页了")
+                    return this.vueCurrentPage = 1
+                }
+                // 最大只能翻到最后一页
+                if(this.vueCurrentPage > this.vueTotalPages){
+                    alert("已经是最后一页了")
+                    this.vueCurrentPage = this.vueTotalPages
+                }
+            },
+        }
     })
 </script>
 </body>
