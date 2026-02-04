@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>图像上传管理器</h1>
+
+  <input type="file" id="imageInput">
+  <button onclick="uploadImage()">上传图片</button>
+  <p id="uploadMessage"></p>
+
+  <h2>图片列表</h2>
+  <div class="image-list" id="imageList">
+    <!-- Images will be displayed here -->
+  </div>
+
+  <script>
+    async function uploadImage() {
+      const imageInput = document.getElementById('imageInput');
+      const uploadMessage = document.getElementById('uploadMessage');
+      const imageList = document.getElementById('imageList');
+
+      const file = imageInput.files[0];
+      if (!file) {
+        uploadMessage.textContent = "请选择一张图片。";
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('image', file);
+
+      try {
+        const response = await fetch('http://localhost:3000/upload', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await response.json();
+        uploadMessage.textContent = data.message; // Display success/error
+        imageInput.value = ''; // Clear the file input
+
+        await loadImages();
+      } catch (error) {
+        console.error('Upload failed:', error);
+        uploadMessage.textContent = "";
+      }
+    }
+
+    async function loadImages() {
+      const imageList = document.getElementById('imageList');
+      imageList.innerHTML = '';
+
+      try {
+        const response = await fetch('http://localhost:3000/upload');
+        const imageUrls = await response.json();
+
+        imageUrls.forEach(url => {
+          const img = document.createElement('img');
+          img.src = url;
+          imageList.appendChild(img);
+        });
+
+      } catch (error) {
+        console.error('加载图像时出错。', error);
+        imageList.textContent = "加载图像时出错。";
+      }
+    }
+
+    // Load images on page load
+    window.onload = loadImages;
+
+  </script>
+</body>
+</html>

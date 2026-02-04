@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上传文件</title>
+</head>
+<style>
+  .box{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    /* background-color: #f8e6e6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box .center{
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(197, 196, 196);
+    display: flex;
+    flex-direction: column;
+    box-shadow:1px 20px 20px -2px rgb(197, 196, 196);
+    background-color: #f7f4f4;
+  }
+  .box .center .top{
+    height: 50%;  /*平方的高度百分比*/
+  }
+  /*================================= 上传区域样式 =================================*/
+    .box .center .top {
+      height: 50%;
+      border-radius: 12px;
+      border: 2px dashed #d0d0d0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .box .center .top:hover {
+      border-color: #667eea;
+      background-color: #f0f5ff;
+    }
+
+    /* 隐藏原生input，使用自定义样式 */
+    .box .center .top input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    /* 上传提示文字 */
+    .upload-hint {
+      position: absolute;
+      text-align: center;
+      color: #666;
+      z-index: 1;
+    }
+
+    .upload-hint i {
+      font-size: 48px;
+      margin-bottom: 10px;
+      display: block;
+      color: #667eea;
+    }
+
+    .upload-hint p {
+      font-size: 16px;
+    }
+/*================================= 上传区域样式 =================================*/
+  /*  */
+  .box .center .promptword{
+    height: 5%; /*平方的高度百分比*/
+    color: red;
+    /* background-color: #f7e4d7; */
+  }
+  /*  */
+  .box .center .food{
+    height: 10%; /*平方的高度百分比*/
+    /* background-color: #f7d9d9; */
+  }
+  .box .center .food button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  .box .center .food button:hover{
+    cursor: pointer;
+    background: linear-gradient(135deg, #3c5ffc 0%, #a14df5 100%);
+  }
+  /*  */
+  .box .center .imagebox{
+    height: 36%;  /*平方的高度百分比*/
+    /* border: 1px solid #fff; */
+    /* border-radius: 15px; */
+    overflow: hidden;
+  }
+  .box .center .imagebox .title{
+    font-size: 20px;
+    line-height: 35px;
+    color: rgb(182, 180, 180);
+  }
+  .box .center .imagebox .imagelist{
+    height: 80%;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f1efef;
+  }
+  .box .center .imagebox .filenumber{
+    background-color: rgb(182, 180, 180);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    color: red;
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="center">
+      <div class="top">
+        <!-- 上传区域 -->
+        <div class="upload-hint">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>点击或拖拽文件到此处上传</p>
+          <p style="font-size: 12px; color: #999; margin-top: 5px;">支持jpg、png、gif等图片格式</p>
+          <p id="UploadHint"></p>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" multiple>
+      </div>
+      <div class="food">
+        <button onclick="uploadImage()">确认上传</button>
+      </div>
+      <div class="promptword">
+        <span id="uploadMessage"></span>
+      </div>
+      <div class="imagebox">
+        <span class="title">文件列表</span>
+        <span id="filenumber" class="filenumber"></span>
+        <div class="imagelist">
+          <!-- 渲染图片列表区域 -->
+          <div class="list" id="imageList">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 页面加载时初始化
+window.onload = function() {
+  const UploadHint = document.getElementById('UploadHint');
+  const imageInput = document.getElementById('imageInput');
+  UploadHint.innerHTML = `已选择的图片是：${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+};
+    // 初始化文件选择监听（需在页面加载时调用）
+function initFileInput() {
+  const UploadHint = document.getElementById('UploadHint');
+  const imageInput = document.getElementById('imageInput');
+  UploadHint.innerHTML = `已选择的图片是：${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+}
+// 加载/显示已选择的文件列表
+async function loadImages() {
+  const uploadMessage = document.getElementById('uploadMessage');
+  const listContainer = document.getElementById('selectedFilesList');
+  
+  // 清空容器
+  listContainer.innerHTML = '';
+
+  if (selectedFiles.length === 0) {
+    // 没有选择文件时的提示
+    UploadHint.textContent = ""; // 清空上传提示
+    listContainer.innerHTML = '<span style="color: #999;">暂无选择的图片</span>';
+    return;
+  }
+
+  // 显示已选择的文件数量提示
+  UploadHint.textContent = `已选择 ${selectedFiles.length} 张图片`;
+  UploadHint.style.color = "#52c41a"; // 绿色提示
+
+  // 遍历显示每个文件的信息
+  selectedFiles.forEach((file, index) => {
+    // 格式化文件大小（B -> KB/MB）
+    const fileSize = file.size < 1024 * 1024 
+      ? `${(file.size / 1024).toFixed(2)} KB` 
+      : `${(file.size / (1024 * 1024)).toFixed(2)} MB`;
+    
+    // 创建文件信息项
+    const fileItem = document.createElement('div');
+    fileItem.style.marginTop = '5px';
+    fileItem.style.padding = '3px 5px';
+    fileItem.style.backgroundColor = '#f5f5f5';
+    fileItem.style.borderRadius = '3px';
+    fileItem.innerHTML = `
+      <span>${index + 1}. ${file.name}</span>
+      <span style="margin-left: 10px; color: #999;">${fileSize}</span>
+      <span style="margin-left: 10px; color: #999;">${file.type.split('/')[1].toUpperCase()}</span>
+    `;
+    
+    listContainer.appendChild(fileItem);
+  });
+}
+// 
+    async function uploadImage() {
+      const UploadHint = document.getElementById('UploadHint');
+      const imageInput = document.getElementById('imageInput');
+      const uploadMessage = document.getElementById('uploadMessage');
+      // const imageList = document.getElementById('imageList');
+      const file = imageInput.files[0];
+      if (!file) {
+        uploadMessage.textContent = "请选择一张图片。";
+        return;
+      }
+      if (UploadHint) {
+        UploadHint.textContent = `已选择的图片是：${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+      }
+      const formData = new FormData();
+      formData.append('image', file);
+
+      // PendingUpload.innerHTML = file
+      try {
+        const response = await fetch('http://localhost:3000/upload', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await response.json();
+        uploadMessage.textContent = data.message; // Display success/error
+        imageInput.value = '';
+
+        await loadImages();
+      } catch (error) {
+        console.error('Upload failed:', error);
+        uploadMessage.textContent = "";
+      }
+    }
+
+    // 前端修正后的 loadImages 函数
+async function loadImages() {
+  const imageList = document.getElementById('imageList');
+  imageList.innerHTML = ''; // 清空现有内容
+
+  try {
+    // 关键修正：1. 路径从 /images 改为 /upload；2. 保持 3000 端口
+    const response = await fetch('http://localhost:3000/upload', {
+      method: 'GET',
+      credentials: 'include', // 配合后端的 Allow-Credentials
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`请求失败，状态码：${response.status}`);
+    }
+
+    const imageUrls = await response.json();
+
+    if (imageUrls.length === 0) {
+      imageList.innerHTML = '<div style="color: #999; padding: 10px;">暂无已上传的图片</div>';
+      uploadMessage.textContent = "暂无上传文件";
+      uploadMessage.style.color = "#666";
+      return;
+    }
+
+    // 渲染图片列表
+    imageUrls.forEach(url => {
+      // 图片列表
+      const imgContainer = document.createElement('div');
+      imgContainer.style.padding = '10px 10px';
+      imgContainer.style.borderBottom  = '1px solid #666';
+      imgContainer.style.height = '50px'
+      
+      // 图片
+      const img = document.createElement('img');
+      img.src = url;
+      img.style.width = '100px';
+      img.style.height = '100%';
+      img.style.border = '1px solid red';
+      img.style.borderRadius = '15px';
+      // img.style.borderRadius = '6px';
+      // img.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+      
+      imgContainer.appendChild(img);
+      imageList.appendChild(imgContainer);
+    });
+
+    const filenumber = document.getElementById("filenumber")
+    filenumber.textContent = imageUrls.length
+    // uploadMessage.textContent = `成功加载 ${imageUrls.length} 张图片`;
+    // uploadMessage.style.color = "#52c41a";
+
+  } catch (error) {
+    console.error('加载图像时出错：', error);
+    imageList.innerHTML = `<div style="color: #ff4d4f; padding: 10px;">加载失败：${error.message}</div>`;
+    uploadMessage.textContent = "图片列表加载失败";
+    uploadMessage.style.color = "#ff4d4f";
+  }
+}
+// Load images on page load
+    window.onload = loadImages;
+ 
+  </script>
+</body>
+</html>
