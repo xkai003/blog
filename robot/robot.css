@@ -17,6 +17,7 @@
   
 .chat .chat-box {
     border: 1px solid #ccc;
+    padding-bottom: 15px;
     height: 600px;
     overflow-y: auto;
     display: flex;
