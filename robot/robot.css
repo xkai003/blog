@@ -28,17 +28,29 @@
     background-color: #f8adad;
 }
 .chat .user {
+    margin-top: 15px;
     width: 300px;
-    background-color: #9bee4d;
-    padding: 10px;
+    /* background-color: #9bee4d; */
     border-radius: 5px;
+}
+.chat .user .icon{
+    width: 30px;
+    height: 30px;
+    fill: #9bee4d;;
+    margin-right: 20px;
 }
 .chat .bot {
     width: 300px;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #e0f7fa;
     padding: 10px;
     border-radius: 5px;
+}
+.chat .bot .icon{
+    width: 30px;
+    height: 30px;
+    fill: #14cff0;
+    margin-right: 20px;
 }
 .chat button:hover{
     background-color: #a9ebf7;
