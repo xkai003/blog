@@ -42,7 +42,7 @@ const works = [
   { 
     label:'https://tiktok-demo.pages.dev/',
     look: "0",
-    title:"密码管理项目", 
+    title:"密码管理系统", 
     time:"2025.09-2025.09", 
     technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
     api: "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
