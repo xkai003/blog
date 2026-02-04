@@ -155,16 +155,22 @@
 }
 /* --- marquee 跑马灯 --- */
 .marquee-container {
-  width: 100%; /* Adjust as needed.  This controls the overall width of the visible marquee area. */
-  overflow: hidden; /* Important to hide the text outside the visible area */
-  position: relative; /*  Needed for absolutely positioned elements within */
-  white-space: nowrap; /* Keep the text on a single line */
+  width: 100%;
+  overflow: hidden; /* 超出部分隐藏 */
+  position: relative; /*  绝对定位 */
+  white-space: nowrap; /* 禁止文本换行 */
 }
 .marquee-text {
-  color:red;
-  display: inline-block; /* Allows setting width and height */
-  padding-left: 100%;   /* Initial offset equal to the width of the container */
-  animation: marquee 15s linear infinite; /* Adjust the duration (15s) for speed */
+  color: red;
+  display: inline-block; /* 保持文字一行，且能被动画位移 */
+  white-space: nowrap; /* 关键：禁止文字换行 */
+  padding-left: 100%; /* 初始位置：文字从容器右侧外开始 */
+  animation: marquee 15s linear infinite; /* 15秒匀速滚动，无限循环 */
+}
+
+/* 鼠标悬停停止滚动 */
+.marquee-text:hover {
+  animation-play-state: paused; /* 推荐用 paused 而非 none，恢复时更流畅 */
 }
 /* 跑马灯动画效果 */
 @keyframes marquee {
