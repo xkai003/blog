@@ -17,7 +17,7 @@
   
 .chat .chat-box {
     border: 1px solid #ccc;
-    padding-bottom: 15px;
+    padding: 20px;
     height: 600px;
     overflow-y: auto;
     display: flex;
@@ -29,8 +29,9 @@
     background-color: #f8adad;
 }
 .chat .user {
+    white-space: nowrap;
     margin-top: 15px;
-    width: 300px;
+    /* width: 300px; */
     /* background-color: #9bee4d; */
     border-radius: 5px;
 }
@@ -45,13 +46,13 @@
     margin-top: 15px;
     background-color: #e0f7fa;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .chat .bot .icon{
     width: 30px;
     height: 30px;
     fill: #14cff0;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 .chat button:hover{
     background-color: #a9ebf7;
