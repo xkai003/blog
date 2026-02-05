@@ -143,50 +143,51 @@ const works = [
   }
 ];
 const notes = [
+  // label 的链接前面要加上 https://blog-e3z.pages.dev/notes
   { 
-      label:'./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
+      label:'https://blog-e3z.pages.dev/notes/vscolod_github+cloudflare/vscolod_github+cloudflare',
       title:"本地项目上传到github上并部署到cloudflare", 
       time:"2025.10.11", 
       technology:"vscolod、github、cloudflare"
   },
   { 
-      label:'./notes/WindTerm_PM2/WindTerm_PM2.html',
+      label:'https://blog-e3z.pages.dev/notes/WindTerm_PM2/WindTerm_PM2',
       title:"使用 PM2 部署 Vue 应用指南", 
       time:"2025.07.10", 
       technology:"PM2"
   },
   { 
-      label:'./notes/pm2+api/pm2+api.html',
+      label:'https://blog-e3z.pages.dev/notes/pm2+api/pm2+api.html',
       title:"使用PM2搭建后端api接口", 
       time:"2025.07.10", 
       technology:"PM2、MySQL" 
   },
   { 
-      label:'./notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
+      label:'https://blog-e3z.pages.dev/notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
       title:"vue项目在服务器临时开启服务", 
       time:"2025.07.10", 
       technology:"PM2"
   },
   { 
-      label:'./notes/vue+MySQL/vue+MySQL.html',
+      label:'https://blog-e3z.pages.dev/notes/vue+MySQL/vue+MySQL.html',
       title:"Vue项目连接数据库(本地)", 
       time:"2025.07.10", 
       technology:"vue、MySQL"
   },
   { 
-      label:'./notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
+      label:'https://blog-e3z.pages.dev/notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
       title:"Nginx托管静态网页", 
       time:"2025.07.10", 
       technology:"Nginx"
   },
   { 
-      label:'./notes/Visual_C++/Visual_C++.html',
+      label:'https://blog-e3z.pages.dev/notes/Visual_C++/Visual_C++.html',
       title:"Visual C++ 6.0 操作步骤", 
       time:"2025.07.10", 
       technology:"Visual C++ 6.0 操作步骤"
   },
   { 
-      label:'./notes/eclips_JavaWeb/eclips_JavaWeb.html',
+      label:'https://blog-e3z.pages.dev/notes/eclips_JavaWeb/eclips_JavaWeb.html',
       title:"eclips创建JavaWeb项目流程", 
       time:"2025.07.10", 
       technology:"eclips创建JavaWeb项目流程"
