@@ -69,6 +69,7 @@
 .travel-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .place-image {
@@ -114,4 +115,50 @@
     color: #555;
     line-height: 1.6;
     margin: 0;
+}
+/* window */
+.window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.window .center{
+    width: 60%;
+    height: 70%;
+    background-color: #fff;
+    padding: 20px;
+    /* border: 3px solid white; */
+    display: flex;
+    flex-direction: column;
+}
+.window .center .windowhead{
+    width: 100%;
+    text-align: center;
+    /* background-color: #ffdbdb; */
+}
+.window .center .windowhead .title{
+    font-size: 25px;
+}
+.window .center .windowhead button{
+    width: 30px;
+    height: 40px;
+    font-size: 25px;
+    background-color: #fff;
+    float: right;
+    text-align: center;
+    border: none;
+}
+.window .center .windowhead button:hover{
+    color: red;
+    cursor: pointer;
+}
+.window .center .windowimg img{
+    width: 100%;
+    height: 600px;
 }

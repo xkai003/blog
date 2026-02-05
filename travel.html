@@ -50,8 +50,9 @@
                 <span class="stat-label">国家</span>
             </div>
         </div>
-        <a href="" class="travel-grid"  onclick="alert(`你好`)">
-            <div class="travel-card" v-for="item in travellist">
+        <div class="travel-grid">
+            <!-- <div class="travel-card" v-for="item in travellist"  onclick="Closewindow()"> -->
+            <div class="travel-card" v-for="item in travellist"  @click="openwindow(item)">
                 <div class="place-image">
                     <img :src="item.image" alt="封面">
                 </div>
@@ -62,13 +63,27 @@
                     <p class="description">{{ item.description }}</p>
                 </div>
             </div>
-        </a>
+        </div>
+        <div class="window" v-show="window">
+            <div class="center">
+                <div class="windowhead">
+                    <span class="title">{{ windowname }}</span>
+                    <button @click="closewindow()">X</button>
+                </div>
+                <div class="windowimg">
+                    <img :src="windowimg" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     const app = new Vue({
         el: '#app',
         data:{
+            window: false,
+            windowname: '',
+            windowimg: '',
             itemsPerPage: 4, // 一页只能有四个
             vueCurrentPage: 1, // 当前页码
             staticCurrentPage: 1,
@@ -113,6 +128,16 @@
                     this.vueCurrentPage = this.vueTotalPages
                 }
             },
+            // 打开弹窗
+            openwindow(listcontent) {
+                this.window = true
+                this.windowimg = listcontent.image
+                this.windowname = listcontent.name
+            },
+            // 关闭弹窗
+            closewindow() {
+                this.window = false
+            }
         }
     })
 </script>
