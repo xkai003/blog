@@ -137,6 +137,7 @@
     /* border: 3px solid white; */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .window .center .windowhead{
     width: 100%;
@@ -161,5 +162,13 @@
 }
 .window .center .windowimg img{
     width: 100%;
-    height: 600px;
+    height: 500px;
+}
+.window .center .windowimg .imgbtn{
+    height: 5%;
+    display: flex;
+    /* position: fixed; */
+    /* top: 50px; */
+    justify-content: space-between;
+    /* background-color: #f3cccc; */
 }
