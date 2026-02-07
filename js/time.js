@@ -1,3 +1,4 @@
+// 一进页面就执行
 window.onload = function(){
     setInterval(() => {
         var dt = new Date()

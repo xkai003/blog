@@ -19,3 +19,9 @@ document.getElementById('sidebarToggle').addEventListener('click', function() {
         openNav();
     }
 });
+
+// 
+// 一进页面就执行
+// window.onload = function(){
+//     this.alert("你好")
+// }
