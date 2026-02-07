@@ -56,29 +56,30 @@ const works = [
     technology:"vue3、vueRouter、vuex、Node.js、MySQL、axios",
     api: "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json"
   },
+  // label 的链接前面要加上 https://blog-e3z.pages.dev/works
   { 
-    label:'./works/Upload_file/index.html',
+    label:'https://blog-e3z.pages.dev/works/Upload_file/index.html',
     look: "0",
     title:"文件上传工具", 
     time:"2026-2-4", 
     technology:"该项目是一个图片上传工具，有前后端。后端暂时还没上线可以把文件下载到本地再运行，后端运行命令是：node server.js"
   },
   { 
-    label:'./works/jindon/index.html',
+    label:'https://blog-e3z.pages.dev/works/jindon/index.html',
     look: "0",
     title:"京东", 
     time:"2025-1-1", 
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/cashbook/cashbook.html',
+    label:'https://blog-e3z.pages.dev/works/cashbook/cashbook.html',
     look: "0",
     title:"阿茂成绩单", 
     time:"2025-1-1", 
     technology:"HTML、CSS、JavaScript、vue3、vueRouter"
   },
   { 
-    label:'./works/notebook/notebook.html',
+    label:'https://blog-e3z.pages.dev/works/notebook/notebook.html',
     imgurl:'./img/notebook.png',
     look: "0",
     title:"小凯记事本", 
@@ -86,7 +87,7 @@ const works = [
     technology:"HTML、CSS、JavaScript、vue3、vueRouter"
   },
   { 
-    label:'./works/baohuhaiyang/baohuhaiyan.html',
+    label:'https://blog-e3z.pages.dev/works/baohuhaiyang/baohuhaiyan.html',
     imgurl:'./img/保护海洋2.jpg',
     look: "0",
     title:"保护海洋", 
@@ -94,7 +95,7 @@ const works = [
     technology:"HTML、CSS、JavaScript、vue3、vueRouter"
   },
   { 
-    label:'./works/xhz/index.html',
+    label:'https://blog-e3z.pages.dev/works/xhz/index.html',
     imgurl:'./img/xhz2.png',
     look: "0",
     title:"惜花芷", 
@@ -102,7 +103,7 @@ const works = [
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/Beijing/tianganmen.html',
+    label:'https://blog-e3z.pages.dev/works/Beijing/tianganmen.html',
     imgurl:'./img/天安门.jpg',
     look: "0",
     title:"北京", 
@@ -110,7 +111,7 @@ const works = [
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/yxqx/index.html',
+    label:'https://blog-e3z.pages.dev/works/yxqx/index.html',
     imgurl:'./img/易烊千玺.jpg',
     look: "0",
     title:"易烊千玺", 
@@ -118,7 +119,7 @@ const works = [
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/Love/Love.html',
+    label:'https://blog-e3z.pages.dev/works/Love/Love.html',
     imgurl:'./img/love.jpg',
     look: "0",
     title:"HTML爱心", 
@@ -126,7 +127,7 @@ const works = [
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/Happy_New_Year/happy.html',
+    label:'https://blog-e3z.pages.dev/works/Happy_New_Year/happy.html',
     imgurl:'./img/Happy_New_Year.jpg',
     look: "0",
     title:"HTML跨年倒计时代码", 
@@ -134,7 +135,7 @@ const works = [
     technology:"HTML、CSS、JavaScript"
   },
   { 
-    label:'./works/PythonLove.py',
+    label:'https://blog-e3z.pages.dev/works/PythonLove.py',
     imgurl:'./img/PythonLove.jpg',
     look: "0",
     title:"Python爱心", 
