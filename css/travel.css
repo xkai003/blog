@@ -172,3 +172,18 @@
     justify-content: space-between;
     /* background-color: #f3cccc; */
 }
+/* 页脚 */
+.indexfoot {
+  /* background-color: white; */
+  font-size: 15px;
+  color: #cac9c9;
+  text-align: center;
+}
+.indexfoot p{
+  font-size: 15px;
+  line-height: 45px;
+}
+.indexfoot span{
+  font-size: 15px;
+  margin-bottom: 20px;
+}
