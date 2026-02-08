@@ -302,6 +302,16 @@ body {
 }
 /* 回到顶部按钮样式 end */
 /* --------------------------------工具栏-------------------------------- */
+.pet{
+    width: 52px; 
+    height: 50px;
+    position: fixed;
+    bottom: 231px;
+    right: 1px;
+    text-align: center;
+    background-color: white;
+    display: none;
+}
 .home-tool-bar{
   position: fixed;
   bottom: 100px;
@@ -312,7 +322,7 @@ body {
   display: none;
   color: black;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 0px 0px 15px 15px;
   border: 1px solid #cac9c9;
   overflow: hidden;
 }
@@ -341,6 +351,11 @@ body {
     display: flex;
     flex-direction: row;
     /* transition: opacity 0.5s ease; 平滑显示/隐藏 */
+}
+.home-tool-bar .icon{
+    width: 30px;
+    height: 30px;
+    fill: #707070;
 }
 /* ---- 三角形 ---- */
 /* 通用样式，方便展示 */
