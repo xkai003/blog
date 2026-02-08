@@ -3,7 +3,7 @@ const backToTopButton = document.getElementById("backToTop");
 
 // 监听滚动事件
 window.addEventListener("scroll", function() {
-    if (window.scrollY > 300) { // 设定触发显示的滚动距离
+    if (window.scrollY > 0) { // 设定触发显示的滚动距离
         backToTopButton.style.display = "block";
     } else {
         backToTopButton.style.display = "none";

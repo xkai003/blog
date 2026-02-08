@@ -301,3 +301,72 @@ body {
     background-color: #c8f2f8;
 }
 /* 回到顶部按钮样式 end */
+/* --------------------------------工具栏-------------------------------- */
+.home-tool-bar{
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #cac9c9;
+  overflow: hidden;
+}
+.home-tool-bar button{
+  border: none;
+  background-color: white;
+}
+.home-tool-bar button:hover{
+  cursor: pointer;
+}
+.home-tool-bar .home-tool-bar-box{
+  padding: 5px;
+  border-bottom: 1px solid #cac9c9;
+}
+.home-tool-bar .desc{
+    opacity: 0; /* 初始隐藏 */
+    visibility: hidden; /* 防止隐藏时占用空间 */
+    position: fixed; /* 绝对定位，基于 li 的相对定位 */
+    right: 70px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: row;
+    /* transition: opacity 0.5s ease; 平滑显示/隐藏 */
+}
+/* ---- 三角形 ---- */
+/* 通用样式，方便展示 */
+.triangle-container {
+  position: fixed; /* 绝对定位*/
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  /* background-color: #63ee39; */
+}
+/* 基础三角形样式 */
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+/* 向右的三角形 */
+.triangle-right {
+  margin-top: -5px;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent #f3f2f2;
+}
+/* ---- 三角形 end ---- */
+/*  */
+.home-tool-bar .home-tool-bar-box:hover .desc {
+    opacity: 1; /* 悬停时显示 */
+    visibility: visible;
+}
+/* --------------------------------工具栏  end-------------------------------- */

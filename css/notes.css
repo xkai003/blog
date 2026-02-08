@@ -111,3 +111,11 @@
 #backToTop:hover {
     background-color: #c8f2f8;
 }
+/* 页脚 */
+.indexfoot {
+  /* margin: 0 auto; */
+  line-height: 30px;
+  font-size: 15px;
+  color: #cac9c9;
+  text-align: center;
+}
