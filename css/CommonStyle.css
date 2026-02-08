@@ -363,10 +363,58 @@ body {
   border-width: 15px 0 15px 15px;
   border-color: transparent transparent transparent #f3f2f2;
 }
+.home-tool-bar .home-tool-bar-box:hover{
+  cursor: pointer;
+}
 /* ---- 三角形 end ---- */
 /*  */
 .home-tool-bar .home-tool-bar-box:hover .desc {
     opacity: 1; /* 悬停时显示 */
     visibility: visible;
 }
+
+/* ----QRcodedesc---- */
+.QRcodedesc{
+    opacity: 0; /*初始隐藏 */
+    visibility: hidden; /* 防止隐藏时占用空间 */
+    position: fixed; /* 绝对定位，基于 li 的相对定位 */
+    right: 70px;
+    padding: 10px;
+    bottom: 50px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: row;
+    /* transition: opacity 0.5s ease; 平滑显示/隐藏 */
+}
+/* .QRcodedesc .icon:hover{
+  cursor: pointer;
+} */
+.QRcodedesc .QRcodebox{
+  display: flex;
+  flex-direction: column;
+}
+.QRcodedesc .QRcodebox img{
+  width: 120px;
+  height: 120px;
+}
+.QRcodedesc .QRcodebox span{
+  font-size: 10px;
+}
+.QRcodedesc .triangle-container{
+  position: fixed; /* 绝对定位*/
+  bottom: 110px;
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  /* background-color: #63ee39; */
+}
+.home-tool-bar .home-tool-bar-box:hover .QRcodedesc{
+    opacity: 1; /* 悬停时显示 */
+    visibility: visible;
+}
+/* ----QRcodedesc end---- */
 /* --------------------------------工具栏  end-------------------------------- */
