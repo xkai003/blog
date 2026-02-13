@@ -8,7 +8,153 @@
     <link rel="icon" type="image/svg+xml" href="./img/index/logo.jpg" />
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
+    <style>
+        /* 网站整体为方格背景 */
+*{
+    margin: 0;
+}
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(250, 246, 246, 0.8);
+    /* background-color: #d3eec1; */
+    /* 方格背景 */
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.1) 3%, transparent 0),
+    linear-gradient(rgba(200, 200, 200, 0.1) 3%, transparent 0);
+    background-size: 20px 20px;
+}
+
+/* 隐藏的侧边栏样式 */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fcfbf0;
+    /* background-color: rgba(228, 227, 227, 0.8); */
+    /* background-color: rgb(208, 213, 169); */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar button{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #fcfbf0;
+    border: none;
+    /* text-align: center;a标签左右居中 */
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar button:hover{
+    cursor: pointer;
+}
+.sidebar button .bj{
+    margin-left: 75px;
+    font-size: 25px;
+}
+.sidebar button .jt{
+    font-size: 25px;
+    padding-top: 5px;
+    margin-right: 15px;
+}
+.sidebar button:hover{
+    background-color: rgba(224, 247, 245, 0.8);
+    color: rgb(228, 172, 135);
+}
+.sidebar .twonav{
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+.sidebar .twonav a{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: left;
+    margin-left: 70px;
+    /* text-align: right; */
+    padding: 10px;
+    font-size: 18px;
+    /* border-left: 1px solid red; */
+}
+.sidebar .twonav a::-webkit-scrollbar{
+  display: none;
+}
+
+/* 侧边栏链接样式 */
+.sidebar a {
+    text-align: center;/* a标签左右居中 */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* 当鼠标悬停在链接上时的样式 */
+.sidebar a:hover {
+    background-color: rgba(224, 247, 245, 0.8);
+    color: rgb(228, 172, 135);
+}
+
+/* 关闭按钮的样式 */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.sidebar .closebtn:hover{
+    color: red;
+    background-color: #fff;
+}
+.sidebar img{
+    margin-left: 32%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+}
+.sidebar .switch{
+    position: absolute;
+    left: 0;
+    bottom: 7%;
+}.sidebar .switch:hover{
+    background-color: #fff;
+}
+.sidebar .switch .icon{
+    width: 20px;
+    height: 20px;
+}
+.sidebar .switch .icon{
+    fill: #333333
+}
+.sidebar .switch:hover .icon{
+    fill: red;
+}
+/* 主内容部分的样式 */
+#mainContent {
+    transition: 0.5s;
+}
+
+/* 触发按钮的样式 */
+.toggle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #111;
+}
+/* -----------------------侧边栏导航栏 end----------------------- */
+    </style>
 </head>
 <body>
     <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
@@ -19,51 +165,51 @@
     <div id="mySidebar" class="sidebar">           
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <img src="./img/头像.jpg" alt="">
-        <a href="./index.html">首页</a>
-        <a href="./works.html">作品</a>
-        <a href="./notes.html">笔记</a>
-        <a href="./travel.html">旅游</a>
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./works.html">作品</a></li>
+        <!-- <li> -->
+            <button id="btn">
+                <span class="bj">笔记</span>
+                <span class="jt" id="jt">></span>
+            </button>
+            <div  class="twonav" id="twonav">
+                <a href="./notes.html">HTML笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <!-- <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a> -->
+            </div>
+        <!-- </li> -->
+        <li><a href="./travel.html">旅游</a></li>
         <!--  -->
         <a href="http://47.79.40.65:8006/" class="switch" title="切换回Vue版本">
             <svg t="1763776418514" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5640" ><path d="M96 448h832a32 32 0 0 0 22.6-54.6l-224-224a32 32 0 0 0-45.2 45.2L850.7 384H96a32 32 0 0 0 0 64zM928 576H96a32 32 0 0 0-22.6 54.6l224 224a31.9 31.9 0 0 0 45.2 0 31.9 31.9 0 0 0 0-45.2L173.3 640H928a32 32 0 1 0 0-64z" p-id="5641"></path></svg>
         </a>
     </div>
     <script src="./js/Side_navigation_bar.js"></script>
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            const townav = document.getElementById('twonav');
+            const jt = document.getElementById('jt')
+            // 关键修复：用 === 做相等判断，而非 = 赋值
+            if (townav.style.display === "none") {
+                townav.style.display = "block";
+                jt.innerText = "v"
+            } else {
+                // 简化 else if 为 else，覆盖 display 为 block/空/其他的情况
+                townav.style.display = "none";
+                jt.innerText = ">"
+            }
+        });
+    </script>
 <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
-
-
-
-<!----------------------------------------------------------------------------------- 正文 ----------------------------------------------------------------------------------->
-
-<div class="dd">
-    <!-- 头标 -->
-    <div class="dd1">
-        <img src="./img/头像.jpg" alt="">
-    </div>
-     <!-- 头标 -->
-    <h1>hello</h1>
-    <span>wellcom to my blog!</span>
-    <div class="iconbox">
-        <a href="https://im.qq.com/index/" title="点击进入我的QQ"><svg t="1762692249556" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6375"><path d="M512 0c-282.767 0-511.979 229.221-511.979 512s229.211 512 511.979 512 511.979-229.221 511.979-512-229.211-512-511.979-512zM793.886 671.573c-13.223 12.342-35.924-1.102-57.744-31.297-9.477 25.566-21.819 49.149-36.144 70.309 30.855 11.020 50.692 28.212 50.692 47.609 0 33.501-59.287 60.611-132.458 60.611-43.418 0-81.767-9.477-106.009-24.244-24.023 14.767-62.593 24.244-106.009 24.244-73.172 0-132.458-27.109-132.458-60.611 0-19.175 19.836-36.586 50.692-47.609-14.546-21.159-26.668-44.742-36.144-70.309-21.819 29.975-44.519 43.641-57.744 31.297-18.073-16.971-11.241-76.922 15.647-133.785 6.171-13.004 12.783-24.685 19.615-34.823 3.747-165.303 112.622-297.987 246.181-297.987h0.441c133.559 0 242.435 132.462 246.181 297.987 6.833 10.139 13.444 21.821 19.615 34.823 26.67 56.864 33.723 116.814 15.65 133.785z"p-id="6376"></path></svg></a>
-        <a href="https://github.com/xkai003" title="点击进入我的GIthub"><svg t="1762692386791" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9062"><path d="M0 524.992q0 166.016 95.488 298.496t247.488 185.504q6.016 0.992 10.016 0.992t6.496-1.504 4-3.008 2.016-4.992 0.512-4.992v-100.512q-36.992 4-66.016-0.512t-45.504-14.016-28.992-23.488-16.992-25.504-8.992-24-5.504-14.496q-8.992-15.008-27.008-27.488t-27.008-20-2.016-14.496q50.016-26.016 112.992 66.016 34.016 51.008 119.008 30.016 10.016-40.992 40-70.016Q293.984 736 237.984 670.976t-56-158.016q0-87.008 55.008-151.008-22.016-64.992 6.016-136.992 28.992-2.016 64.992 11.488t50.496 23.008 25.504 17.504q56.992-16 128.512-16t129.504 16q12.992-8.992 28.992-19.008t48.992-21.504 60.992-9.504q27.008 71.008 7.008 135.008 56 64 56 151.008 0 92.992-56.992 158.496t-172 85.504q43.008 43.008 43.008 104v128.992q0 0.992 0.992 3.008 0 6.016 0.512 8.992t4.512 6.016 12 3.008q152.992-52 250.496-185.504t97.504-300.512q0-104-40.512-199.008t-108.992-163.488-163.488-108.992T512.032 12.96 313.024 53.472 149.536 162.464t-108.992 163.488-40.512 199.008z" p-id="9063"></path></svg></a>
-    </div>
-    <!-- 时间 -->
-        <div class="time">
-            <span id="NN"></span>
-            <span>年</span>
-            <span id="YY"></span>
-            <span>月</span>
-            <span id="RR"></span>
-            <span>日</span>
-            <span id="HH"></span>
-            <span>:</span>
-            <span id="mm"></span>
-            <span>:</span>
-            <span id="ss"></span>
-        </div>
-        <script src="./js/time.js"></script>
-    <!-- 时间 -->
-</div>
-<!----------------------------------------------------------------------------------- 正文 ----------------------------------------------------------------------------------->
 </body>
 </html>
