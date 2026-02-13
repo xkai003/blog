@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小凯的博客</title>
-    <!-- 浏览器标签loge -->
-    <link rel="icon" type="image/svg+xml" href="./img/index/logo.jpg" />
-    <link rel="stylesheet" href="./css/notes.css">
-    <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
     <!-- 引入开发版本的包 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- 浏览器标签loge -->
+    <link rel="icon" type="image/svg+xml" href="./img/index/logo.jpg" />
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./css/notes.css">
+    <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
 </head>
 <body>
     <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
@@ -17,25 +19,33 @@
     <div id="sidebarToggle" class="toggle-btn">☰</div>
 
     <!-- 隐形的侧边导航栏 -->
-    <div id="mySidebar" class="sidebar">
+    <div id="mySidebar" class="sidebar">           
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <img src="./img/头像.jpg" alt="">
-        <a href="./index.html">首页</a>
-        <a href="./works.html">作品</a>
-        <a href="./notes.html">笔记</a>
-        <a href="./travel.html">旅游</a>
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./works.html">作品</a></li>
+        <!-- <li> -->
+            <button id="btn">
+                <span class="bj">笔记</span>
+                <span class="jt" id="jt">❯</span>
+            </button>
+            <div  class="twonav" id="twonav">
+                <a href="./notes.html">实践笔记</a>
+                <a href="https://md-myblog.pages.dev/">markdown笔记</a>
+            </div>
+        <!-- </li> -->
+        <li><a href="./travel.html">旅游</a></li>
         <!--  -->
         <a href="http://47.79.40.65:8006/" class="switch" title="切换回Vue版本">
             <svg t="1763776418514" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5640" ><path d="M96 448h832a32 32 0 0 0 22.6-54.6l-224-224a32 32 0 0 0-45.2 45.2L850.7 384H96a32 32 0 0 0 0 64zM928 576H96a32 32 0 0 0-22.6 54.6l224 224a31.9 31.9 0 0 0 45.2 0 31.9 31.9 0 0 0 0-45.2L173.3 640H928a32 32 0 1 0 0-64z" p-id="5641"></path></svg>
         </a>
     </div>
-    <script src="./js/Side_navigation_bar.js"></script>
-<!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
 <div id="mainContent"><!-- 这一行是为了加入侧边导航栏的js动态效果 -->
     <!-- 头部 -->
     <div class="herd">
-        <p>笔记</p>
-        <span>welcom to my notes!</span>
+        <p>实践笔记</p>
+        <span>welcom to my practice notes!</span>
     </div>
     <!-- 头部 -->
     <!-- 展览台 -->
@@ -138,8 +148,32 @@
     </div>
     <!--------------------------------工具栏 end-------------------------------->
 </div>
-<script>
-   const app = new Vue({                                        
+
+    <script src="./js/Side_navigation_bar.js"></script>
+    <script>
+        document.getElementById('btn').onclick = function() {
+            const townav = document.getElementById('twonav');
+            const jt = document.getElementById('jt');
+        
+            // 关键：用 getComputedStyle 获取实际生效的样式（不管是行内还是CSS表）
+            const currentDisplay = window.getComputedStyle(townav).display;
+    
+            if (currentDisplay === "none") {
+                // 显示元素
+                townav.style.display = "block";
+                townav.style.transform = "translate(0%, 0%)"
+                // 给箭头添加动画效果
+                jt.style.transform = "rotate(90deg)";
+            } else {
+                // 隐藏元素
+                townav.style.display = "none";
+                // 给箭头添加动画效果
+                jt.style.transform = "rotate(0deg)";
+            }
+        };
+
+        // 
+        const app = new Vue({                                        
         el:'#app',                                               
         data:{
             itemsPerPage: 4, // 一页只能有四个
@@ -196,12 +230,6 @@
                     title:"eclips创建JavaWeb项目流程", 
                     time:"2025.07.10", 
                     technology:"eclips创建JavaWeb项目流程"
-                },
-                { 
-                    label:'https://md-myblog.pages.dev/',
-                    title:"MarkDown笔记", 
-                    time:"2025.07.10", 
-                    technology:"MarkDown笔记"
                 }
             ]
         },
@@ -273,6 +301,7 @@
             }
         }
     })
-</script>
+    </script>
+<!--------------------------------------------------------------------------------- 侧边导航 --------------------------------------------------------------------------------->
 </body>
 </html>
