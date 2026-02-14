@@ -2,6 +2,10 @@ function sendMessage() {
   const input = document.getElementById('userInput');
   const chatBox = document.getElementById('chatBox');
 
+  if (input.value == "") {
+    alert("请输入内容！")
+  }
+
   if (input.value.trim() !== "") {
     const userMsg = document.createElement('span');
     userMsg.className = 'user';
