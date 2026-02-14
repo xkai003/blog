@@ -18,7 +18,7 @@
 .chat .chat-box {
     border: 1px solid #ccc;
     padding: 20px;
-    height: 600px;
+    height: 65vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -91,14 +91,18 @@
 .inputbox .center{
     width: 700px;
     max-width: 700px;
+    border-radius: 15px;
+    margin-top: 20px;
     border: 1px solid rgb(153, 152, 152);
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
 }
 .inputbox .center input{
     width: 80%;
-    height: 30px;
+    height: 40px;
     border: none;
+    padding-left: 30px;
 }
 .inputbox .center button{
     width: 20%;

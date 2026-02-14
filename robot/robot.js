@@ -207,12 +207,17 @@ function getBotReply(msg) {
     return "你好呀！很高兴见到你。";
   }
   if(msg.includes("这个博客里一共有几个作品")) {
-    return `一共有<span style="color: red; margin: 5px">${works.length}</span>条作品`;
+    return `一共有<span style="color: red; margin: 5px">${works.length}</span>条<a href="../works.html" style="text-decoration: none;" title="点击跳转到作品页">作品</a>`;
+  }
+  if(msg.includes("这个博客里一共有几个笔记")) {
+    return `一共有<span style="color: red; margin: 5px">${notes.length}</span>条<a href="../notes.html" style="text-decoration: none;" title="点击跳转到笔记页">笔记</a>`;
   }
   if (msg.includes("你会什么")) {
     return "我会的东西可多着呢^-^<br/>" +
-    "📚 查作品：你只需要跟我说你要查询的作品的标题，我就可以帮你查询该作品的所有信息。<br/>" +
-    "🛠 查笔记：你只需要跟我说你要查询的笔记的标题，我就可以帮你查询该作品的所有信息。<br/>"
+    " ● 查作品：你只需要跟我说你要查询的作品的标题，我就可以帮你查询该作品的所有信息。<br/>" +
+    " ● 查作品数量：你只需要跟我说：“这个博客里一共有几个作品”<br/>" + 
+    " ● 查笔记：你只需要跟我说你要查询的笔记的标题，我就可以帮你查询该作品的所有信息。<br/>" + 
+    " ● 查笔记数量：你只需要跟我说：“这个博客里一共有几个笔记”<br/>" 
   }
 
   const input = document.getElementById('userInput');
