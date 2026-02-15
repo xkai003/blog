@@ -15,7 +15,7 @@ body {
 }
 
 /* 隐藏的侧边栏样式 */
-.sidebar {
+.sidebar{
     height: 100%;
     width: 0;
     position: fixed;
@@ -27,6 +27,11 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+}
+.sidebar li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* 侧边栏链接样式 */
