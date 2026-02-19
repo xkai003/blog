@@ -194,12 +194,6 @@ const notes = [
       title:"Python爱心代码", 
       time:"2025.07.10", 
       technology:"Python爱心代码"
-  },
-  { 
-      label:'https://md-myblog.pages.dev/',
-      title:"MarkDown笔记", 
-      time:"2025.07.10", 
-      technology:"MarkDown笔记"
   }
 ]
 
@@ -212,7 +206,7 @@ function getBotReply(msg) {
     return `一共有<span style="color: red; margin: 5px">${works.length}</span>条<a href="../works.html" style="text-decoration: none;" title="点击跳转到作品页">作品</a>`;
   }
   if(msg.includes("这个博客里一共有几个笔记")) {
-    return `一共有<span style="color: red; margin: 5px">${notes.length}</span>条<a href="../notes.html" style="text-decoration: none;" title="点击跳转到笔记页">笔记</a>`;
+    return `一共有<span style="color: red; margin: 5px">${notes.length}</span>条<a href="../notes.html" style="text-decoration: none;" title="点击跳转到笔记页">笔记</a>和一个<a href="https://md-myblog.pages.dev/" style="text-decoration: none;" title="点击跳转到MarkDown笔记">MarkDown笔记</a>`;
   }
   if (msg.includes("你会什么")) {
     return "我会的东西可多着呢^-^<br/>" +
