@@ -137,14 +137,6 @@ const works = [
     title:"HTML跨年倒计时代码", 
     time:"2023-9-10", 
     technology:"HTML、CSS、JavaScript"
-  },
-  { 
-    label:'https://blog-e3z.pages.dev/works/PythonLove.py',
-    imgurl:'./img/PythonLove.jpg',
-    look: "0",
-    title:"Python爱心", 
-    time:"2023-9-10", 
-    technology:"Python"
   }
 ];
 const notes = [
@@ -196,6 +188,12 @@ const notes = [
       title:"eclips创建JavaWeb项目流程", 
       time:"2025.07.10", 
       technology:"eclips创建JavaWeb项目流程"
+  },
+  { 
+      label:'https://blog-e3z.pages.dev/notes/Python_LoveCode/Python_LoveCode.html',
+      title:"Python爱心代码", 
+      time:"2025.07.10", 
+      technology:"Python爱心代码"
   },
   { 
       label:'https://md-myblog.pages.dev/',

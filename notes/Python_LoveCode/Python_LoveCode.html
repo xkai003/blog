@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python_LoveCode</title>
+    <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
+    <link rel="stylesheet" href="./Python_LoveCode.css">
+    <script src="./Python_LoveCode.js"></script>
+</head>
+    <body>
+        <div class="box">
+            <div class="center">
+                <h1>Python爱心代码</h1>
+                <div class="content">
+                    <li><strong>代码</strong></li>
+                    <div class="column">
+                        <!-- <span>步骤五：进入vim编辑界面后，按i进入编辑模式。代码示范如下</span> -->
+                        <div class="Board">
+                            <div class="BoardHead">
+                                <a href="./PythonLove.py" title="下载源代码">
+                                    <svg t="1771505208928" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5410" width="15" height="15"><path d="M921.84736468 997.93033544H101.54506534c-24.68943392 0-44.71162586-20.00838352-44.71162584-44.71162585V631.455181c0-24.70324234 20.02219194-44.71162586 44.71162584-44.71162585s44.71162586 20.00838352 44.71162586 44.71162585v277.05190275h730.87904765V631.455181c0-24.70324234 20.02219194-44.71162586 44.71162583-44.71162585 24.68943392 0 44.71162586 20.00838352 44.71162586 44.71162585V953.21870959c0 24.70324234-20.02219194 44.71162586-44.71162586 44.71162585z" p-id="5411"></path><path d="M511.69621502 839.9897621c-24.68943392 0-44.71162586-20.00838352-44.71162585-44.71162585V70.54383027c0-24.70324234 20.02219194-44.71162586 44.71162585-44.71162586s44.71162586 20.00838352 44.71162585 44.71162586v724.73430598c0 24.70324234-20.02219194 44.71162586-44.71162585 44.71162585z" p-id="5412"></path><path d="M511.69621502 869.73307344c-14.37455297 0-27.92060144-6.93182094-36.30230524-18.61373431L323.62569491 639.87831001c-14.41597819-20.04980875-9.84539506-47.998027 10.21822209-62.41400518 20.02219194-14.37455297 47.94279339-9.85920347 62.3863884 10.21822208l115.47971803 160.70225499 115.45210121-160.68844659c14.443595-20.09123397 42.37800485-24.60658347 62.38638839-10.23203048 20.04980875 14.41597819 24.62039188 42.33657964 10.21822208 62.40019679l-151.75440644 211.2272207a44.65639221 44.65639221 0 0 1-36.31611365 18.64135112z" p-id="5413"></path></svg>
+                                </a>
+                                <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                                <button onclick="copyToClipboard('txttwo')">
+                                    <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                                </button>
+                            </div>
+                            <div class="BoardText">
+                                <span id="txttwo">
+                                    # 颜色可以参考12行注释修改<br>
+                                    # 微醺_日记<br>
+                                    <br>
+                                    import random<br>
+                                    from math import sin, cos, pi, log<br>
+                                    from tkinter import *<br>
+                                    <br>
+                                    CANVAS_WIDTH = 640  # 画布的宽<br>
+                                    CANVAS_HEIGHT = 480  # 画布的高<br>
+                                    CANVAS_CENTER_X = CANVAS_WIDTH / 2  # 画布中心的X轴坐标<br>
+                                    CANVAS_CENTER_Y = CANVAS_HEIGHT / 2  # 画布中心的Y轴坐标<br>
+                                    IMAGE_ENLARGE = 11  # 放大比例<br>
+                                    HEART_COLOR = "#ff3366"  # 心的颜色(16进制代码) 参考链接：https://developer.aliyun.com/article/760003<br>
+                                    <br>
+                                    def heart_function(t, shrink_ratio: float = IMAGE_ENLARGE):<br>
+                                        &emsp;"""<br>
+                                        &emsp;“爱心函数生成器”<br>
+                                        &emsp;:param shrink_ratio: 放大比例<br>
+                                        &emsp;:param t: 参数<br>
+                                        &emsp;:return: 坐标<br>
+                                        &emsp;"""<br>
+                                        &emsp;# 基础函数<br>
+                                        &emsp;x = 16 * (sin(t) ** 3)<br>
+                                        &emsp;y = -(13 * cos(t) - 5 * cos(2 * t) - 2 * cos(3 * t) - cos(4 * t))<br>
+                                        <br>
+                                        &emsp;# 放大<br>
+                                        &emsp;x *= shrink_ratio<br>
+                                        &emsp;y *= shrink_ratio<br>
+                                        <br>
+                                        &emsp;# 移到画布中央<br>
+                                        &emsp;x += CANVAS_CENTER_X<br>
+                                        &emsp;y += CANVAS_CENTER_Y<br>
+                                        <br>
+                                        &emsp;return int(x), int(y)<br>
+                                    <br>
+
+                                    def scatter_inside(x, y, beta=0.15):<br>
+                                        &emsp;"""<br>
+                                        &emsp;随机内部扩散<br>
+                                        &emsp;:param x: 原x<br>
+                                        &emsp;:param y: 原y<br>
+                                        &emsp;:param beta: 强度<br>
+                                        &emsp;:return: 新坐标<br>
+                                        &emsp;"""<br>
+                                        &emsp;ratio_x = - beta * log(random.random())<br>
+                                        &emsp;ratio_y = - beta * log(random.random())<br>
+                                        <br>
+                                        &emsp;dx = ratio_x * (x - CANVAS_CENTER_X)<br>
+                                        &emsp;dy = ratio_y * (y - CANVAS_CENTER_Y)<br>
+                                        <br>
+                                        &emsp;return x - dx, y - dy<br>
+                                    <br>
+
+                                    def shrink(x, y, ratio):<br>
+                                        &emsp;"""<br>
+                                        &emsp;抖动<br>
+                                        &emsp;:param x: 原x<br>
+                                        &emsp;:param y: 原y<br>
+                                        &emsp;:param ratio: 比例<br>
+                                        &emsp;:return: 新坐标<br>
+                                        &emsp;"""<br>
+                                        &emsp;force = -1 / (((x - CANVAS_CENTER_X) ** 2 + (y - CANVAS_CENTER_Y) ** 2) ** 0.6)  # 这个参数...<br>
+                                        &emsp;dx = ratio * force * (x - CANVAS_CENTER_X)<br>
+                                        &emsp;dy = ratio * force * (y - CANVAS_CENTER_Y)<br>
+                                        &emsp;return x - dx, y - dy<br>
+                                    <br>
+
+                                    def curve(p):<br>
+                                        &emsp;"""<br>
+                                        &emsp;自定义曲线函数，调整跳动周期<br>
+                                        &emsp;:param p: 参数<br>
+                                        &emsp;:return: 正弦<br>
+                                        &emsp;"""<br>
+                                        &emsp;# 可以尝试换其他的动态函数，达到更有力量的效果（贝塞尔？）<br>
+                                        &emsp;return 2 * (2 * sin(4 * p)) / (2 * pi)<br>
+                                    <br>
+
+                                    class Heart:<br>
+                                        &emsp;"""<br>
+                                        &emsp;爱心类<br>
+                                        &emsp;"""<br>
+
+                                        &emsp;def __init__(self, generate_frame=20):<br>
+                                            &emsp;&emsp;self._points = set()  # 原始爱心坐标集合<br>
+                                            &emsp;&emsp;self._edge_diffusion_points = set()  # 边缘扩散效果点坐标集合<br>
+                                            &emsp;&emsp;self._center_diffusion_points = set()  # 中心扩散效果点坐标集合<br>
+                                            &emsp;&emsp;self.all_points = {}  # 每帧动态点坐标<br>
+                                            &emsp;&emsp;self.build(2000)<br>
+
+                                            &emsp;&emsp;self.random_halo = 1000<br>
+
+                                            &emsp;&emsp;self.generate_frame = generate_frame<br>
+                                            &emsp;&emsp;for frame in range(generate_frame):<br>
+                                                &emsp;&emsp;&emsp;self.calc(frame)<br>
+
+                                        &emsp;def build(self, number):<br>
+                                            &emsp;&emsp;# 爱心<br>
+                                            &emsp;&emsp;for _ in range(number):<br>
+                                                &emsp;&emsp;&emsp;t = random.uniform(0, 2 * pi)  # 随机不到的地方造成爱心有缺口<br>
+                                                &emsp;&emsp;&emsp;x, y = heart_function(t)<br>
+                                                &emsp;&emsp;&emsp;self._points.add((x, y))<br>
+
+                                            &emsp;&emsp;# 爱心内扩散<br>
+                                            &emsp;&emsp;for _x, _y in list(self._points):<br>
+                                                &emsp;&emsp;&emsp;for _ in range(3):<br>
+                                                    &emsp;&emsp;&emsp;&emsp;x, y = scatter_inside(_x, _y, 0.05)<br>
+                                                    &emsp;&emsp;&emsp;&emsp;self._edge_diffusion_points.add((x, y))<br>
+
+                                            &emsp;&emsp;# 爱心内再次扩散<br>
+                                            &emsp;&emsp;point_list = list(self._points)<br>
+                                            &emsp;&emsp;for _ in range(4000):<br>
+                                                &emsp;&emsp;&emsp;x, y = random.choice(point_list)<br>
+                                                &emsp;&emsp;&emsp;x, y = scatter_inside(x, y, 0.17)<br>
+                                                &emsp;&emsp;&emsp;self._center_diffusion_points.add((x, y))<br>
+                                        <br>
+                                        &emsp;@staticmethod<br>
+                                        &emsp;def calc_position(x, y, ratio):<br>
+                                            &emsp;&emsp;# 调整缩放比例<br>
+                                            &emsp;&emsp;force = 1 / (((x - CANVAS_CENTER_X) ** 2 + (y - CANVAS_CENTER_Y) ** 2) ** 0.520)  # 魔法参数<br>
+                                            <br>
+                                            &emsp;&emsp;dx = ratio * force * (x - CANVAS_CENTER_X) + random.randint(-1, 1)<br>
+                                            &emsp;&emsp;dy = ratio * force * (y - CANVAS_CENTER_Y) + random.randint(-1, 1)<br>
+                                            <br>
+                                            &emsp;&emsp;return x - dx, y - dy<br>
+                                            <br>
+                                        &emsp;def calc(self, generate_frame):<br>
+                                            &emsp;&emsp;ratio = 10 * curve(generate_frame / 10 * pi)  # 圆滑的周期的缩放比例<br>
+                                            <br>
+                                            &emsp;&emsp;halo_radius = int(4 + 6 * (1 + curve(generate_frame / 10 * pi)))<br>
+                                            &emsp;&emsp;halo_number = int(3000 + 4000 * abs(curve(generate_frame / 10 * pi) ** 2))<br>
+                                            <br>
+                                            &emsp;&emsp;all_points = []<br>
+                                            <br>
+                                            &emsp;&emsp;# 光环<br>
+                                            &emsp;&emsp;heart_halo_point = set()  # 光环的点坐标集合<br>
+                                            &emsp;&emsp;for _ in range(halo_number):<br>
+                                                &emsp;&emsp;&emsp;t = random.uniform(0, 2 * pi)  # 随机不到的地方造成爱心有缺口<br>
+                                                &emsp;&emsp;&emsp;x, y = heart_function(t, shrink_ratio=11.6)  # 魔法参数<br>
+                                                &emsp;&emsp;&emsp;x, y = shrink(x, y, halo_radius)<br>
+                                                &emsp;&emsp;&emsp;if (x, y) not in heart_halo_point:<br>
+                                                    &emsp;&emsp;&emsp;&emsp;# 处理新的点<br>
+                                                    &emsp;&emsp;&emsp;&emsp;heart_halo_point.add((x, y))<br>
+                                                    &emsp;&emsp;&emsp;&emsp;x += random.randint(-14, 14)<br>
+                                                    &emsp;&emsp;&emsp;&emsp;y += random.randint(-14, 14)<br>
+                                                    &emsp;&emsp;&emsp;&emsp;size = random.choice((1, 2, 2))<br>
+                                                    &emsp;&emsp;&emsp;&emsp;all_points.append((x, y, size))<br>
+                                            <br>
+                                            &emsp;&emsp;# 轮廓<br>
+                                            &emsp;&emsp;for x, y in self._points:<br>
+                                                &emsp;&emsp;&emsp;x, y = self.calc_position(x, y, ratio)<br>
+                                                &emsp;&emsp;&emsp;size = random.randint(1, 3)<br>
+                                                &emsp;&emsp;&emsp;all_points.append((x, y, size))<br>
+                                                <br>
+                                            &emsp;&emsp;# 内容<br>
+                                            &emsp;&emsp;for x, y in self._edge_diffusion_points:<br>
+                                                &emsp;&emsp;&emsp;x, y = self.calc_position(x, y, ratio)<br>
+                                                &emsp;&emsp;&emsp;size = random.randint(1, 2)<br>
+                                                &emsp;&emsp;&emsp;all_points.append((x, y, size))<br>
+                                                <br>
+                                            &emsp;&emsp;for x, y in self._center_diffusion_points:<br>
+                                                &emsp;&emsp;&emsp;x, y = self.calc_position(x, y, ratio)<br>
+                                                &emsp;&emsp;&emsp;size = random.randint(1, 2)<br>
+                                                &emsp;&emsp;&emsp;all_points.append((x, y, size))<br>
+                                                <br>
+                                            &emsp;&emsp;self.all_points[generate_frame] = all_points<br>
+                                            <br>
+                                        &emsp;def render(self, render_canvas, render_frame):<br>
+                                            &emsp;&emsp;for x, y, size in self.all_points[render_frame % self.generate_frame]:<br>
+                                                &emsp;&emsp;&emsp;render_canvas.create_rectangle(x, y, x + size, y + size, width=0, fill=HEART_COLOR)<br>
+                                        <br>
+
+                                    def draw(main: Tk, render_canvas: Canvas, render_heart: Heart, render_frame=0):<br>
+                                        &emsp;render_canvas.delete('all')<br>
+                                        &emsp;render_heart.render(render_canvas, render_frame)<br>
+                                        &emsp;main.after(160, draw, main, render_canvas, render_heart, render_frame + 1)<br>
+                                    <br>
+
+                                    if __name__ == '__main__':<br>
+                                        &emsp;root = Tk()  # 一个Tk
+                                        &emsp;root.title("微醺_日记") #设置窗口名 可以修改或注释掉<br>
+                                        &emsp;canvas = Canvas(root, bg='black', height=CANVAS_HEIGHT, width=CANVAS_WIDTH)<br>
+                                        &emsp;canvas.pack()<br>
+                                        &emsp;heart = Heart()  # 心<br>
+                                        &emsp;draw(root, canvas, heart)  # 开始画画~<br>
+                                        &emsp;root.mainloop()<br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <li><strong>效果图</strong></li>
+                    <img src="./xgt.jpg" alt="">
+                </div>
+                <!-- 页脚 -->
+                <div class="foot">
+                    <a href="/notes/eclips_JavaWeb/eclips_JavaWeb.html">上一篇:eclips创建JavaWeb项目流程</a>
+                    <a href="">下一篇</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 复制成功提示 -->
+        <div name="toast-fade">
+            <div class="toast" id="toast">复制成功</div>
+        </div>
+
+        <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
+        <button id="backToTop">
+            <svg t="1757048304311" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1736" id="mx_n_1757048304312" width="30" height="30"><path d="M383.786667 640.853333a42.666667 42.666667 0 0 1-8.192 56.149334l-3.968 2.986666-64.64 42.496a42.666667 42.666667 0 0 0-16.085334 20.138667l-1.621333 5.034667L267.946667 853.333333H384a42.666667 42.666667 0 0 1 42.368 37.674667L426.666667 896a42.666667 42.666667 0 0 1-37.674667 42.368L384 938.666667H213.333333a42.666667 42.666667 0 0 1-42.325333-48.213334l0.938667-4.778666 34.56-138.666667a128.042667 128.042667 0 0 1 46.250666-70.570667l7.082667-5.12 64.853333-42.666666a42.666667 42.666667 0 0 1 59.093334 12.202666z m311.168-14.677333l4.352 2.517333 65.066666 42.794667a128 128 0 0 1 50.773334 67.2l2.346666 8.32 34.56 138.666667a42.666667 42.666667 0 0 1-36.565333 52.736L810.666667 938.666667h-170.666667a42.666667 42.666667 0 0 1-4.992-85.034667L640 853.333333h116.053333l-21.333333-85.674666a42.709333 42.709333 0 0 0-13.397333-21.888l-4.096-3.157334-64.853334-42.666666a42.666667 42.666667 0 0 1 37.76-75.861334l4.821334 2.133334z" fill="#1beff3" p-id="1737"></path><path d="M512 102.570667a85.333333 85.333333 0 0 0-60.586667 25.258666l-30.165333 30.165334a469.333333 469.333333 0 0 0-131.882667 403.2l52.48 341.290666A42.666667 42.666667 0 0 0 384 938.666667h256a42.666667 42.666667 0 0 0 42.154667-36.181334l52.48-341.333333a469.333333 469.333333 0 0 0-131.84-403.157333l-30.293334-30.293334A85.248 85.248 0 0 0 512 102.570667z m-30.421333 115.754666L512 187.946667l30.421333 30.378666 9.088 9.386667a384 384 0 0 1 98.816 320.426667L603.306667 853.333333H420.608l-46.933333-305.152a384 384 0 0 1 107.946666-329.856z" fill="#1beff3" p-id="1738"></path><path d="M512 384a42.666667 42.666667 0 0 1 42.368 37.674667L554.666667 426.666667v128a42.666667 42.666667 0 0 1-85.034667 4.992L469.333333 554.666667v-128a42.666667 42.666667 0 0 1 42.666667-42.666667z" fill="#1beff3" p-id="1739"></path></svg>
+        </button>
+        <script src="/js/backToTop.js"></script>
+        <link rel="stylesheet" href="/css/backToTop.css">
+        <!---------------------------------------------------------------------------- 回到顶部按钮 ---------------------------------------------------------------------------->
+    </body>
+</html>
