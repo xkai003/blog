@@ -208,6 +208,14 @@ function getBotReply(msg) {
   if(msg.includes("这个博客里一共有几个笔记")) {
     return `一共有<span style="color: red; margin: 5px">${notes.length}</span>条<a href="../notes.html" style="text-decoration: none;" title="点击跳转到笔记页">笔记</a>和一个<a href="https://md-myblog.pages.dev/" style="text-decoration: none;" title="点击跳转到MarkDown笔记">MarkDown笔记</a>`;
   }
+  if(msg.includes("MarkDown笔记")) {
+    return `(查询结果如下)<br>
+      <span style="color:red;">标题</span>：MarkDown笔记<br>
+      <span style="color:red;">项目地址</span>：<a href="https://md-myblog.pages.dev/" style="text-decoration: none; color: #0077cc;">点击查看</a><br>
+      <span style="color:red;">查看数量</span>：100<br>
+      <span style="color:red;">创建时间</span>：2025.12-2025.12<br>
+      <span style="color:red;">技术栈</span>：MarkDown、HTML、CSS、JavaScript`;
+  }
   if (msg.includes("你会什么")) {
     return "我会的东西可多着呢^-^<br/>" +
     " ● 查作品：你只需要跟我说你要查询的作品的标题，我就可以帮你查询该作品的所有信息。<br/>" +
