@@ -3,110 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vue_ServerLocalhost</title>
+    <title>VueCli_DataSharing</title>
     <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
-    <link rel="stylesheet" href="./vscolod_github+cloudflare.css">
-    <script src="./vscolod_github+cloudflare.js"></script>
+    <link rel="stylesheet" href="./VueCli_DataSharing.css">
+    <script src="./VueCli_DataSharing.js"></script>
 </head>
 <body>
     <div class="box">
         <div class="center">
-            <h1>本地项目上传到github上并部署到cloudflare</h1>
+            <h1>基于VueCli创建项目及构建数据共享环境</h1>
             <div class="content">
-                <li><strong>本地项目上传到github</strong></li>
+                <li><strong>基于VueCli创建项目</strong></li>
                 <div class="column">
-                    <span>步骤一：进入<a href="https://github.com/">github官网</a></span>
-                    <span>步骤二：点击右上角+号 → New repository</span>
-                    <span>步骤三：进入New repository页面后依次填写存储库的名称Repository name和存储库的描述Description</span>
-                    <span>步骤四：点击Create repository 就创建好仓库了</span>
-                    <span>步骤五：打开vscold，在项目根目录新建终端</span>
-                    <span>步骤六：在终端中输入以下命令初始化 Git 仓库</span>
+                    <span>步骤一：新建一个文件夹【VueCli】</span>
+                    <span>步骤二：进入该文件在空白处按住shift+鼠标右键→选择【在此处打开Powershell窗口】</span>
+                    <span>步骤三：全局安装了 Vue CLI</span>
                     <div class="Board">
                         <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
                             <button onclick="copyToClipboard('txtone')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txtone">git init</span>
+                            <span id="txtone">npm install -g @vue/cli<br> vue create 项目名</span>
                         </div>
                     </div>
-                    <span>步骤七：创建并添加项目文件</span>
+                    <span>（按上下箭头更换选项、按空格键勾选选项、按回车确认）</span>
+                    <span>步骤四：选择【Manually select features】</span>
+                    <span>步骤五：勾选【Babel】、【Router】、【CSS Pre-processors】、【Linter/Formatter】</span>
+                    <span>步骤六：选择【2.x】（注：选择vue2版本）</span>
+                    <span>步骤七：输入n（注：默认选择带#号哈希模式，不采用历史模式）</span>
+                    <span>步骤八：选择【use NPM】</span>
+                    <span>步骤九：选择【Less】</span>
+                    <span>步骤十：选择【ESLint+Standard config】（注：选择无分号规范）</span>
+                    <span>步骤十一：勾选【Lint on save】（注：在保存的时候校验）</span>
+                    <span>步骤十二：选择【In dedicated config files】（注：将配置文件放在单独的文件中）</span>
+                    <span>步骤十三：输入<code>n</code></span>
+                    <span>项目已创建成功</span>
+                    <span>最后：输入以下命令启动项目</span>
                     <div class="Board">
                         <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
                             <button onclick="copyToClipboard('txttwo')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txttwo">git add .</span>
+                            <span id="txttwo">cd 项目名<br>npm run dev</span>
                         </div>
                     </div>
-                    <span>步骤八：提交你的修改</span>
+                </div>
+            </div>
+            <!--  -->
+            <div class="content">
+                <li><strong>构建多组组件共享的数据环境</strong></li>
+                <div class="column">
+                    <span>步骤一：进入文件夹D:\code\VSCode\practise\vue，并打开cmd终端</span>
+                    <span>步骤二：输入以下命令</span>
                     <div class="Board">
                         <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
                             <button onclick="copyToClipboard('txtthree')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txtthree">git commit -m "这是我的课堂管理系统"</span>
+                            <span id="txtthree"> vue create vuex-demo </span>
                         </div>
                     </div>
-                    <span>步骤九：关联本地仓库和远程 GitHub 仓库</span>
+                    <span>（按上下箭头更换选项、按空格键勾选选项、按回车确认）</span>
+                    <span>步骤三：选择【Manually select features】</span>
+                    <span>步骤四：勾选【CSS Pre-processors】</span>
+                    <span>步骤五：选择【2.x】</span>
+                    <span>步骤六：选择【Less】</span>
+                    <span>步骤七：选择【ESLint + Standard config】</span>
+                    <span>步骤八：勾选【Lint on save】</span>
+                    <span>步骤九：选择【In dedicated config files】</span>
+                    <span>步骤十：输入<code>n</code></span>
+                    <span>自动创建vuex-demo成功</span>
+                    <span>步骤十一：在VSCode cd到D:\code\VSCode\practise\vue\vuex-demo并输入以下命令启动项目</span>
                     <div class="Board">
                         <div class="BoardHead">
-                            <button onclick="copyToClipboard('txtfour')">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                            <button onclick="copyToClipboard('txtefour')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txtfour">git remote add origin https://github.com/xkai003/MyClassroomManagementSystem.git</span>
+                            <span id="txtefour">npm run serve</span>
                         </div>
                     </div>
-                    <span>步骤十：推送到 GitHub</span>
+                </div>
+                <!--  -->
+                <li><strong>创建一个空仓库</strong></li>
+                <div class="column">
+                    <span>步骤一：装包</span>
                     <div class="Board">
                         <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
                             <button onclick="copyToClipboard('txtfive')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txtfive">git branch -m master main</span>
+                            <span id="txtfive"> yarn add vuex@3</span>
                         </div>
                     </div>
-                    <span>步骤十一：推送代码到 GitHub</span>
+                    <span>步骤二：在src文件内新建【store】仓库文件</span>
+                    <span>步骤三：在【store】仓库文件夹中新建【index.js】文件</span>
+                    <span>步骤四：在【index.js】文件中导包、Vuex插件、创建仓库、导出给main.js使用</span>
+                    <span>步骤五：在【main.js】文件中导入仓库、挂载仓库</span>
+                    <span>空仓库构建成功，以后所有组件都能拿到仓库里的数据</span>
+                </div>
+                <!--  -->
+                <li><strong>提供并访问数据</strong></li>
+                <div class="column">
+                    <span>步骤一：在【store】仓库文件夹里的【index.js】文件中给仓库提供数据</span>
                     <div class="Board">
                         <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
                             <button onclick="copyToClipboard('txtsix')">
                                 <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
                             </button>
                         </div>
                         <div class="BoardText">
-                            <span id="txtsix">git push -u origin main</span>
+                            <span id="txtsix">
+                                const store = new Vuex.Store({<br>
+                                    &emsp;// 1、通过state提供数据（所有组件都共享的数据）<br>
+                                    &emsp;state: {<br>
+                                        &emsp;&emsp;title: '唐茂凯',<br>
+                                        &emsp;&emsp;count: 100<br>
+                                    &emsp;}<br>
+                                })
+                            </span>
                         </div>
                     </div>
-                    <span>到这里就结束了。你的项目就成功上传到 GitHub 了</span>
-                </div>
-            </div>
-            <!--  -->
-            <div class="content">
-                <li><strong>github上的项目部署到cloudflare</strong></li>
-                <div class="column">
-                    <span>步骤一：进入<a href="https://www.cloudflare-cn.com/">cloudflare官网</a></span>
-                    <span>步骤二：点击Workers 和 Pages → 点击创建应用程序</span>
-                    <span>步骤三：点击Pages → 点击导入现有 Git 存储库栏的开始使用按钮</span>
-                    <span>步骤四：在选择一个存储库栏勾选你要部署的项目</span>
-                    <span>步骤五：点击开始设置按钮</span>
-                    <span>步骤六：在框架预设栏选择Vue</span>
-                    <span>步骤五：点击保存并部署</span>
-                    <span>到这里就部署成功了。你就可以访问<a href="https://myclassroommanagementsystem.pages.dev/">你的网站</a>了</span>
+                    <span>步骤二：使用数据</span>
+                    <span>方式1：通过store直接访问数据获取数据(模板中)：其他组件可通过 {{ $仓库.状态.属性 }}来渲染数据</span>
+                    <span>例如</span>
+                    <span>页面中：<code>{{ $store.state.title }}</code></span>
+                    <span>获取数据(组件中)：<code>console.log(this.$store.state.title)</code></span>
+                    <span>获取数据(JS模块中)：<code>console.log(store.state.title)</code></span>
+                    <span>方式2、：通过辅助函数访问数据</span>
+                    <span>步骤一：在其他组件中导入mapState</span>
+                    <span>步骤二：往computed里配</span>
+                    <div class="Board">
+                        <div class="BoardHead">
+                            <!-- onclick="cope('document.getElementById(`txt`)')" 复制id为txt的内容 -->
+                            <button onclick="copyToClipboard('txtseven')">
+                                <svg t="1757132891560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4577" width="15" height="15"><path d="M731.68184 676.057473 731.68184 183.323259c0-30.233582-24.512277-54.745858-54.747905-54.745858L184.216093 128.577401c-30.233582 0-54.746882 24.512277-54.746882 54.745858l0 492.734214c0 30.207999 24.5133 54.746882 54.746882 54.746882l492.717841 0C707.16854 730.804355 731.68184 706.265472 731.68184 676.057473zM622.1891 676.057473 238.962975 676.057473c-30.233582 0-54.746882-24.538883-54.746882-54.745858L184.216093 238.07014c0-30.233582 24.5133-54.746882 54.746882-54.746882l383.226125 0c30.233582 0 54.744835 24.512277 54.744835 54.746882l0 383.242498C676.933935 651.51859 652.421658 676.057473 622.1891 676.057473zM841.17458 292.817022l-54.745858 0 0 54.746882c30.232558 0 54.745858 24.5133 54.745858 54.759161l0 383.228171c0 30.206976-24.5133 54.745858-54.745858 54.745858L403.201573 840.297095c-30.233582 0-54.746882-24.538883-54.746882-54.745858l-54.746882 0 0 54.745858c0 30.207999 24.5133 54.747905 54.746882 54.747905l492.719888 0c30.234605 0 54.747905-24.539906 54.747905-54.747905L895.922485 347.563904C895.922485 317.329299 871.408161 292.817022 841.17458 292.817022z" p-id="4578"></path></svg>
+                            </button>
+                        </div>
+                        <div class="BoardText">
+                            <span id="txtseven">
+                                import { mapState } from 'vuex'<br>
+                                computed: {<br>
+                                    &emsp;...mapState(['title'])<br>
+                                },<br>
+                            </span>
+                        </div>
+                    </div>
+                    <span>步骤三：在模板中直接写<code>{{ title }}</code></span>
                 </div>
             </div>
             <!-- 页脚 -->
             <div class="foot">
-                <a href="/notes/VueCli_DataSharing/VueCli_DataSharing.html">上一篇:基于VueCli创建项目及构建数据共享环境</a>
-                <a href="/notes/WindTerm_PM2/WindTerm_PM2.html">下一篇:使用 PM2 部署 Vue 应用指南</a>
+                <a href="">上一篇</a>
+                <a href="/notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html">下一篇:本地项目上传到github上并部署到cloudflare</a>
             </div>
         </div>
     </div>

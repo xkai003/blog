@@ -142,6 +142,12 @@ const works = [
 const notes = [
   // label 的链接前面要加上 https://blog-e3z.pages.dev/notes
   { 
+      label:'https://blog-e3z.pages.dev/notes/VueCli_DataSharing/VueCli_DataSharing',
+      title:"基于VueCli创建项目及构建数据共享环境", 
+      time:"2026.01.01", 
+      technology:"Vue2、VueCli" 
+  },
+  { 
       label:'https://blog-e3z.pages.dev/notes/vscolod_github+cloudflare/vscolod_github+cloudflare',
       title:"本地项目上传到github上并部署到cloudflare", 
       time:"2025.10.11", 
