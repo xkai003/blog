@@ -83,13 +83,13 @@
             <div class="item" v-for="item in displayedVueWebList" :key="item.id">
                 <div class="desc">
                     <a :href="item.label" class="title">{{ item.title }}</a><br>
-                        <span class="spanicon"><svg t="1763739628070" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5952"><path d="M512 73.142857C269.604571 73.142857 73.142857 269.604571 73.142857 512s196.461714 438.857143 438.857143 438.857143 438.857143-196.461714 438.857143-438.857143S754.395429 73.142857 512 73.142857z m0-73.142857c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z" fill="#666666" p-id="5953"></path><path d="M521.142857 182.857143C495.908571 182.857143 475.428571 203.337143 475.428571 228.571429V548.571429a45.714286 45.714286 0 0 0 91.428572 0V228.571429c0-25.234286-20.48-45.714286-45.714286-45.714286z" fill="#666666" p-id="5954"></path><path d="M523.337143 507.611429a45.714286 45.714286 0 0 0-32.292572 78.043428l165.778286 160.548572a45.714286 45.714286 0 0 0 64.621714-64.585143l-165.778285-160.621715a45.568 45.568 0 0 0-32.329143-13.385142z" p-id="5955"></path></svg> 
+                    <span class="spanicon"><svg t="1763739628070" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5952"><path d="M512 73.142857C269.604571 73.142857 73.142857 269.604571 73.142857 512s196.461714 438.857143 438.857143 438.857143 438.857143-196.461714 438.857143-438.857143S754.395429 73.142857 512 73.142857z m0-73.142857c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z" fill="#666666" p-id="5953"></path><path d="M521.142857 182.857143C495.908571 182.857143 475.428571 203.337143 475.428571 228.571429V548.571429a45.714286 45.714286 0 0 0 91.428572 0V228.571429c0-25.234286-20.48-45.714286-45.714286-45.714286z" fill="#666666" p-id="5954"></path><path d="M523.337143 507.611429a45.714286 45.714286 0 0 0-32.292572 78.043428l165.778286 160.548572a45.714286 45.714286 0 0 0 64.621714-64.585143l-165.778285-160.621715a45.568 45.568 0 0 0-32.329143-13.385142z" p-id="5955"></path></svg> 
                         {{ item.time }}
                         &nbsp;
                         <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
                         {{ item.look }}
                     </span>
-                    <span>技术栈：{{ item.technology }}</span>
+                    <span class="Introduction">简介：{{ item.technology }}</span>
                     <a :href="item.label">进入 →</a>
                 </div>
             </div>
@@ -188,61 +188,61 @@
                     label:'./notes/VueCli_DataSharing/VueCli_DataSharing.html',
                     title:"基于VueCli创建项目及构建数据共享环境", 
                     time:"2026.01.01", 
-                    technology:"Vue2、VueCli" 
+                    technology:"这是一个基于VueCli创建项目及构建数据共享环境的实践笔记，里面详细介绍了从零搭建项目→构建多组组件共享的数据环境→创建一个空仓库→提供并访问数据的全过程" 
                 },
                 { 
                     label:'./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
                     title:"本地项目上传到github上并部署到cloudflare", 
                     time:"2025.10.11", 
-                    technology:"vscolod、github、cloudflare"
+                    technology:"这篇笔记将教你如何把自己本地的项目上传到github仓库里，并部署到cloudflare"
                 },
                 { 
                     label:'./notes/WindTerm_PM2/WindTerm_PM2.html',
                     title:"使用 PM2 部署 Vue 应用指南", 
                     time:"2025.07.10", 
-                    technology:"PM2"
+                    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式"
                 },
                 { 
                     label:'./notes/pm2+api/pm2+api.html',
                     title:"使用PM2搭建后端api接口", 
                     time:"2025.07.10", 
-                    technology:"PM2、MySQL" 
+                    technology:"这篇笔记将教你如何应用PM2搭建连接数据库的api接口" 
                 },
                 { 
                     label:'./notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
                     title:"vue项目在服务器临时开启服务", 
                     time:"2025.07.10", 
-                    technology:"PM2"
+                    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）"
                 },
                 { 
                     label:'./notes/vue+MySQL/vue+MySQL.html',
                     title:"Vue项目连接数据库(本地)", 
                     time:"2025.07.10", 
-                    technology:"vue、MySQL"
+                    technology:"这篇笔记将教你vue如何链接数据库并渲染信息到页面上"
                 },
                 { 
                     label:'./notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
                     title:"Nginx托管静态网页", 
                     time:"2025.07.10", 
-                    technology:"Nginx"
+                    technology:"这篇笔记将教你使用Nginx反向代理的方式将你的网页呈现在浏览器上供用户浏览"
                 },
                 { 
                     label:'./notes/Visual_C++/Visual_C++.html',
                     title:"Visual C++ 6.0 操作步骤", 
                     time:"2025.07.10", 
-                    technology:"Visual C++ 6.0 操作步骤"
+                    technology:"这篇笔记将教你怎么使用Visual C++ 6.0软件并创建项目"
                 },
                 { 
                     label:'./notes/eclips_JavaWeb/eclips_JavaWeb.html',
                     title:"eclips创建JavaWeb项目流程", 
                     time:"2025.07.10", 
-                    technology:"eclips创建JavaWeb项目流程"
+                    technology:"这篇笔记将教你怎么使用eclips创建JavaWeb项目"
                 },
                 { 
                     label:'./notes/Python_LoveCode/Python_LoveCode.html',
                     title:"Python爱心代码", 
                     time:"2025.07.10", 
-                    technology:"Python爱心代码"
+                    technology:"这是一个Python爱心代码"
                 }
             ]
         },

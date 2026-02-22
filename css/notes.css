@@ -47,9 +47,17 @@
     color: black;
     display: flex;
     flex-direction: column;
-    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    /* overflow: hidden;         2. 隐藏超出容器的部分 */
     text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
-    white-space: nowrap;
+    /* white-space: nowrap; */
+}
+.item .desc .Introduction{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 最多显示两行 */
+    overflow: hidden; /* 隐藏超出的部分 */
+    word-break: break-all;
+    /* text-indent: 2em;  首行缩进2各字符 */
 }
 .item .desc a{
     color: black;
