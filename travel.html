@@ -78,16 +78,22 @@
         <div class="window" v-show="window">
             <div class="center">
                 <div class="windowhead">
-                    <span class="title">{{ windowname }}</span>
                     <button @click="closewindow()">X</button>
                 </div>
-                <div class="windowimg">
-                    <img :src="windowimg" alt="">
-                    <div class="imgbtn">
-                        <button><</button>
-                        <button>></button>
+                <div class="windowbody">
+                    <!-- <img :src="windowimg" alt=""> -->
+                    <div class="imagebox">
+                        <img :src="windowimg" alt="">
                     </div>
-                </div>
+                    <div class="rightbox">
+                        <span class="title">{{ windowname }}</span>
+                        <div class="rightbox-center">
+                            <input type="text" name="" id="" placeholder="昵称">
+                            <textarea name="" id=""></textarea>
+                            <button>发布评论</button>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
@@ -143,7 +149,7 @@
     const app = new Vue({
         el: '#app',
         data:{
-            window: false,
+            window: true,
             windowname: '',
             windowimg: '',
             itemsPerPage: 4, // 一页只能有四个
