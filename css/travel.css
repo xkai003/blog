@@ -257,6 +257,9 @@
     justify-content: space-between; /* 平摊空间 */
 }
 .window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox span{
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 超出部分用...代替 */
+    white-space: nowrap;
     line-height: 40px;
 }
 .window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox:hover{
