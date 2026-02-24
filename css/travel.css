@@ -175,24 +175,24 @@
 .window .center .windowbody .rightbox{
     width: 100%;
     max-width: 750px;
-    height: 500px;
-    background-color: #fefffb;
+    /* background-color: #a3d608; */
     float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.window .center .windowbody .rightbox .rightbox-center{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
 }
 .window .center .windowbody .rightbox .title{
     font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
 }
-.window .center .windowbody .rightbox input{
+/* rightbox-center */
+.window .center .windowbody .rightbox .rightbox-center{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.window .center .windowbody .rightbox .rightbox-center input{
     /* width: 80%; */
     height: 45px;
     margin-top: 10px;
@@ -200,14 +200,14 @@
     padding-left: 10px;
     border: 1px solid rgb(214, 213, 213);
 }
-.window .center .windowbody .rightbox textarea{
+.window .center .windowbody .rightbox .rightbox-center textarea{
     height: 55px;
     margin-top: 10px;
     border-radius: 15px;
     padding: 10px 10px;
     border: 1px solid rgb(214, 213, 213);
 }
-.window .center .windowbody .rightbox button{
+.window .center .windowbody .rightbox .rightbox-center button{
     font-size: 20px;
     height: 45px;
     margin-top: 10px;
@@ -216,11 +216,77 @@
     border: 1px solid rgb(214, 213, 213);
     background-color: #e5f0f0;
 }
-.window .center .windowbody .rightbox button:hover{
+.window .center .windowbody .rightbox .rightbox-center button:hover{
     cursor: pointer;
     border: none;
     color: #fff;
     background-color: #cccecc;
+}
+/* commentlist */
+.window .center .windowbody .rightbox .commentlist{
+    width: 80%;
+    height: 200px;
+    margin-top: 25px;
+    /* flex-direction: column; */
+    background-color: #f6f8ed;
+    border: 1px solid rgb(214, 213, 213);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.window .center .windowbody .rightbox .commentlist .title{
+    font-size: 20px;
+    line-height: 45px;
+    margin-left: 10px;
+}
+.window .center .windowbody .rightbox .commentlist div{
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(240, 231, 231);
+}
+.window .center .windowbody .rightbox .commentlist .overflowy{
+    height: 155px;
+    max-height: 155px;
+    overflow-y: auto;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy span{
+    margin-left: 10px;
+}
+/* 评论列表 */
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox{
+    display: flex;
+    justify-content: space-between; /* 平摊空间 */
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox span{
+    line-height: 40px;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox:hover{
+    background-color: #faf8f8;
+    cursor: pointer;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox:hover button{
+    background-color: #faf8f8;
+}
+/* 删除按钮 */
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox button{
+    border: none;
+    background-color: #fff;
+    color: #d3d2d2;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox button:hover{
+    color: red;
+    cursor: pointer;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .notcommentlist{
+    height: 155px;
+    max-height: 155px;
+    border: none;
+    text-align: center;
+    background-color: #f8f6f6;
+}
+/* 暂时没有评论 */
+.window .center .windowbody .rightbox .commentlist .overflowy .notcommentlist span{
+    line-height: 150px;
+    color: #f35d06;
 }
 /* 页脚 */
 .indexfoot {
