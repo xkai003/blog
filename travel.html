@@ -218,16 +218,17 @@
                         nicknameinp: this.nicknameinp,
                         commentinp: this.commentinp
                     };
-                    // 把 commentInfo 这个评论数据添加到 this.commentlist 这个评论数组的最开头
-                    this.commentlist.unshift(commentInfo);
-                    // 数据存储到本地
-                    localStorage.setItem("commentInfo", JSON.stringify(this.commentlist));
+                    
                     // 发布成功提示
                     const hint = document.getElementById("toast")
                     hint.style.display = "block"
                     hint.innerHTML = "发布成功"
                     setTimeout(() => {
                         hint.style.display = "none"
+                        // 把 commentInfo 这个评论数据添加到 this.commentlist 这个评论数组的最开头
+                        this.commentlist.unshift(commentInfo);
+                        // 数据存储到本地
+                        localStorage.setItem("commentInfo", JSON.stringify(this.commentlist));
                         // 清空输入框
                         this.nicknameinp = ''
                         this.commentinp = ''
