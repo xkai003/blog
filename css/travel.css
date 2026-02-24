@@ -134,7 +134,7 @@
     width: 80%;
     /* height: 90vh; */
     max-height: 80vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     /* max-width: 900px; */
     background-color: #fff;
     padding: 20px;
@@ -146,7 +146,6 @@
 .window .center .windowhead{
     width: 100%;
     text-align: center;
-    /* background-color: #ffdbdb; */
 }
 .window .center .windowhead button{
     width: 30px;
@@ -160,6 +159,9 @@
 .window .center .windowhead button:hover{
     color: red;
     cursor: pointer;
+}
+.window .center .windowbody{
+    overflow-y: auto;
 }
 .window .center .windowbody .imagebox{
     width: 100%;
@@ -194,15 +196,25 @@
     /* width: 80%; */
     height: 45px;
     margin-top: 10px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid rgb(214, 213, 213);
 }
 .window .center .windowbody .rightbox textarea{
-    height: 45px;
+    height: 55px;
     margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    border: 1px solid rgb(214, 213, 213);
 }
 .window .center .windowbody .rightbox button{
-    font-size: 25px;
+    font-size: 20px;
     height: 45px;
     margin-top: 10px;
+    border-radius: 15px;
+    color: #f35d06;
+    border: 1px solid rgb(214, 213, 213);
+    background-color: #e5f0f0;
 }
 .window .center .windowbody .rightbox button:hover{
     cursor: pointer;
