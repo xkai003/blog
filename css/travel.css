@@ -212,15 +212,15 @@
     height: 45px;
     margin-top: 10px;
     border-radius: 15px;
-    color: #f35d06;
+    color: #fff;
     border: 1px solid rgb(214, 213, 213);
-    background-color: #e5f0f0;
+    background-color: #cccecc;
 }
 .window .center .windowbody .rightbox .rightbox-center button:hover{
     cursor: pointer;
     border: none;
-    color: #fff;
-    background-color: #cccecc;
+    color: #f35d06;
+    background-color: #e5f0f0;
 }
 /* commentlist */
 .window .center .windowbody .rightbox .commentlist{
