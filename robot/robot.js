@@ -142,64 +142,64 @@ const works = [
 const notes = [
   // label 的链接前面要加上 https://blog-e3z.pages.dev/notes
   { 
-      label:'https://blog-e3z.pages.dev/notes/VueCli_DataSharing/VueCli_DataSharing',
-      title:"基于VueCli创建项目及构建数据共享环境", 
-      time:"2026.01.01", 
-      technology:"Vue2、VueCli" 
+    label:'https://blog-e3z.pages.dev/notes/VueCli_DataSharing/VueCli_DataSharing.html',
+    title:"基于VueCli创建项目及构建数据共享环境", 
+    time:"2026.01.01", 
+    technology:"这是一个基于VueCli创建项目及构建数据共享环境的实践笔记，里面详细介绍了从零搭建项目→构建多组组件共享的数据环境→创建一个空仓库→提供并访问数据的全过程" 
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/vscolod_github+cloudflare/vscolod_github+cloudflare',
-      title:"本地项目上传到github上并部署到cloudflare", 
-      time:"2025.10.11", 
-      technology:"vscolod、github、cloudflare"
+    label:'https://blog-e3z.pages.dev/notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
+    title:"本地项目上传到github上并部署到cloudflare", 
+    time:"2025.10.11", 
+    technology:"这篇笔记将教你如何把自己本地的项目上传到github仓库里，并部署到cloudflare"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/WindTerm_PM2/WindTerm_PM2',
-      title:"使用 PM2 部署 Vue 应用指南", 
-      time:"2025.07.10", 
-      technology:"PM2"
+    label:'https://blog-e3z.pages.dev/notes/WindTerm_PM2/WindTerm_PM2.html',
+    title:"使用 PM2 部署 Vue 应用指南", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/pm2+api/pm2+api.html',
-      title:"使用PM2搭建后端api接口", 
-      time:"2025.07.10", 
-      technology:"PM2、MySQL" 
+    label:'https://blog-e3z.pages.dev/notes/pm2+api/pm2+api.html',
+    title:"使用PM2搭建后端api接口", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你如何应用PM2搭建连接数据库的api接口" 
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
-      title:"vue项目在服务器临时开启服务", 
-      time:"2025.07.10", 
-      technology:"PM2"
+    label:'https://blog-e3z.pages.dev/notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
+    title:"vue项目在服务器临时开启服务", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/vue+MySQL/vue+MySQL.html',
-      title:"Vue项目连接数据库(本地)", 
-      time:"2025.07.10", 
-      technology:"vue、MySQL"
+    label:'https://blog-e3z.pages.dev/notes/vue+MySQL/vue+MySQL.html',
+    title:"Vue项目连接数据库(本地)", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你vue如何链接数据库并渲染信息到页面上"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
-      title:"Nginx托管静态网页", 
-      time:"2025.07.10", 
-      technology:"Nginx"
+    label:'https://blog-e3z.pages.dev/notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
+    title:"Nginx托管静态网页", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你使用Nginx反向代理的方式将你的网页呈现在浏览器上供用户浏览"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/Visual_C++/Visual_C++.html',
-      title:"Visual C++ 6.0 操作步骤", 
-      time:"2025.07.10", 
-      technology:"Visual C++ 6.0 操作步骤"
+    label:'https://blog-e3z.pages.dev/notes/Visual_C++/Visual_C++.html',
+    title:"Visual C++ 6.0 操作步骤", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你怎么使用Visual C++ 6.0软件并创建项目"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/eclips_JavaWeb/eclips_JavaWeb.html',
-      title:"eclips创建JavaWeb项目流程", 
-      time:"2025.07.10", 
-      technology:"eclips创建JavaWeb项目流程"
+    label:'https://blog-e3z.pages.dev/notes/eclips_JavaWeb/eclips_JavaWeb.html',
+    title:"eclips创建JavaWeb项目流程", 
+    time:"2025.07.10", 
+    technology:"这篇笔记将教你怎么使用eclips创建JavaWeb项目"
   },
   { 
-      label:'https://blog-e3z.pages.dev/notes/Python_LoveCode/Python_LoveCode.html',
-      title:"Python爱心代码", 
-      time:"2025.07.10", 
-      technology:"Python爱心代码"
+    label:'https://blog-e3z.pages.dev/notes/Python_LoveCode/Python_LoveCode.html',
+    title:"Python爱心代码", 
+    time:"2025.07.10", 
+    technology:"这是一个Python爱心代码"
   }
 ]
 
@@ -251,7 +251,7 @@ function getBotReply(msg) {
       <span style="color:red;">标题</span>：${targetNotes.title}<br>
       <span style="color:red;">项目地址</span>：<a href="${targetNotes.label}" style="text-decoration: none; color: #0077cc;">点击查看</a><br>
       <span style="color:red;">创建时间</span>：${targetNotes.time}<br>
-      <span style="color:red;">技术栈</span>：${targetNotes.technology}`;
+      <span style="color:red;">简介</span>：${targetNotes.technology}`;
     } 
     else {
       return "未找到对应的查询结果";
