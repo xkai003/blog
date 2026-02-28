@@ -241,7 +241,6 @@
 .window .center .windowbody .rightbox .commentlist div{
     width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid rgb(240, 231, 231);
 }
 .window .center .windowbody .rightbox .commentlist .overflowy{
     height: 155px;
@@ -255,14 +254,26 @@
 .window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox{
     display: flex;
     justify-content: space-between; /* 平摊空间 */
+    border-bottom: 1px solid rgb(240, 231, 231);
 }
-.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox span{
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox .commentlistboxleft{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden; /* 超出部分隐藏 */
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox  .commentlistboxleft .conten{
     overflow: hidden; /* 超出部分隐藏 */
     text-overflow: ellipsis; /* 超出部分用...代替 */
     white-space: nowrap;
-    line-height: 40px;
+    /* line-height: 40px; */
 }
-.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox:hover{
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox .commentlistboxleft .time{
+    color: #b1b0b0;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.window .center .windowbody .rightbox .commentlist .overflowy .commentlistbox:hover .commentlistboxleft{
     background-color: #faf8f8;
     cursor: pointer;
 }

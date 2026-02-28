@@ -97,7 +97,10 @@
                             <div class="overflowy">
                                 <!-- 评论列表 -->
                                 <div class="commentlistbox" v-for="item in commentlist" :key="item.id">
-                                    <span>{{item.nicknameinp}}：{{item.commentinp}}</span>
+                                    <div class="commentlistboxleft">
+                                        <span class="conten">{{item.nicknameinp}}：{{item.commentinp}}</span>
+                                        <span class="time">{{ item.time }}</span>
+                                    </div>
                                     <button @click="del(item.id)">X</button>
                                 </div>
                                 <!-- 暂时没有评论 -->
@@ -211,12 +214,24 @@
                     alert("请输入评论！")
                 }
                 if(this.nicknameinp !== '' && this.commentinp !== '') {
+                    // 获取时间当前时间
+                    const getTimestamp = function() {
+                        const now = new Date();
+                        const YYYY = now.getFullYear();
+                        const MM = String(now.getMonth() + 1).padStart(2, '0');
+                        const DD = String(now.getDate()).padStart(2, '0');
+                        const HH = String(now.getHours()).padStart(2, '0');
+                        const mm = String(now.getMinutes()).padStart(2, '0');
+                        const ss = String(now.getSeconds()).padStart(2, '0');
+                        return `${YYYY}-${MM}-${DD} ${HH}:${mm}:${ss}`;
+                    }
                     // 将评论信息存储在本地
                     const commentInfo = {
                         // 起名：变量名
                         id: +new Date(),
                         nicknameinp: this.nicknameinp,
-                        commentinp: this.commentinp
+                        commentinp: this.commentinp,
+                        time: getTimestamp()
                     };
                     
                     // 发布成功提示
