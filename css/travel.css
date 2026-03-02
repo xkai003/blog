@@ -207,6 +207,10 @@
     padding: 10px 10px;
     border: 1px solid rgb(214, 213, 213);
 }
+.window .center .windowbody .rightbox .rightbox-center .commentinplength{
+    font-size: 13px;
+    color: #cdf5a8;
+}
 .window .center .windowbody .rightbox .rightbox-center button{
     font-size: 20px;
     height: 45px;
