@@ -89,7 +89,8 @@
                         <span class="title">{{ windowtitle }}</span>
                         <div class="rightbox-center">
                             <input type="text" name="" id="" placeholder="昵称" v-model="nicknameinp">
-                            <textarea name="" id="" placeholder="评论" v-model="commentinp"></textarea>
+                            <textarea name="" id="" placeholder="评论(不能超过300字)" v-model="commentinp"></textarea>
+                            <span v-if="commentinp.length != 0" id="commentinplength" class="commentinplength">{{commentinp.length}}</span>
                             <button @click="comment()">发布评论</button>
                         </div>
                         <div class="commentlist">
@@ -97,7 +98,7 @@
                             <div class="overflowy">
                                 <!-- 评论列表 -->
                                 <div class="commentlistbox" v-for="item in commentlist" :key="item.id">
-                                    <div class="commentlistboxleft">
+                                    <div class="commentlistboxleft" :title="item.nicknameinp + '：' + item.commentinp">
                                         <span class="conten">{{item.nicknameinp}}：{{item.commentinp}}</span>
                                         <span class="time">{{ item.time }}</span>
                                     </div>
@@ -213,7 +214,10 @@
                 if(this.commentinp == '') {
                     alert("请输入评论！")
                 }
-                if(this.nicknameinp !== '' && this.commentinp !== '') {
+                if(this.commentinp.length.trim() > 300) {
+                    alert("评论不能超过300字")
+                }
+                if(this.nicknameinp !== '' && this.commentinp !== ''  && this.commentinp.length <= 300) {
                     // 获取时间当前时间
                     const getTimestamp = function() {
                         const now = new Date();
