@@ -201,7 +201,19 @@ const notes = [
     time:"2025.07.10", 
     technology:"这是一个Python爱心代码"
   }
-]
+];
+const travel = [
+  { image:"https://www.yuexiu.gov.cn/img/0/764/764154/8664487.png", name:"越秀公园", location:"广州", data:"2025-1-1", description:"地铁越秀公园站B1口" },
+  { image:"https://www.yuexiu.gov.cn/img/0/764/764782/8665100.png", name:"圣心大教堂", location:"广州", data:"2025-1-1", description:"地铁一德路站B口" },
+  { image:"https://aos-comment.amap.com/B0FFMEK0R5/comment/e9ede5b444706eec53044ca4c14cd049_2048_2048_80.jpg", name:"粤海关", location:"广州", data:"2025-1-1", description:"地铁8号线文化公园站A口" },
+  { image:"https://huacheng.gz-cmc.com/upload/news/image/2022/12/01/38c405194bd4459783bdc76bccea358a.jpeg", name:"广东省博物馆", location:"广州", data:"2025-1-1", description:"地铁apm号线大剧院站A口" },
+  { image:"https://www.baiyunshan.com.cn/bys/xhtml/images/zjbys_jj_l_03.png", name:"广州白云山", location:"广州", data:"2025-1-1", description:"地铁11号线云台花园站A口" },
+  { image:"https://qcloud.dpfile.com/pc/3-OQtk0bF79ipbLQK8D-kLy-9nqkpZZc4oPBSUFgLAF0dyciPvbAlEFZ_qaWpz84.jpg", name:"流花湖", location:"广州", data:"2025-1-1", description:"地铁11号线站B口" },
+  { image:"https://www.gz.gov.cn/img/0/148/148091/6533885.jpg", name:"广州动物园", location:"广州", data:"2025-1-1", description:"地铁5号线动物园站A口" },
+  { image:"https://img1.qunarzz.com/travel/d1/1704/91/7cd27467a85df6b5.jpg_r_640x426x70_dad2b17e.jpg", name:"沙面岛", location:"广州", data:"2025-1-1", description:"地铁6号线黄沙站E口" },
+  { image:"https://www.gz.gov.cn/img/1/1186/1186093/9638937.png", name:"白鹅潭艺术中心", location:"广州", data:"2025-1-1", description:"地铁11号线芳村站B1口" },
+  { image:"https://ak-d.tripcdn.com/images/1mi5612000d62kwvdBE59_W_640_0_R5_Q80.jpg?proc=source/tripg", name:"永庆坊", location:"广州", data:"2025-1-1", description:"交通：黄沙站（1号线或6号线）B出口" }
+];
 
 function getBotReply(msg) {
   // 智能问答环节
@@ -213,6 +225,9 @@ function getBotReply(msg) {
   }
   if(msg.includes("这个博客里一共有几个笔记")) {
     return `一共有<span style="color: red; margin: 5px">${notes.length}</span>条<a href="../notes.html" style="text-decoration: none;" title="点击跳转到笔记页">笔记</a>和一个<a href="https://md-myblog.pages.dev/" style="text-decoration: none;" title="点击跳转到MarkDown笔记">MarkDown笔记</a>`;
+  }
+  if(msg.includes("这个博客里一共有几个旅游景点")) {
+    return `一共有<span style="color: red; margin: 5px">${travel.length}</span>条<a href="../travel.html" style="text-decoration: none;" title="点击跳转到笔记页">旅游景点</a>`;
   }
   if(msg.includes("MarkDown笔记")) {
     return `(查询结果如下)<br>
@@ -227,7 +242,9 @@ function getBotReply(msg) {
     " ● 查作品：你只需要跟我说你要查询的作品的标题，我就可以帮你查询该作品的所有信息。<br/>" +
     " ● 查作品数量：你只需要跟我说：“这个博客里一共有几个作品”<br/>" + 
     " ● 查笔记：你只需要跟我说你要查询的笔记的标题，我就可以帮你查询该作品的所有信息。<br/>" + 
-    " ● 查笔记数量：你只需要跟我说：“这个博客里一共有几个笔记”<br/>" 
+    " ● 查笔记数量：你只需要跟我说：“这个博客里一共有几个笔记”<br/>" +
+    " ● 查旅游景点：你只需要跟我说你要查询的旅游景点，我就可以帮你查询该旅游景点的所有信息。<br/>" +
+    " ● 查旅游景点数量：你只需要跟我说：“这个博客里一共有几个旅游景点”<br/>" 
   }
 
   const input = document.getElementById('userInput');
@@ -252,6 +269,17 @@ function getBotReply(msg) {
       <span style="color:red;">项目地址</span>：<a href="${targetNotes.label}" style="text-decoration: none; color: #0077cc;">点击查看</a><br>
       <span style="color:red;">创建时间</span>：${targetNotes.time}<br>
       <span style="color:red;">简介</span>：${targetNotes.technology}`;
+    } 
+
+    // 查旅游
+    const targetTravel = travel.find(item => item.name === input.value);
+    if (targetTravel) {
+      return `(查询结果如下)<br>
+      <span style="color:red;">名称</span>：${targetTravel.name}<br>
+      <span style="color:red;">缩略图</span>：<img src="${targetTravel.image}" alt="封面" style="width:50px; height:50px; border-radius: 50%"><br>
+      <span style="color:red;">城市</span>：${targetTravel.location}<br>
+      <span style="color:red;">创建时间</span>：${targetTravel.data}<br>
+      <span style="color:red;">出行路线</span>：${targetTravel.description}`;
     } 
     else {
       return "未找到对应的查询结果";
