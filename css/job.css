@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #f5e8e8; */
+    display: flex;
+    justify-content: center;
+}
+.body .center{
+    max-width: 80vw;
+    margin-top: 30px;
+    /* background-color: #fff; */
+    /* border-radius: 15px;边框圆角 */
+    padding: 20px;
+    /* background-color: #f3f5d5; */
+    /* border-left: 3px solid rgb(162, 243, 151); */
+}
+.body .center .center-box{
+    display: flex;
+    flex-direction: column;
+}
+.body .center .center-box .company{
+    margin-top: 30px;
+    width: 200px;
+    margin-bottom: 30px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #e1e6e7;
+    padding: 10px;
+}
+.body .center .center-box .diary{
+    border: 1px solid rgb(231, 229, 229);
+    margin-bottom: 30px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px;
+    background-color: #fff;
+}
+.body .center .center-box .diary .time{
+    font-size: 15px;
+    color: rgb(187, 187, 186);
+}
+.body .center .center-box .diary .content{
+    display: -webkit-box;
+    margin-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 最多显示两行，多余的部分用...代替 */
+    overflow: hidden; /* 隐藏超出的部分 */
+    word-break: break-all;
+    /* text-indent: 2em;  首行缩进2各字符 */
+}
+.body .center .center-box div a{
+    color: rgb(204, 203, 203);
+    text-decoration: none;
+}
+.body .center .center-box div a:hover{
+    color: red;
+}
