@@ -96,6 +96,6 @@
 .window .center .content{
     overflow-y: auto;
 }
-.window .center .content{
-    text-indent: 2em;  /* 首行缩进2各字符 */
-}
+/* .window .center .content{
+    text-indent: 2em;  首行缩进2各字符
+} */
