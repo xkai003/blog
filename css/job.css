@@ -15,6 +15,7 @@
     flex-direction: column;
     background-color: hsl(0, 0%, 100%);
     padding: 0px 10px;
+    border: 1px solid rgb(252, 247, 247);
 }
 .body .center .center-box .overflowy{
     max-height: 60vh;
@@ -104,3 +105,14 @@
 /* .window .center .content{
     text-indent: 2em;  首行缩进2各字符
 } */
+ /* 页脚 */
+.indexfoot {
+  /* background-color: white; */
+  font-size: 15px;
+  color: #cac9c9;
+  text-align: center;
+}
+.indexfoot p{
+  font-size: 15px;
+  line-height: 60px;
+}
