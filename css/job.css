@@ -98,6 +98,14 @@
     color: rgb(204, 203, 203);
     margin-right: 10px;
 }
+.window .head button{
+    border: none;
+    background-color: #fff;
+}
+.window .head button:hover .icon{
+    fill: red;
+    cursor: pointer;
+}
 .window .center .content{
     margin-top: 10px;
     overflow-y: auto;
