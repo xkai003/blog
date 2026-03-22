@@ -73,15 +73,21 @@ body {
     font-size: 25px;
 }
 .sidebar button .jt{
+    width: 35px;
+    height: 35px;
     font-size: 25px;
     padding-top: 3px;
     margin-right: 15px;
     /* 给箭头添加动画效果 */
+    fill:  #818181;
     transition: transform 0.3s linear 0s;
 }
 .sidebar button:hover{
     background-color: rgba(224, 247, 245, 0.8);
     color: rgb(228, 172, 135);
+}
+.sidebar button:hover .jt{
+    fill: rgb(228, 149, 135);
 }
 .sidebar .twonav{
     max-height: 300px;
