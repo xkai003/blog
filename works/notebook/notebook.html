@@ -33,8 +33,17 @@
             </div>
             <!-- <span v-if="this.list.length == 0">1</span> -->
             <div class="box-2" v-for="(item,index) in list" :key="item.id">
-                <span>{{ index + 1 }}、</span><label v-html="item.name"></label>
-                <button @click="del(item.id)">x</button>
+                <div>
+                    <!-- <div> -->
+                        <span>{{ index + 1 }}、<label v-html="item.name"></label></span>
+                    <!-- </div> -->
+                    <!-- <div class="timebox"> -->
+                        <span class="timespan" >{{ item.time}}</span>
+                    <!-- </div> -->
+                </div>
+                <div>
+                    <button @click="del(item.id)">x</button>
+                </div>
             </div>
         </div>
         <!-- box-3 -->

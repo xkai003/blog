@@ -24,10 +24,22 @@ const app = new Vue({
                 alert('请输入任务名称');
                 return;
             }
+            // 获取时间当前时间
+            const getTimestamp = function() {
+                const now = new Date();
+                const YYYY = now.getFullYear();
+                const MM = String(now.getMonth() + 1).padStart(2, '0');
+                const DD = String(now.getDate()).padStart(2, '0');
+                const HH = String(now.getHours()).padStart(2, '0');
+                const mm = String(now.getMinutes()).padStart(2, '0');
+                const ss = String(now.getSeconds()).padStart(2, '0');
+                return `${YYYY}-${MM}-${DD} ${HH}:${mm}:${ss}`;
+            }
             // 添加列表动作
             const newTask = {
                 id: +new Date(),
-                name: this.todoName
+                name: this.todoName,
+                time: getTimestamp()
             };
             this.list.unshift(newTask);
             // 清空输入框

@@ -68,7 +68,7 @@ body{
 }
 .box .box-2{
     /* height: 100%; */
-    padding:  10px 0px;
+    padding:  5px 0px;
     display: flex;
     justify-content: space-between;/* 第一个项目与容器的起点对齐，最后一个项目与容器的终点对齐，并将 剩余空间平均分配到相邻项目之间的间距中 */
     align-items: center;/* 垂直居中 */
@@ -79,8 +79,17 @@ body{
     /* box-shadow: 0px 1px rgba(112, 129, 139, 0.2);边框阴影 */
     /* background-color: #ddb2b2; */
 }
+.box .box-2 div{
+    display: flex;
+    flex-direction: column;
+}
 .box .box-2:hover{
     background-color: #f5f3f3;
+}
+.box .box-2 .timespan{
+    margin-top: 5px;
+    font-size: 10px;
+    color: #c5c1c1;
 }
 .box .box-2:hover button{
     background-color: #f5f3f3;
