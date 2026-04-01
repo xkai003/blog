@@ -61,7 +61,7 @@
     -webkit-line-clamp: 3; /* 最多显示两行，多余的部分用...代替 */
     overflow: hidden; /* 隐藏超出的部分 */
     word-break: break-all;
-    /* text-indent: 2em;  首行缩进2各字符 */
+    text-indent: 2em;  /* 首行缩进2各字符 */
 }
 .body .center .center-box div a{
     color: rgb(204, 203, 203);
@@ -117,9 +117,9 @@
     margin-top: 10px;
     overflow-y: auto;
 }
-/* .window .center .content{
-    text-indent: 2em;  首行缩进2各字符
-} */
+.window .center .content{
+    text-indent: 2em;  /*首行缩进2各字符*/
+}
  /* 页脚 */
 .indexfoot {
   /* background-color: white; */
