@@ -10,11 +10,12 @@
     justify-content: center;
 }
 .body .center .center-box{
-    max-width: 80vw;
+    width: 80vw;
+    max-width: 80vw;/* 设置宽度为自适应 */
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 100%);
-    padding: 0px 10px;
+    padding: 20px;
     border: 1px solid rgb(252, 247, 247);
 }
 .body .center .center-box .overflowy{
@@ -25,23 +26,29 @@
   display: none;
 }
 .body .center .center-box .company{
-    margin-top: 30px;
+    margin-top: 10px;
     width: 235px;
-    margin-bottom: 30px;
     border-radius: 15px 15px 15px 15px;
     background-color: #e1e6e7;
     padding: 10px;
+    border: none;
+}
+.body .center .center-box .company:hover{
+    cursor: pointer;
+    background-color: #d0e5e9;
 }
 .body .center .center-box .diary{
+    margin-top: 15px;
     border: 1px solid rgb(238, 230, 230);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-radius: 15px 15px 15px 15px;
     padding: 10px;
     background-color: #fff;
 }
 .body .center .center-box .diary:hover{
     cursor: pointer;
-    border: 1px solid rgb(241, 149, 28);
+    background-color: #f8f6ec;
+    /* border: 1px solid rgb(241, 149, 28); */
 }
 .body .center .center-box .diary .time{
     font-size: 15px;

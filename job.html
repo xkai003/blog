@@ -48,8 +48,9 @@
             </div>
             <div class="center">
                 <div class="center-box">
-                    <div class="company">广州易川网络科技有限公司（{{gzycwlkjyxgs.length}}）</div>
-                    <div class="overflowy">
+                    <!-- <div class="company">广州易川网络科技有限公司（{{gzycwlkjyxgs.length}}）</div> -->
+                    <button class="company" @click="gzyc()">广州易川网络科技有限公司（{{gzycwlkjyxgs.length}}）</button>
+                    <div class="overflowy" v-show="gzycwlkjyxgsShow">
                         <div v-for="item in gzycwlkjyxgs" class="diary"> 
                             <span class="time">{{ item.time}}</span>
                             <span class="content" v-html="item.content"></span>
@@ -89,6 +90,7 @@
         const app = new Vue({
             el: '#app',
             data: {
+                gzycwlkjyxgsShow: true,// 控制公司列表是收缩与展开
                 window: false, // 控制弹窗的显示与隐藏
                 windowtime: '',
                 windowcontent: '',
@@ -132,11 +134,80 @@
                     {
                         time: "2026-3-18", 
                         like: "", 
-                        content:"&emsp;&emsp;今天早上9:50处理了【已发货仅退款订单】的导出；早上11:00将仓内库存数量改成了1；今天下午3:00处理了普通商品档案v2的普通商品转组合  " 
+                        content:"&emsp;&emsp;今天早上9:50处理了【已发货仅退款订单】的导出；早上11:00将仓内库存数量改成了1；今天下午3:00处理了普通商品档案v2的普通商品转组合" 
+                    },
+                    {
+                        time: "2026-3-19", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天早上09:39处理了【已发货仅退款】订单的导出" 
+                    },
+                    {
+                        time: "2026-3-20", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天早上09:30处理了【已发货仅退款】订单的导出" 
+                    },
+                    {
+                        time: "2026-3-21", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天早上09:17处理了【已发货仅退款】订单的导出,17:30制作了JW31BS001的商品编码" 
+                    },
+                    {
+                        time: "2026-3-22", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天休息" 
+                    },
+                    {
+                        time: "2026-3-23", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天9:30导出了已发货仅退款订单；10:30 - 14:31制作了JW29BS01款、JW9BS01和02款、JW28BS01款、JW7NNC01款；15:16 增加hk3cm 随机2条的编码、Jw1nnc 所有8条的都改成单品" 
+                    },
+                    {
+                        time: "2026-3-24", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天9:17处理了【已发货仅退款】订单的导出；15:35 将YL1NNC-8条的做成了单品；16:20将YL1NNC-8-9转成组合；17:00将8-5,8-6,8-9添加了编码" 
+                    },
+                    {
+                        time: "2026-3-25", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天早上9:50处理了【已发货仅退款订单】的导出；" 
+                    },
+                    {
+                        time: "2026-3-26", 
+                        like: "", 
+                        content:"&emsp;&emsp;导出已发货仅退款、制作YES10BS 的编码、JW23BS-D的编码、HK1NNC-8-14转组合、HK4BS-8-3-2XL、HK4BS-8-4-2XL、HK4BS-8-6-2XL、HK4NNC-8-1-5XL。导出6YCX-毛巾方-红大1-5包" 
+                    },
+                    {
+                        time: "2026-3-27", 
+                        like: "", 
+                        content:"&emsp;&emsp;9:20导出【已发货仅退款订单】；10:31制作了YES15CM的编码、10:06制作了YES30BS的编码" 
+                    },
+                    {
+                        time: "2026-3-28", 
+                        like: "", 
+                        content:"&emsp;&emsp;9:27处理了【已发货仅退款】订单的导出；9:54给客服2重置密码；15:45修改了客服晴氚 的密码" 
+                    },
+                    {
+                        time: "2026-3-29", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天休息" 
+                    },
+                    {
+                        time: "2026-3-30", 
+                        like: "", 
+                        content:"&emsp;&emsp;今天早上9:22处理了【已发货仅退款订单】的导出；" 
+                    },
+                    {
+                        time: "2026-3-31", 
+                        like: "", 
+                        content:"&emsp;&emsp;9:29处理了【已发货仅退款】订单的导出；10:50完成了JW33BS-01-裸货+组合" 
                     }
                 ],
             },
             methods: {
+                // 公司列表是收缩与展开
+                gzyc() {
+                    this.gzycwlkjyxgsShow = !this.gzycwlkjyxgsShow
+                },
                 // 打开弹窗
                 openwindow(item) {
                     this.window = true
