@@ -8,6 +8,31 @@
     <link rel="icon" type="image/svg+xml" href="./img/index/logo.jpg" />
     <link rel="stylesheet" href="./css/travel.css">
     <link rel="stylesheet" href="/css/CommonStyle.css"><!-- 共同样式 -->
+    <style>
+        /* 轮播按钮样式（不破坏原有布局） */
+.imagebox {
+  position: relative;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 9;
+}
+.carousel-btn.left {
+  left: 10px;
+}
+.carousel-btn.right {
+  right: 10px;
+}
+    </style>
     <!-- 引入开发版本的包 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 </head>
@@ -77,48 +102,46 @@
             </div>
         </div>
         <div class="window" v-show="window">
-            <div class="center">
-                <div class="windowhead">
-                    <button @click="closewindow()">X</button>
-                </div>
-                <div class="windowbody">
-                    <!-- 轮播图区域（完全保留你的 class，只加轮播逻辑） -->
-                    <div class="imagebox">
-                        <img :src="windowimg" alt="">
-                        <!-- 左右切换按钮（悬浮在图片上，不破坏样式） -->
-                        <button class="carousel-btn left" @click="prev">‹</button>
-                        <button class="carousel-btn right" @click="next">›</button>
-                    </div>
-                    <!--  -->
-                    <div class="rightbox">
-                        <span class="title">{{ windowtitle }}</span>
-                        <div class="rightbox-center">
-                            <input type="text" name="" id="" placeholder="昵称" v-model="nicknameinp">
-                            <textarea name="" id="" placeholder="评论(不能超过300字)" v-model="commentinp"></textarea>
-                            <span v-if="commentinp.length != 0" class="commentinplength">{{commentinp.length}}</span>
-                            <button @click="comment()">发布评论</button>
-                        </div>
-                        <div class="commentlist">
-                            <span class="title">评论列表（{{this.commentlist.length}}）</span>
-                            <div class="overflowy">
-                                <!-- 评论列表 -->
-                                <div class="commentlistbox" v-for="item in commentlist" :key="item.id">
-                                    <div class="commentlistboxleft" :title="item.nicknameinp + '：' + item.commentinp">
-                                        <span class="conten">{{item.nicknameinp}}：{{item.commentinp}}</span>
-                                        <span class="time">{{ item.time }}</span>
-                                    </div>
-                                    <button @click="del(item.id)">X</button>
-                                </div>
-                                <!-- 暂时没有评论 -->
-                                <div class="notcommentlist" v-if="this.commentlist == ''">
-                                    <span>暂时没有评论</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
+  <div class="center">
+    <div class="windowhead">
+      <button @click="closewindow()">X</button>
+    </div>
+    <div class="windowbody">
+      <!-- 轮播图区域（完全保留你的 class，只加轮播逻辑） -->
+      <div class="imagebox">
+        <img :src="windowimg" alt="">
+        <!-- 左右切换按钮（悬浮在图片上，不破坏样式） -->
+        <button class="carousel-btn left" @click="prev">‹</button>
+        <button class="carousel-btn right" @click="next">›</button>
+      </div>
+
+      <div class="rightbox">
+        <span class="title">{{ windowtitle }}</span>
+        <div class="rightbox-center">
+          <input type="text" name="" id="" placeholder="昵称" v-model="nicknameinp">
+          <textarea name="" id="" placeholder="评论(不能超过300字)" v-model="commentinp"></textarea>
+          <span v-if="commentinp.length != 0" class="commentinplength">{{commentinp.length}}</span>
+          <button @click="comment()">发布评论</button>
         </div>
+        <div class="commentlist">
+          <span class="title">评论列表（{{this.commentlist.length}}）</span>
+          <div class="overflowy">
+            <div class="commentlistbox" v-for="item in commentlist" :key="item.id">
+              <div class="commentlistboxleft" :title="item.nicknameinp + '：' + item.commentinp">
+                <span class="conten">{{item.nicknameinp}}：{{item.commentinp}}</span>
+                <span class="time">{{ item.time }}</span>
+              </div>
+              <button @click="del(item.id)">X</button>
+            </div>
+            <div class="notcommentlist" v-if="this.commentlist == ''">
+              <span>暂时没有评论</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
     </div>
     <!-- 发布成功提示 -->
     <div name="toast-fade">
@@ -181,7 +204,6 @@
             windowimg: '', // 弹窗的图片
             nicknameinp: '', // 弹窗的昵称框
             commentinp: '', // 弹窗的评论框
-            currentIndex: 0, // 当前轮播图的索引
             commentlist:  JSON.parse(localStorage.getItem("commentInfo")) || [],// 从本地获取弹窗的评论列表
             // itemsPerPage: 4, // 一页只能有四个
             // vueCurrentPage: 1, // 当前页码
@@ -198,7 +220,9 @@
                 { image:"https://www.gz.gov.cn/img/1/1186/1186093/9638937.png", name:"白鹅潭艺术中心", location:"广州", data:"时间：2025-1-1", description:"地铁11号线芳村站B1口" },
                 { image:"https://ak-d.tripcdn.com/images/1mi5612000d62kwvdBE59_W_640_0_R5_Q80.jpg?proc=source/tripg", name:"永庆坊", location:"广州", data:"时间：2025-1-1", description:"交通：黄沙站（1号线或6号线）B出口" }
             ],
+            currentIndex: 0, // 当前轮播索引
         },
+        computed: {},
         methods: {
             // 打开弹窗
             openwindow(listcontent) {
@@ -277,36 +301,35 @@
                     localStorage.setItem("commentInfo", JSON.stringify(this.commentlist));
                 }, 1500);
             },
-            
             // ============= 轮播方法 =============
-            // 上一张
-            prev() {
-                this.currentIndex = (this.currentIndex - 1 + this.travellist.length) % this.travellist.length;
-                this.setCurrentData();
-            },
-            // 下一张
-            next() {
-                this.currentIndex = (this.currentIndex + 1) % this.travellist.length;
-                this.setCurrentData();
-            },
-            // 同步图片和标题到弹窗变量
-            setCurrentData() {
-                const current = this.travellist[this.currentIndex];
-                this.windowimg = current.image;
-                this.windowtitle = current.name;
-            },
+    // 上一张
+    prev() {
+      this.currentIndex = (this.currentIndex - 1 + this.travellist.length) % this.travellist.length;
+      this.setCurrentData();
+    },
+    // 下一张
+    next() {
+      this.currentIndex = (this.currentIndex + 1) % this.travellist.length;
+      this.setCurrentData();
+    },
+    // 同步图片和标题到弹窗变量
+    setCurrentData() {
+      const current = this.travellist[this.currentIndex];
+      this.windowimg = current.image;
+      this.windowtitle = current.name;
+    },
 
-            // 打开弹窗时初始化轮播（你调用 openwindow 时改成调用这个）
-            openCarouselWindow(index = 0) {
-                this.currentIndex = index;
-                this.setCurrentData();
-                this.window = true;
-            }
+    // 打开弹窗时初始化轮播（你调用 openwindow 时改成调用这个）
+    openCarouselWindow(index = 0) {
+      this.currentIndex = index;
+      this.setCurrentData();
+      this.window = true;
+    }
         },
         mounted() {
-            // 默认显示第一张
-            this.setCurrentData();
-        }
+    // 默认显示第一张
+    this.setCurrentData();
+  }
     })
 </script>
 </body>
