@@ -19,8 +19,10 @@
     border: 1px solid rgb(252, 247, 247);
 }
 .body .center .center-box .overflowy{
+    margin-top: 15px;
     max-height: 60vh;
     overflow-y: auto;
+    /* background-color: #f0d3d3; */
 }
 .body .center .center-box .overflowy::-webkit-scrollbar{
   display: none;
