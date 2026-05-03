@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历备忘录</title>
+    <!-- 引入 Vue 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- 引入css样式 -->
+     <link rel="stylesheet" href="./calendar.css">
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="calendar-header">
+            <button @click="prevMonth">←</button>
+            <h2>{{ currentYear }}年{{ currentMonth + 1 }}月</h2>
+            <button @click="nextMonth">→</button>
+        </div>
+
+        <div class="weekdays">
+            <div v-for="week in weeks" :key="week">{{ week }}</div>
+        </div>
+
+        <div class="days">
+            <div
+                class="day"
+                :class="{
+                    active: selectDay === day.fullDate,
+                    notMonth: !day.isCurrentMonth
+                }"
+                v-for="day in daysList"
+                :key="day.fullDate"
+                @click="selectDate(day)"
+            >
+                <span class="day-num">{{ day.day }}</span>
+                <span
+                    v-if="getDaySchedule(day.fullDate).length"
+                    class="badge"
+                >
+                    {{ getDaySchedule(day.fullDate).length }}
+                </span>
+                <div class="schedule-preview">
+                    <div
+                        v-for="(item, idx) in getDaySchedule(day.fullDate).slice(0,2)"
+                        :key="idx"
+                        class="item"
+                    >
+                        {{ item.title }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-box" v-show="selectDay">
+            <h3>📅 {{ selectDay }} 日程</h3>
+            <div class="add-form">
+                <input
+                    v-model="scheduleText"
+                    placeholder="输入日程/备忘录..."
+                    @keyup.enter="addSchedule"
+                >
+                <button @click="addSchedule">添加</button>
+            </div>
+            <div class="schedule-list">
+                <div v-for="(item, idx) in currentDaySchedules" :key="idx" class="schedule-item">
+                    <span style="overflow: hidden;">{{ item.title }}</span>
+                    <button @click="delSchedule(idx)">删除</button>
+                </div>
+                <div v-if="currentDaySchedules.length === 0" class="empty">暂无日程</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    currentYear: new Date().getFullYear(),
+                    currentMonth: new Date().getMonth(),
+                    today: new Date().getDate(),
+                    weeks: ["日", "一", "二", "三", "四", "五", "六"],
+                    daysList: [],
+                    selectDay: "",
+                    scheduleText: "",
+                    scheduleData: JSON.parse(localStorage.getItem("scheduleData")) || {},
+                };
+            },
+            computed: {
+                currentDaySchedules() {
+                    return this.scheduleData[this.selectDay] || [];
+                },
+            },
+            mounted() {
+                this.renderCalendar();
+            },
+            methods: {
+                renderCalendar() {
+                    const year = this.currentYear;
+                    const month = this.currentMonth;
+                    const firstDay = new Date(year, month, 1).getDay();
+                    const daysInMonth = new Date(year, month + 1, 0).getDate();
+                    const prevMonthDays = new Date(year, month, 0).getDate();
+                    let days = [];
+
+                    for (let i = firstDay - 1; i >= 0; i--) {
+                        days.push({
+                            day: prevMonthDays - i,
+                            fullDate: `${year}-${month}-${prevMonthDays - i}`,
+                            isCurrentMonth: false,
+                        });
+                    }
+                    for (let i = 1; i <= daysInMonth; i++) {
+                        days.push({
+                            day: i,
+                            fullDate: `${year}-${month + 1}-${i}`,
+                            isCurrentMonth: true,
+                        });
+                    }
+                    const remain = 42 - days.length;
+                    for (let i = 1; i <= remain; i++) {
+                        days.push({
+                            day: i,
+                            fullDate: `${year}-${month + 2}-${i}`,
+                            isCurrentMonth: false,
+                        });
+                    }
+                    this.daysList = days;
+                },
+                prevMonth() {
+                    this.currentMonth--;
+                    if (this.currentMonth < 0) {
+                        this.currentMonth = 11;
+                        this.currentYear--;
+                    }
+                    this.renderCalendar();
+                },
+                nextMonth() {
+                    this.currentMonth++;
+                    if (this.currentMonth > 11) {
+                        this.currentMonth = 0;
+                        this.currentYear++;
+                    }
+                    this.renderCalendar();
+                },
+                selectDate(day) {
+                    this.selectDay = day.fullDate;
+                },
+                getDaySchedule(date) {
+                    return this.scheduleData[date] || [];
+                },
+                addSchedule() {
+                    if (!this.scheduleText.trim()) return;
+                    if (!this.selectDay) return alert("请先选择日期！");
+
+                    if (!this.scheduleData[this.selectDay]) {
+                        this.scheduleData[this.selectDay] = [];
+                    }
+                    this.scheduleData[this.selectDay].push({
+                        title: this.scheduleText,
+                    });
+                    this.scheduleText = "";
+                    this.saveSchedule();
+                },
+                delSchedule(index) {
+                    this.scheduleData[this.selectDay].splice(index, 1);
+                    this.saveSchedule();
+                },
+                saveSchedule() {
+                    localStorage.setItem("scheduleData", JSON.stringify(this.scheduleData));
+                },
+            }
+        })
+    </script>
+</body>
+</html>
