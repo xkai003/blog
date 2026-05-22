@@ -20,29 +20,37 @@ document.getElementById('sidebarToggle').addEventListener('click', function() {
     }
 });
 
-document.getElementById('btn').onclick = function() {
-            const townav = document.getElementById('twonav');
-            const jt = document.getElementById('jt');
-        
-            // 关键：用 getComputedStyle 获取实际生效的样式（不管是行内还是CSS表）
-            const currentDisplay = window.getComputedStyle(townav).display;
-    
-            if (currentDisplay === "none") {
-                // 显示元素
-                townav.style.display = "block";
-                townav.style.transform = "translate(0%, 0%)"
-                // 给箭头添加动画效果
-                jt.style.transform = "rotate(90deg)";
-            } else {
-                // 隐藏元素
-                townav.style.display = "none";
-                // 给箭头添加动画效果
-                jt.style.transform = "rotate(0deg)";
-            }
-        };
+// 作品下拉
+document.getElementById('worksbtn').onclick = function() {
+    const workstownav = document.getElementById('workstownav');
+    const jt = document.getElementById('jt_works');
+    const currentDisplay = window.getComputedStyle(workstownav).display;
 
-// 
-// 一进页面就执行
-// window.onload = function(){
-//     this.alert("你好")
-// }
+    if (currentDisplay === "none") {
+        workstownav.style.display = "block";
+        workstownav.style.transform = "translate(0%, 0%)"
+        jt.style.transform = "rotate(90deg)";
+    } else {
+        workstownav.style.display = "none";
+        jt.style.transform = "rotate(0deg)";
+    }
+};
+
+// 笔记下拉
+document.getElementById('notesbtn').onclick = function() {
+    const townav = document.getElementById('townav');
+    const jt = document.getElementById('jt_note');
+    const currentDisplay = window.getComputedStyle(townav).display;
+
+    if (currentDisplay === "none") {
+        townav.style.display = "block";
+        townav.style.transform = "translate(0%, 0%)"
+        jt.style.transform = "rotate(90deg)";
+    } else {
+        townav.style.display = "none";
+        jt.style.transform = "rotate(0deg)";
+    }
+};
+
+
+

@@ -1,0 +1,129 @@
+/* 展览台 */
+.nrr{
+    /* 这部分的作用是把展览台设置成一个整体，然后设置内容垂直居中 */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nr{
+    width: 80%;
+    /* 改用限制最大长度，从而满足手机屏幕自适应 */
+    max-width: 1000px;
+    /* background-color: #eeeeec; */
+    border-radius: 15px;/* 边框圆角 */
+    padding: 20px;
+}
+.nr a{
+    text-decoration: none;
+}
+.item {
+    width: 100%;
+    /* height: 300px; */
+    /* padding: 10px 30px; */
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 20px -2px rgb(197, 196, 196);
+    background-color: #fff;
+}
+.item:hover{
+    border: 1px solid rgb(197, 196, 196);
+    box-shadow:1px 20px 20px -2px rgb(197, 196, 196);
+}
+
+.item img {
+    width: 20%;
+    /* height: 90%; */
+    border-radius: 5px;
+    margin: 10px;
+}
+.item .desc{
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden;         2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
+    /* white-space: nowrap; */
+}
+.item .desc .Introduction{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 最多显示两行 */
+    overflow: hidden; /* 隐藏超出的部分 */
+    word-break: break-all;
+    /* text-indent: 2em;  首行缩进2各字符 */
+}
+.item .desc a{
+    color: black;
+    text-decoration: none;
+}
+.item .desc a:hover{
+    color: red;
+}
+.item .desc .title{
+    /* margin-top: 10px; */
+    font-size: 20px;
+    font-weight: bolder;
+    /* font-size: 30px; 标题文字大小 */
+    text-align: center; /* 标题居中 */
+} 
+.item .desc .spanicon{
+    color: #989898;
+}
+.item .desc .spanicon .icon{
+    width: 15px;
+    height: 15px;
+}
+.item .desc .wb {
+    /* width: 90%; */
+    display: block;
+    /* width: 60%; */
+    /* border: 1px solid red; */
+    background-color: #f0c5c5;
+    /* margin-right: 30px; */
+    /* padding: 10px; */
+    /* 关键：当内容在水平方向上溢出时，显示滚动条 */
+    overflow-y: auto;/* 垂直滚动条 */
+    /* padding: 8px 12px; */
+    border-radius: 4px;
+}
+.item .desc .api{
+    /* height: 50px; */
+    /* background-color: #b18e8e; */
+    /* line-height: 30px; */
+    /* padding: 5px 0px 5px 0px; */
+    max-width: 50%;
+    overflow: hidden;         /* 2. 隐藏超出容器的部分 */
+    text-overflow: ellipsis;  /* 3. 将被隐藏的部分显示为省略号 */
+    white-space: nowrap;
+}
+/* 展览台 */
+/* 回到顶部按钮样式 */
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: none; /* 默认隐藏 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#backToTop:hover {
+    background-color: #c8f2f8;
+}
+/* 页脚 */
+.indexfoot {
+  /* margin: 0 auto; */
+  line-height: 30px;
+  font-size: 15px;
+  color: #cac9c9;
+  text-align: center;
+}
