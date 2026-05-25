@@ -2,12 +2,13 @@
   height: 79vh;
   margin-top: 30px;
   /* border: 1px solid red; */
-  padding: 30px;
+  padding: 10px;
 }
 .bigbox .center {
   width: 100%;
   height: 100%;
-  background-color: #f7eaea;
+  padding: 10px 0px;
+  background-color: #fff;
   overflow-x: auto; /* 横向滚动 */
   overflow-y: hidden;
   /* 👇 核心修复：横向排列，不换行 */
@@ -20,15 +21,16 @@
 .bigbox .center .card {
   /* 👇 核心修复：取消 float，用 flex 横向排列 */
   width: 200px;
-  /* border: 1px solid red; */
-  margin-right: 10px;
+  border: 1px solid rgb(236, 235, 235);
+  margin-left: 10px;
   /* 保证不被压缩 */
   flex-shrink: 0;
-  border: 1px solid rgba(245, 244, 244, 0.3);
+  box-shadow: 2px 2px 20px -2px rgb(197, 196, 196);
 }
 .bigbox .center .card:hover{
   cursor: pointer;
-  border: 1px solid rgba(202, 200, 200, 0.3);
+  border: 1px solid rgb(211, 210, 210);
+  box-shadow:1px 20px 20px -2px rgb(197, 196, 196);
 }
 .bigbox .center .card img{
   width: 100%;
@@ -41,13 +43,13 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(3, 3, 3, 0.795);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .window .center{
-  width: 95%;
+  width: 50%;
   height: 95%;
   background-color: #fff;
   /* border: 1px solid red; */
@@ -57,7 +59,7 @@
 .window .center .windowhead{
   width: 100%;
   height: 5%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(3, 3, 3, 0.39);
 }
 .window .center .windowhead button{
   width: 50px;
@@ -69,6 +71,7 @@
 }
 .window .center .windowhead button:hover{
   color: #fff;
+  fill: #fff;
 }
 .window .center .windowhead button:hover{
   cursor: pointer;
