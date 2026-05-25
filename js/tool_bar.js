@@ -3,7 +3,7 @@ const backToTopButton = document.getElementById("indexbackToTop");
 const HomeToolBar = document.getElementById('home-tool-bar')
 const HomeToolBaricon = document.getElementById('home-tool-bar-icon')
 
-// 监听滚动事件,如果页面下滑大于300就显示工具栏
+// 监听滚动事件,如果页面下滑大于100就显示工具栏
 window.addEventListener("scroll", function() {
     if (window.scrollY > 100) { // 设定触发显示的滚动距离
         HomeToolBar.style.display = "block";

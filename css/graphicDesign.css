@@ -1,41 +1,52 @@
 .bigbox {
-  height: 79vh;
-  margin-top: 30px;
-  /* border: 1px solid red; */
-  padding: 10px;
+  height: 63vh;
+  margin: 0px 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
 }
-.bigbox .center {
+
+.scroll-box {
   width: 100%;
   height: 100%;
   padding: 10px 0px;
-  background-color: #fff;
-  overflow-x: auto; /* 横向滚动 */
-  overflow-y: hidden;
-  /* 👇 核心修复：横向排列，不换行 */
   display: flex;
-  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll 18s linear infinite;
 }
-.bigbox .center::-webkit-scrollbar{
-  display: none;
+/* 鼠标停留时停止滚动 */
+.scroll-box:hover {
+  animation-play-state: paused;
 }
-.bigbox .center .card {
-  /* 👇 核心修复：取消 float，用 flex 横向排列 */
-  width: 200px;
-  border: 1px solid rgb(236, 235, 235);
+
+.card-list {
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  height: 97%;
   margin-left: 10px;
-  /* 保证不被压缩 */
-  flex-shrink: 0;
-  box-shadow: 2px 2px 20px -2px rgb(197, 196, 196);
+  /* background: #fff; */
 }
-.bigbox .center .card:hover{
+.card:hover{
   cursor: pointer;
-  border: 1px solid rgb(211, 210, 210);
-  box-shadow:1px 20px 20px -2px rgb(197, 196, 196);
 }
-.bigbox .center .card img{
+.card img {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /*  */
 .window{
   position: fixed;
@@ -79,13 +90,12 @@
 .window .center .windowbody{
   width: 100%;
   height: 95%;
-  background-color: #d1a6a6;
+  /* background-color: #d1a6a6; */
 }
 .window .center .windowbody img{
   width: 100%;
   height: 100%;
 }
-
 
 /* 页脚 */
 .indexfoot {
