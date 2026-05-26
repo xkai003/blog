@@ -27,6 +27,8 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    /* 永远保持在最上层 */
+    z-index: 2;
 }
 .sidebar li{
     margin: 0;
