@@ -1,6 +1,7 @@
 .bigbox {
   height: 63vh;
-  margin: 0px 20px;
+  width: 80vw;
+  margin: 20px auto;
   overflow: hidden;
   box-sizing: border-box;
   background-color: #fff;
