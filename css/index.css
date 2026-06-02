@@ -120,14 +120,57 @@
 }
 .window .center{
   width: 70%;
-  height: 300px;
+  height: 350px;
+  background-color: #fff;
+  color: #cdcece;
+}
+.window .center .windowhead{
+  height: 10%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.window .center .windowhead input{
+  width: 90%;
+  border: none;
+}
+.window .center .windowhead button{
+  width: 10%;
+  border: none;
   background-color: #fff;
 }
-.window .center .seachdatabox{
+.window .center .windowhead button:hover{
+  cursor: pointer;
+  background-color: #ecebeb;
+}
+.window .center .windowbody{
   width: 100%;
-  height: 300px;
+  height: 90%;
+  margin-bottom: 10px;
+  background-color: #fff;
   overflow-y: auto;
-  background-color: #f8f5f5;
+}
+.window .center .windowbody a{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #cdcece;
+  text-decoration: none;
+}
+.window .center .windowbody a:hover{
+  background-color: #ecebeb;
+}
+.window .center .windowbody a span{
+  margin-left: 10px;
+}
+.window .center .windowfoot{
+  height: 10%;
+}
+.window .center .windowfoot span{
+  font-size: 15px;
+  color: #cdcece;
+  margin-right: 10px;
 }
 /* -------------------------------- 搜索弹窗部分 end -------------------------------- */
 

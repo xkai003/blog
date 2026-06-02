@@ -40,19 +40,29 @@
     </div>
     <!-------------------------------- 导航部分 end -------------------------------->
 
-    <!-------------------------------- 弹窗部分 -------------------------------->
+    <!-------------------------------- 搜索弹窗部分 -------------------------------->
     <div class="window" v-show = "windowshow">
       <div class="center">
-        <button @click="closewindow()">X</button>
-        <input v-model="searchQuery" ref="inp" placeholder="输入标题搜索" />
-        <div class="seachdatabox">
-            <div v-for="item in seachdata" :key="item.id">
-              <p>{{ item.title }}</p>
-            </div>
+        <div class="windowhead">
+          <input v-model="searchQuery" ref="inp" placeholder="输入标题搜索" />
+          <button @click="closewindow()">X</button>
+        </div>
+        <!-- <button @click="filteredVueWebList()">搜索</button> -->
+        <div class="windowbody">
+          <div v-for="item in filteredVueWebList" :key="item.id">
+            <!-- <p>{{ item.title }}</p> -->
+            <a :href="item.label">
+              <span>{{ item.title }}</span>
+            </a>
+          </div>
+        </div>
+        <div class="windowfoot">
+          <span>总数据：{{ seachdata.length }}</span>
+          <span>筛选数量：{{filteredVueWebList.length}}</span>
         </div>
       </div>
     </div>
-    <!-------------------------------- 弹窗部分 end -------------------------------->
+    <!-------------------------------- 搜索弹窗部分 end -------------------------------->
 
 
     <!-------------------------------- 内容部分 -------------------------------->
@@ -261,6 +271,7 @@
           this.VueWorksList = json.workslist || [];
           this.VueNotesList = json.noteslist || [];
           this.VueTravelList = json.travellist || [];
+          this.seachdata = this.VueNotesList
           // 所有数据合并到 seachdata 数组里    
           this.seachdata = [...this.VueWorksList, ...this.VueNotesList, ...this.VueTravelList]
 
@@ -272,32 +283,43 @@
       // ==================读取 data.json 数据 end ==================
 
       // ==================弹窗部分==================
-    // 搜索数据
-    filteredVueWebList() {
-    console.log(this.searchQuery)
-    const query = this.searchQuery.trim().toLowerCase()
-    if (!query) return this.seachdata // 这里也要 this.
-    return this.seachdata.filter(item =>
-      item.title?.toLowerCase().includes(query)
-    )
-  },
       // 打开弹窗
       openwindow() {
           this.windowshow = true
           console.log("打开弹窗")
+          // $refs.inp.focus() 的作用是当搜索框为显示状态时自动聚焦
+          this.$nextTick(() => {
+              console.log("搜索框已自动聚焦")
+              this.$refs.inp.focus()
+          })
       },
       // 关闭弹窗
       closewindow() {
           this.windowshow = false
           console.log("关闭弹窗")
-      },
+      }
 
       // ==================弹窗部分 end==================
+    },
+    computed: {
+      // ================== 搜索部分 ==================
+      filteredVueWebList() {
+        const query = this.searchQuery.trim().toLowerCase()
+        // 输入为空，直接返回原始全量数据
+        if (!query) {
+          return this.seachdata
+        }
+        // 有搜索词 → 返回筛选后的新数组，不改动原seachdata
+        return this.seachdata.filter(item => {
+          return item.title?.toLowerCase().includes(query)
+        })
+      }
+      // ================== 搜索部分 end ==================
     },
     // 页面加载时读取JSON
     mounted() {
       this.loadData(); // 页面加载时读取JSON   
-      this.filteredVueWebList();       
+      // this.filteredVueWebList();       
       console.log("页面加载时读取JSON")
     }
   })
