@@ -77,26 +77,26 @@
         </div>
         <div class="scroll-container">
           <!--  -->
-          <a :href="item.cardlink" class="card-link" v-for="item in workslist" :key="item.id">
+          <a :href="item.label" class="card-link" v-for="item in VueWorksList" :key="item.id">
             <div class="card">
               <div class="card-img">
                 <img :src="item.image" alt="封面">
                 <div class="img-overlay"></div>
               </div>
               <div class="card-content">
-                <h3 class="card-title">{{ item.cardtitle }}</h3>
+                <h3 class="card-title">{{ item.title }}</h3>
                 <div class="card-meta">
                   <div class="meta-item">
                     <!-- 精选作品盒子的时间 -->
                     <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                    <span>{{ item.cardtime }}</span>
+                    <span>{{ item.time }}</span>
                     <!-- 精选作品盒子的浏览量 -->
                     <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
-                    <span>{{ item.cardlook }}</span>
+                    <span>{{ item.look }}</span>
                   </div>
                 </div>
                 <div class="card-tags">
-                  <span class="tag">技术栈：{{ item.cardtags }}</span>
+                  <span class="tag">技术栈：{{ item.technology }}</span>
                 </div>
               </div>
             </div>
@@ -118,21 +118,21 @@
           <!--  -->
           <!-- v-for="item in noteslist.slice(0, 4)" 限制只显示前四条数据 -->
           <!-- <a :href="item.label" v-for="item in noteslist.slice(0, 4)" :key="item.id" class="card-link" @click.prevent="noteslook(item)"> -->
-          <a :href="item.cardlink" class="card-link" v-for="item in noteslist" :key="item.id">
+          <a :href="item.label" class="card-link" v-for="item in VueNotesList">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
-                <h3 class="card-title">{{ item.cardtitle }}</h3>
+                <h3 class="card-title">{{ item.title }}</h3>
                 <div class="card-meta">
                     <!-- 学习笔记盒子的时间 -->
                   <svg class="icon" viewBox="0 0 1024 1024" width="14" height="14"><path d="M512 73.143C269.605 73.143 73.143 269.605 73.143 512s196.462 438.857 438.857 438.857 438.857-196.462 438.857-438.857S754.395 73.143 512 73.143zm0-73.143c282.77 0 512 229.23 512 512s-229.23 512-512 512S0 794.77 0 512 229.23 0 512 0z" fill="#999"/><path d="M521.143 182.857c-25.234 0-45.714 20.48-45.714 45.714v320l-45.715 0a45.714 45.714 0 0 0 91.429 0V228.57c0-25.233-20.48-45.714-45.714-45.714z" fill="#999"/><path d="M523.337 507.611a45.714 45.714 0 0 0-32.292 78.044l165.778 160.548a45.714 45.714 0 0 0 64.622-64.585L555.666 521a45.568 45.568 0 0 0-32.33-13.385z" fill="#999"/></svg>
-                  <span>{{ item.cardtime }}</span>
+                  <span>{{ item.time }}</span>
                   <!-- 学习笔记盒子的浏览量 -->
                   <svg t="1763740826758" class="icon" viewBox="0 0 1024 1024" style="margin-left: 5px;" width="14" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767"><path d="M512 298.666667c-162.133333 0-285.866667 68.266667-375.466667 213.333333 89.6 145.066667 213.333333 213.333333 375.466667 213.333333s285.866667-68.266667 375.466667-213.333333c-89.6-145.066667-213.333333-213.333333-375.466667-213.333333z m0 469.333333c-183.466667 0-328.533333-85.333333-426.666667-256 98.133333-170.666667 243.2-256 426.666667-256s328.533333 85.333333 426.666667 256c-98.133333 170.666667-243.2 256-426.666667 256z m0-170.666667c46.933333 0 85.333333-38.4 85.333333-85.333333s-38.4-85.333333-85.333333-85.333333-85.333333 38.4-85.333333 85.333333 38.4 85.333333 85.333333 85.333333z m0 42.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z" p-id="7768"></path></svg>
-                  <span>{{ item.cardlook }}</span>
+                  <span>{{ item.look }}</span>
                 </div>
                 <div class="card-tags">
-                  <span class="tag secondary">技术栈：{{ item.cardtags }}</span>
+                  <span class="tag secondary">技术栈：{{ item.technology }}</span>
                 </div>
               </div>
             </div>
@@ -153,15 +153,15 @@
         <div class="scroll-container">
           <!-- v-for="item in travellist.slice(0, 4)" 限制只显示前四条数据 -->
           <!-- <a :href="item.label" v-for="item in travellist.slice(0, 4)" :key="item.id" class="card-link travel-link"> -->
-          <a :href="item.cardlink" class="card-link travel-link" v-for="item in travellist" :key="item.id">
+          <a href="#" class="card-link travel-link" v-for="item in VueTravelList" :key="item.id">
             <div class="card travel-card">
               <div class="card-img">
                 <img :src="item.image" alt="封面">
               </div>
               <div class = "travel-info">
-              <h3 class="location">{{ item.cardlocation }}</h3>
-              <p class="city">{{ item.cardcity }}</p>
-                <p class="station">{{ item.cardstation }}</p>
+              <h3 class="location">{{ item.name }}</h3>
+              <p class="city">{{ item.location }}</p>
+                <p class="station">{{ item.description }}</p>
                 </div>
             </div>
           </a>
@@ -216,106 +216,37 @@
     <div class="indexfoot">
       <p>© 2026小凯的博客 Xiaokai's Blog</p>
     </div>
+    <!-- <a href="./database/data.json"></a> -->
   </div>
 <!----------------------------------------------------------------------------------- 正文 ----------------------------------------------------------------------------------->
 <script>
   const app = new Vue({
     el: '#app',
     data: {
-      workslist: [
-        {
-          cardlink: "https://imitateboos.pages.dev/",
-          image: "./img/index/BOOS.jpg",
-          cardtitle: "仿BOSS直聘",
-          cardtime: "2025.12-2025.12",
-          cardlook: "10",
-          cardtags: "HTML、CSS、JavaScript、vue3、vueRouter"
-        },
-        {
-          cardlink: "https://xiaomi-vue.pages.dev/",
-          image: "./img/index/xiaomilogo.jpg",
-          cardtitle: "仿小米商城",
-          cardtime: "2025.06-2025.07",
-          cardlook: "10",
-          cardtags: "HTML、CSS、JavaScript、vue3、vueRouter"
-        },
-        {
-          cardlink: "https://hm-shopping.pages.dev/#/home",
-          image: "./img/index/HMshopping.jpg",
-          cardtitle: "黑马购物商城",
-          cardtime: "2025-12-10",
-          cardlook: "10",
-          cardtags: "HTML、CSS、JavaScript、vue3、vueRouter"
-        },
-        {
-          cardlink: "https://tiktok-demo.pages.dev/",
-          image: "./img/index/PasswordManagementSystem.jpg",
-          cardtitle: "密码管理系统",
-          cardtime: "2025.12-2025.12",
-          cardlook: "10",
-          cardtags: "vue2、vueRouter、vuex、Node.js、MySQL、axios"
+      VueWorksList: [],
+      VueNotesList: [],
+      VueTravelList: []
+    },
+    methods: {
+      // ==================读取 data.json 数据==================
+      async loadData() {
+        try {
+          let res = await fetch('./database/data.json');
+          let json = await res.json();
+          this.VueWorksList = json.workslist || [];
+          this.VueNotesList = json.noteslist || [];
+          this.VueTravelList = json.travellist || [];
+          console.log(this.VueWorksList)
+        } catch (err) {
+          console.error('加载数据失败', err);
         }
-      ],
-      noteslist: [
-        {
-          cardlink: "./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html",
-          cardtitle: "本地项目上传到github上并部署到cloudflare",
-          cardtime: "2025-10-11",
-          cardlook: "10",
-          cardtags: "vscolod、github、cloudflare"
-        },
-        {
-          cardlink: "./notes/WindTerm_PM2/WindTerm_PM2.html",
-          cardtitle: "使用 PM2 部署 Vue 应用指南",
-          cardtime: "2025-7-10",
-          cardlook: "10",
-          cardtags: "PM2"
-        },
-        {
-          cardlink: "./notes/pm2+api/pm2+api.html",
-          cardtitle: "使用PM2搭建后端api接口",
-          cardtime: "2025-7-10",
-          cardlook: "10",
-          cardtags: "PM2、MySQL"
-        },
-        {
-          cardlink: "https://md-myblog.pages.dev/",
-          cardtitle: "MarkDown笔记",
-          cardtime: "2025-7-10",
-          cardlook: "10",
-          cardtags: "MarkDown笔记"
-        }
-      ],
-      travellist: [
-        {
-          cardlink: "./travel.html",
-          image: "https://www.yuexiu.gov.cn/img/0/764/764154/8664487.png",
-          cardlocation: "越秀公园",
-          cardcity: "广州",
-          cardstation: "地铁越秀公园站B1口"
-        },
-        {
-          cardlink: "./travel.html",
-          image: "https://www.yuexiu.gov.cn/img/0/764/764782/8665100.png",
-          cardlocation: "圣心大教堂",
-          cardcity: "广州",
-          cardstation: "地铁一德路站B口"
-        },
-        {
-          cardlink: "./travel.html",
-          image: "https://aos-comment.amap.com/B0FFMEK0R5/comment/e9ede5b444706eec53044ca4c14cd049_2048_2048_80.jpg",
-          cardlocation: "粤海关",
-          cardcity: "广州",
-          cardstation: "地铁8号线文化公园站A口"
-        },
-        {
-          cardlink: "./travel.html",
-          image: "https://huacheng.gz-cmc.com/upload/news/image/2022/12/01/38c405194bd4459783bdc76bccea358a.jpeg",
-          cardlocation: "广东省博物馆",
-          cardcity: "广州",
-          cardstation: "地铁apm号线大剧院站A口"
-        }
-      ]
+      },
+      // ==================读取 data.json 数据 end ==================
+    },
+    // 页面加载时读取JSON
+    mounted() {
+      this.loadData(); // 页面加载时读取JSON
+      console.log("页面加载时读取JSON")
     }
   })
 </script>

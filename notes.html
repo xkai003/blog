@@ -167,7 +167,6 @@
     </div>
     <!--------------------------------工具栏 end-------------------------------->
 </div>
-
     <!-- <script src="./js/Side_navigation_bar.js"></script> -->
     <script>
         // document.getElementById('btn').onclick = function() {
@@ -201,68 +200,7 @@
             searchQuery: '', // 获取搜索输入框的信息
             showinp: false, // 控制搜索框的显示隐藏
             // 笔记列表
-            VueWebList: [
-                { 
-                    label:'./notes/VueCli_DataSharing/VueCli_DataSharing.html',
-                    title:"基于VueCli创建项目及构建数据共享环境", 
-                    time:"2026.01.01", 
-                    technology:"这是一个基于VueCli创建项目及构建数据共享环境的实践笔记，里面详细介绍了从零搭建项目→构建多组组件共享的数据环境→创建一个空仓库→提供并访问数据的全过程" 
-                },
-                { 
-                    label:'./notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html',
-                    title:"本地项目上传到github上并部署到cloudflare", 
-                    time:"2025.10.11", 
-                    technology:"这篇笔记将教你如何把自己本地的项目上传到github仓库里，并部署到cloudflare"
-                },
-                { 
-                    label:'./notes/WindTerm_PM2/WindTerm_PM2.html',
-                    title:"使用 PM2 部署 Vue 应用指南", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式"
-                },
-                { 
-                    label:'./notes/pm2+api/pm2+api.html',
-                    title:"使用PM2搭建后端api接口", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你如何应用PM2搭建连接数据库的api接口" 
-                },
-                { 
-                    label:'./notes/vue_ServerLocalhost/vue_ServerLocalhost.html',
-                    title:"vue项目在服务器临时开启服务", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）"
-                },
-                { 
-                    label:'./notes/vue+MySQL/vue+MySQL.html',
-                    title:"Vue项目连接数据库(本地)", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你vue如何链接数据库并渲染信息到页面上"
-                },
-                { 
-                    label:'./notes/Nginx_HostedWeb/Nginx_HostedWeb.html',
-                    title:"Nginx托管静态网页", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你使用Nginx反向代理的方式将你的网页呈现在浏览器上供用户浏览"
-                },
-                { 
-                    label:'./notes/Visual_C++/Visual_C++.html',
-                    title:"Visual C++ 6.0 操作步骤", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你怎么使用Visual C++ 6.0软件并创建项目"
-                },
-                { 
-                    label:'./notes/eclips_JavaWeb/eclips_JavaWeb.html',
-                    title:"eclips创建JavaWeb项目流程", 
-                    time:"2025.07.10", 
-                    technology:"这篇笔记将教你怎么使用eclips创建JavaWeb项目"
-                },
-                { 
-                    label:'./notes/Python_LoveCode/Python_LoveCode.html',
-                    title:"Python爱心代码", 
-                    time:"2025.07.10", 
-                    technology:"这是一个Python爱心代码"
-                }
-            ]
+            VueWebList: []
         },
         computed: {
             // 搜索数据
@@ -293,9 +231,9 @@
                 return Math.ceil(this.filteredVueWebList.length  / this.itemsPerPage);
             },
             
-            staticTotalPages() {
-                return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
-            },
+            // staticTotalPages() {
+            //     return Math.ceil(this.StaticWebList.length / this.itemsPerPage);
+            // },
             displayedVueWebList() {
                 const start = (this.vueCurrentPage - 1) * this.itemsPerPage;
                 const end = start + this.itemsPerPage;
@@ -303,6 +241,18 @@
             },
         },
         methods: {
+            // ==================读取 data.json 数据==================
+            async loadData() {
+                try {
+                    let res = await fetch('./database/data.json');
+                    let json = await res.json();
+                    this.VueWebList = json.noteslist || [];
+                    console.log(this.VueWebList)
+                } catch (err) {
+                    console.error('加载数据失败', err);
+                }
+            },
+            // ==================读取 data.json 数据 end ==================
             // 上下页切换动作
             changeVuePage(page) {
                 this.vueCurrentPage = page;
@@ -335,6 +285,11 @@
             hotsearchwords(word) {
                 this.searchQuery = word
             }
+        },
+        // 页面加载时读取JSON
+        mounted() {
+            this.loadData(); // 页面加载时读取JSON
+            console.log("页面加载时读取JSON")
         }
     })
     </script>
