@@ -16,7 +16,7 @@
   --font-headers: 'Montserrat', sans-serif; /* Header font */
 }
 
-/* --- 导航栏 --- */
+/* -------------------------------- 导航部分 -------------------------------- */
 .nav-container {
   /* position: sticky; */
   top: 0;
@@ -89,6 +89,41 @@
 .nav .right ul li a.active::after {
   width: 100%;
 }
+.nav .right ul button{
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  line-height: 10px;
+}
+.nav .right ul button:hover{
+  cursor: pointer;
+}
+.nav .right ul .icon{
+  width: 15px;
+  height: 15px;
+  fill: var(--text-secondary);
+}
+/* -------------------------------- 导航部分 end -------------------------------- */
+
+/* -------------------------------- 搜索弹窗部分 -------------------------------- */
+.window{
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.window .center{
+  width: 70%;
+  height: 300px;
+  background-color: #fff;
+}
+/* -------------------------------- 搜索弹窗部分 end -------------------------------- */
 
 /* --- 内容区域 --- */
 .center {
