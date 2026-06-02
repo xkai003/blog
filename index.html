@@ -44,10 +44,12 @@
     <div class="window" v-show = "windowshow">
       <div class="center">
         <button @click="closewindow()">X</button>
-        <input v-model="searchQuery" placeholder="输入标题搜索" />
-<div v-for="item in filteredVueWebList" :key="item.id">
-  {{ item.title }}
-</div>
+        <input v-model="searchQuery" ref="inp" placeholder="输入标题搜索" />
+        <div class="seachdatabox">
+            <div v-for="item in seachdata" :key="item.id">
+              <p>{{ item.title }}</p>
+            </div>
+        </div>
       </div>
     </div>
     <!-------------------------------- 弹窗部分 end -------------------------------->
@@ -259,7 +261,10 @@
           this.VueWorksList = json.workslist || [];
           this.VueNotesList = json.noteslist || [];
           this.VueTravelList = json.travellist || [];
-          console.log(this.VueWorksList)
+          // 所有数据合并到 seachdata 数组里    
+          this.seachdata = [...this.VueWorksList, ...this.VueNotesList, ...this.VueTravelList]
+
+          console.log("合并后的数据：",this.seachdata)
         } catch (err) {
           console.error('加载数据失败', err);
         }
@@ -267,46 +272,33 @@
       // ==================读取 data.json 数据 end ==================
 
       // ==================弹窗部分==================
+    // 搜索数据
+    filteredVueWebList() {
+    console.log(this.searchQuery)
+    const query = this.searchQuery.trim().toLowerCase()
+    if (!query) return this.seachdata // 这里也要 this.
+    return this.seachdata.filter(item =>
+      item.title?.toLowerCase().includes(query)
+    )
+  },
       // 打开弹窗
       openwindow() {
           this.windowshow = true
-          // 所有数据合并到 seachdata 数组里
-          this.seachdata = [...this.VueWorksList, ...this.VueNotesList, ...this.VueTravelList]
-          console.log("打开弹窗", this.seachdata)
+          console.log("打开弹窗")
       },
       // 关闭弹窗
       closewindow() {
           this.windowshow = false
           console.log("关闭弹窗")
       },
-      // 过滤后的列表（自动更新）
-    filteredVueWebList() {
-      const query = this.searchQuery.trim().toLowerCase();
-      if (!query) return this.seachdata; // 空搜索返回全部
-      return this.seachdata.filter(item =>
-        item.title?.toLowerCase().includes(query)
-      );
-        console.log("1",this.seachdata)
-    },
-     openwindow() {
-      this.windowshow = true;
-      // 合并两个数组
-      this.seachdata = [...this.VueNotesList, ...this.VueWorksList];
-      console.log("打开弹窗", this.seachdata);
-    }
 
       // ==================弹窗部分 end==================
     },
     // 页面加载时读取JSON
     mounted() {
-      this.loadData(); // 页面加载时读取JSON
+      this.loadData(); // 页面加载时读取JSON   
+      this.filteredVueWebList();       
       console.log("页面加载时读取JSON")
-    },
-    openwindow() {
-      this.windowshow = true;
-      // 合并两个数组
-      this.seachdata = [...this.VueNotesList, ...this.VueWorksList];
-      console.log("打开弹窗", this.seachdata);
     }
   })
 </script>

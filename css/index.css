@@ -123,6 +123,12 @@
   height: 300px;
   background-color: #fff;
 }
+.window .center .seachdatabox{
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #f8f5f5;
+}
 /* -------------------------------- 搜索弹窗部分 end -------------------------------- */
 
 /* --- 内容区域 --- */
