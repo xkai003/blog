@@ -43,9 +43,13 @@
     <!-------------------------------- 搜索弹窗部分 -------------------------------->
     <div class="window" v-show = "windowshow">
       <div class="center">
+        <div class="windowtitle">
+          <span>搜索数据</span>
+          <button @click="closewindow()" title="关闭窗口">X</button>
+        </div>
         <div class="windowhead">
           <input v-model="searchQuery" ref="inp" placeholder="输入标题搜索" />
-          <button @click="closewindow()">X</button>
+          <button @click="clearinput()" title="清空搜索框">X</button>
         </div>
         <!-- <button @click="filteredVueWebList()">搜索</button> -->
         <div class="windowbody">
@@ -287,6 +291,8 @@
       openwindow() {
           this.windowshow = true
           console.log("打开弹窗")
+          // 清空搜索框
+          this.searchQuery = ''
           // $refs.inp.focus() 的作用是当搜索框为显示状态时自动聚焦
           this.$nextTick(() => {
               console.log("搜索框已自动聚焦")
@@ -297,6 +303,10 @@
       closewindow() {
           this.windowshow = false
           console.log("关闭弹窗")
+      },
+      // 清空搜索框
+      clearinput() {
+        this.searchQuery = ''
       }
 
       // ==================弹窗部分 end==================

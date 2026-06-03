@@ -1,135 +1,135 @@
 {
     "workslist": [
         {
-                "label":"https://imitateboos.pages.dev/",
-                "look": "0",
-                "title":"仿BOOS直聘",
-                "image": "./img/index/BOOS.jpg",
-                "time":"2025.12-2025.12", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            {
-                "label":"https://xiaomi-vue.pages.dev/",
-                "look": "0",
-                "title":"仿小米商城",
-                "image": "./img/index/xiaomilogo.jpg", 
-                "time":"2025.06-2025.07", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            { 
-                "label":"https://hm-shopping.pages.dev/#/home",
-                "look": "0",
-                "title":"黑马购物商城",
-                "image": "./img/index/HMshopping.jpg", 
-                "time":"2025.01-2025.03", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            { 
-                "label":"https://tiktok-demo.pages.dev/",
-                "look": "0",
-                "title":"密码管理系统",
-                "image": "./img/index/PasswordManagementSystem.jpg",
-                "time":"2025.09-2025.09", 
-                "technology":"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                "api": "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
-                "instructions":"测试账号是：XiaoTang；密码是：123456"
-            },
-            { 
-                "label":"https://myclassroommanagementsystem.pages.dev/",
-                "look": "0",
-                "title":"我的课堂管理系统",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025.03-2025.04", 
-                "technology":"vue3、vueRouter、vuex、Node.js、MySQL、axios",
-                "api": "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/Upload_file/index.html",
-                "look": "0",
-                "title":"文件上传工具",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2026-2-4", 
-                "technology":"该项目是一个图片上传工具，有前后端。后端暂时还没上线可以把文件下载到本地再运行，后端运行命令是：node server.js"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/jindon/index.html",
-                "look": "0",
-                "title":"京东",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-1-1", 
-                "technology":"HTML、CSS、JavaScript"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/cashbook/cashbook.html",
-                "look": "0",
-                "title":"阿茂成绩单",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-1-1", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/notebook/notebook.html",
-                "imgurl":"./img/notebook.png",
-                "look": "0",
-                "title":"小凯记事本",
-                "image": "./img/index/PasswordManagementSystem.jpg",
-                "time":"2025-1-1", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/calendar/calendar.html",
-                "imgurl":"./img/calendar.png",
-                "look": "0",
-                "title":"日历备忘录",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-2-8", 
-                "technology":"HTML、CSS、JavaScript、vue2"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/baohuhaiyang/baohuhaiyan.html",
-                "imgurl":"./img/保护海洋2.jpg",
-                "look": "0",
-                "title":"保护海洋",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-1-1", 
-                "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/Beijing/tianganmen.html",
-                "imgurl":"./img/天安门.jpg",
-                "look": "0",
-                "title":"北京",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-2-8", 
-                "technology":"HTML、CSS、JavaScript"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/yxqx/index.html",
-                "imgurl":"./img/易烊千玺.jpg",
-                "look": "0",
-                "title":"易烊千玺",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2025-2-18", 
-                "technology":"HTML、CSS、JavaScript"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/Love/Love.html",
-                "imgurl":"./img/love.jpg",
-                "look": "0",
-                "title":"HTML爱心",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2023-9-10", 
-                "technology":"HTML、CSS、JavaScript"
-            },
-            { 
-                "label":"https://blog-e3z.pages.dev/works/Happy_New_Year/happy.html",
-                "imgurl":"./img/Happy_New_Year.jpg",
-                "look": "0",
-                "title":"HTML跨年倒计时代码",
-                "image": "./img/index/PasswordManagementSystem.jpg", 
-                "time":"2023-9-10", 
-                "technology":"HTML、CSS、JavaScript"
-            }
+            "label":"https://imitateboos.pages.dev/",
+            "look": "0",
+            "title":"仿BOOS直聘",
+            "image": "./img/index/BOOS.jpg",
+            "time":"2025.12-2025.12", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        {
+            "label":"https://xiaomi-vue.pages.dev/",
+            "look": "0",
+            "title":"仿小米商城",
+            "image": "./img/index/xiaomilogo.jpg", 
+            "time":"2025.06-2025.07", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        { 
+            "label":"https://hm-shopping.pages.dev/#/home",
+            "look": "0",
+            "title":"黑马购物商城",
+            "image": "./img/index/HMshopping.jpg", 
+            "time":"2025.01-2025.03", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        { 
+            "label":"https://tiktok-demo.pages.dev/",
+            "look": "0",
+            "title":"密码管理系统",
+            "image": "./img/index/PasswordManagementSystem.jpg",
+            "time":"2025.09-2025.09", 
+            "technology":"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+            "api": "https://gist.githubusercontent.com/xkai003/4886740985f4d6276636b3d35c6a3744/raw/9069e4ecd9e7f605d80e54ded6427f1d6750c1e4/tiktok-data.json", 
+            "instructions":"测试账号是：XiaoTang；密码是：123456"
+        },
+        { 
+            "label":"https://myclassroommanagementsystem.pages.dev/",
+            "look": "0",
+            "title":"我的课堂管理系统",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025.03-2025.04", 
+            "technology":"vue3、vueRouter、vuex、Node.js、MySQL、axios",
+            "api": "https://gist.githubusercontent.com/xkai003/dffaa48ea67e287c8b49cb918cfa9a4b/raw/3d7241f6fa70e693a37f9e0b9b7e7b23010a3ec6/MyClassroomManagementSystem.json"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/Upload_file/index.html",
+            "look": "0",
+            "title":"文件上传工具",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2026-2-4", 
+            "technology":"该项目是一个图片上传工具，有前后端。后端暂时还没上线可以把文件下载到本地再运行，后端运行命令是：node server.js"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/jindon/index.html",
+            "look": "0",
+            "title":"京东",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-1-1", 
+            "technology":"HTML、CSS、JavaScript"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/cashbook/cashbook.html",
+            "look": "0",
+            "title":"阿茂成绩单",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-1-1", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/notebook/notebook.html",
+            "imgurl":"./img/notebook.png",
+            "look": "0",
+            "title":"小凯记事本",
+            "image": "./img/index/PasswordManagementSystem.jpg",
+            "time":"2025-1-1", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/calendar/calendar.html",
+            "imgurl":"./img/calendar.png",
+            "look": "0",
+            "title":"日历备忘录",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-2-8", 
+            "technology":"HTML、CSS、JavaScript、vue2"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/baohuhaiyang/baohuhaiyan.html",
+            "imgurl":"./img/保护海洋2.jpg",
+            "look": "0",
+            "title":"保护海洋",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-1-1", 
+            "technology":"HTML、CSS、JavaScript、vue3、vueRouter"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/Beijing/tianganmen.html",
+            "imgurl":"./img/天安门.jpg",
+            "look": "0",
+            "title":"北京",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-2-8", 
+            "technology":"HTML、CSS、JavaScript"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/yxqx/index.html",
+            "imgurl":"./img/易烊千玺.jpg",
+            "look": "0",
+            "title":"易烊千玺",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2025-2-18", 
+            "technology":"HTML、CSS、JavaScript"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/Love/Love.html",
+            "imgurl":"./img/love.jpg",
+            "look": "0",
+            "title":"HTML爱心",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2023-9-10", 
+            "technology":"HTML、CSS、JavaScript"
+        },
+        { 
+            "label":"https://blog-e3z.pages.dev/works/Happy_New_Year/happy.html",
+            "imgurl":"./img/Happy_New_Year.jpg",
+            "look": "0",
+            "title":"HTML跨年倒计时代码",
+            "image": "./img/index/PasswordManagementSystem.jpg", 
+            "time":"2023-9-10", 
+            "technology":"HTML、CSS、JavaScript"
+        }
     ],
     "noteslist": [
         {
@@ -204,117 +204,133 @@
         }
     ],
     "travellist": [
-    {
-        "image": "https://ts1.tc.mm.bing.net/th/id/R-C.77f7c7aba9201677d7020dfc51de0d5c?rik=sbOH7lY%2fZgTvng&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fphotoblog%2f1109%2f23%2fc7%2f9059070_9059070_1316777077828.jpg&ehk=zxMYBO8K%2fXQx3ios59wctZ3rVchKOeubxeFj2y99hpM%3d&risl=&pid=ImgRaw&r=0",
-        "title": "广州塔",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁3号线/APM线广州塔站"
-    },
-    {
-        "image": "https://www.yuexiu.gov.cn/img/0/764/764154/8664487.png",
-        "title": "越秀公园",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁越秀公园站B1口"
-    },
-    {
-        "image": "https://www.yuexiu.gov.cn/img/0/764/764782/8665100.png",
-        "title": "圣心大教堂",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁一德路站B口"
-    },
-    {
-        "image": "https://aos-comment.amap.com/B0FFMEK0R5/comment/e9ede5b444706eec53044ca4c14cd049_2048_2048_80.jpg",
-        "title": "粤海关",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁8号线文化公园站A口"
-    },
-    {
-        "image": "https://huacheng.gz-cmc.com/upload/news/image/2022/12/01/38c405194bd4459783bdc76bccea358a.jpeg",
-        "title": "广东省博物馆",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁apm号线大剧院站A口"
-    },
-    {
-        "image": "https://www.baiyunshan.com.cn/bys/xhtml/images/zjbys_jj_l_03.png",
-        "title": "广州白云山",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁11号线云台花园站A口"
-    },
-    {
-        "image": "https://qcloud.dpfile.com/pc/3-OQtk0bF79ipbLQK8D-kLy-9nqkpZZc4oPBSUFgLAF0dyciPvbAlEFZ_qaWpz84.jpg",
-        "title": "流花湖",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁11号线站B口"
-    },
-    {
-        "image": "https://www.gz.gov.cn/img/0/148/148091/6533885.jpg",
-        "title": "广州动物园",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁5号线动物园站A口"
-    },
-    {
-        "image": "https://img1.qunarzz.com/travel/d1/1704/91/7cd27467a85df6b5.jpg_r_640x426x70_dad2b17e.jpg",
-        "title": "沙面岛",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁6号线黄沙站E口"
-    },
-    {
-        "image": "https://www.gz.gov.cn/img/1/1186/1186093/9638937.png",
-        "title": "白鹅潭艺术中心",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁11号线芳村站B1口"
-    },
-    {
-        "image": "https://ak-d.tripcdn.com/images/1mi5612000d62kwvdBE59_W_640_0_R5_Q80.jpg?proc=source/tripg",
-        "title": "永庆坊",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "交通：黄沙站（1号线或6号线）B出口"
-    },
-    {
-        "image": "https://ts1.tc.mm.bing.net/th/id/R-C.d568b0b9888c66782421ca409772cd24?rik=verUOROSShphkw&riu=http%3a%2f%2fyouimg1.c-ctrip.com%2ftarget%2ffd%2ftg%2fg5%2fM0A%2f0D%2fFA%2fCggYsVdBsGOAAfypAAFplHeRqps935.jpg&ehk=tHLZuIGvoClAMkPpkU9QMq6l8pw%2bLEaHYBY0BFf%2fxCI%3d&risl=&pid=ImgRaw&r=0",
-        "title": "中山纪念堂",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁2号线纪念堂站C口"
-    },
-    {
-        "image": "./img/travel/太古仓码头.jpg",
-        "title": "太古仓码头",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁8号线沙园站A口"
-    },
-    {
-        "image": "./img/travel/海心沙亚运公园.jpg",
-        "title": "海心沙亚运公园",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "APM线海心沙站"
-    },
-    {
-        "image": "./img/travel/陈家祠.jpg",
-        "title": "陈家祠",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁1号线陈家祠站D口"
-    },
-    {
-        "image": "./img/travel/农讲所.jpg",
-        "title": "农讲所纪念馆",
-        "location": "广州",
-        "data": "时间：2025-1-1",
-        "description": "地铁1号线农讲所站C出口"
-    }
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://ts1.tc.mm.bing.net/th/id/R-C.77f7c7aba9201677d7020dfc51de0d5c?rik=sbOH7lY%2fZgTvng&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fphotoblog%2f1109%2f23%2fc7%2f9059070_9059070_1316777077828.jpg&ehk=zxMYBO8K%2fXQx3ios59wctZ3rVchKOeubxeFj2y99hpM%3d&risl=&pid=ImgRaw&r=0",
+            "title": "广州塔",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁3号线/APM线广州塔站"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://www.yuexiu.gov.cn/img/0/764/764154/8664487.png",
+            "title": "越秀公园",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁越秀公园站B1口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://www.yuexiu.gov.cn/img/0/764/764782/8665100.png",
+            "title": "圣心大教堂",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁一德路站B口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://aos-comment.amap.com/B0FFMEK0R5/comment/e9ede5b444706eec53044ca4c14cd049_2048_2048_80.jpg",
+            "title": "粤海关",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁8号线文化公园站A口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://huacheng.gz-cmc.com/upload/news/image/2022/12/01/38c405194bd4459783bdc76bccea358a.jpeg",
+            "title": "广东省博物馆",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁apm号线大剧院站A口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://www.baiyunshan.com.cn/bys/xhtml/images/zjbys_jj_l_03.png",
+            "title": "广州白云山",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁11号线云台花园站A口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://qcloud.dpfile.com/pc/3-OQtk0bF79ipbLQK8D-kLy-9nqkpZZc4oPBSUFgLAF0dyciPvbAlEFZ_qaWpz84.jpg",
+            "title": "流花湖",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁11号线站B口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://www.gz.gov.cn/img/0/148/148091/6533885.jpg",
+            "title": "广州动物园",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁5号线动物园站A口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://img1.qunarzz.com/travel/d1/1704/91/7cd27467a85df6b5.jpg_r_640x426x70_dad2b17e.jpg",
+            "title": "沙面岛",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁6号线黄沙站E口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://www.gz.gov.cn/img/1/1186/1186093/9638937.png",
+            "title": "白鹅潭艺术中心",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁11号线芳村站B1口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://ak-d.tripcdn.com/images/1mi5612000d62kwvdBE59_W_640_0_R5_Q80.jpg?proc=source/tripg",
+            "title": "永庆坊",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "交通：黄沙站（1号线或6号线）B出口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "https://ts1.tc.mm.bing.net/th/id/R-C.d568b0b9888c66782421ca409772cd24?rik=verUOROSShphkw&riu=http%3a%2f%2fyouimg1.c-ctrip.com%2ftarget%2ffd%2ftg%2fg5%2fM0A%2f0D%2fFA%2fCggYsVdBsGOAAfypAAFplHeRqps935.jpg&ehk=tHLZuIGvoClAMkPpkU9QMq6l8pw%2bLEaHYBY0BFf%2fxCI%3d&risl=&pid=ImgRaw&r=0",
+            "title": "中山纪念堂",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁2号线纪念堂站C口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "./img/travel/太古仓码头.jpg",
+            "title": "太古仓码头",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁8号线沙园站A口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "./img/travel/海心沙亚运公园.jpg",
+            "title": "海心沙亚运公园",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "APM线海心沙站"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "./img/travel/陈家祠.jpg",
+            "title": "陈家祠",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁1号线陈家祠站D口"
+        },
+        {
+            "label": "https://blog-e3z.pages.dev/travel.html",
+            "image": "./img/travel/农讲所.jpg",
+            "title": "农讲所纪念馆",
+            "location": "广州",
+            "data": "时间：2025-1-1",
+            "description": "地铁1号线农讲所站C出口"
+        }
     ]
 }
