@@ -332,5 +332,37 @@
             "data": "时间：2025-1-1",
             "description": "地铁1号线农讲所站C出口"
         }
+    ],
+    "graphicDesign": [
+        {
+            "image":"./img/graphicDesign/1.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/2.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/3.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/4.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        },
+        {
+            "image":"./img/graphicDesign/5.jpg"
+        }
     ]
 }

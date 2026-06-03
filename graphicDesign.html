@@ -94,7 +94,7 @@
                         <span>条数据</span>
                     </div>
                 </div>
-                <div class="item" v-for="item in displayedVueWebList" :key="item.id">
+                <!-- <div class="item" v-for="item in displayedVueWebList" :key="item.id">
                     <div class="desc">
                         <a :href="item.label" class="title">{{ item.title }}</a><br>
                         <span class="spanicon"><svg t="1763739628070" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5952"><path d="M512 73.142857C269.604571 73.142857 73.142857 269.604571 73.142857 512s196.461714 438.857143 438.857143 438.857143 438.857143-196.461714 438.857143-438.857143S754.395429 73.142857 512 73.142857z m0-73.142857c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z" fill="#666666" p-id="5953"></path><path d="M521.142857 182.857143C495.908571 182.857143 475.428571 203.337143 475.428571 228.571429V548.571429a45.714286 45.714286 0 0 0 91.428572 0V228.571429c0-25.234286-20.48-45.714286-45.714286-45.714286z" fill="#666666" p-id="5954"></path><path d="M523.337143 507.611429a45.714286 45.714286 0 0 0-32.292572 78.043428l165.778286 160.548572a45.714286 45.714286 0 0 0 64.621714-64.585143l-165.778285-160.621715a45.568 45.568 0 0 0-32.329143-13.385142z" p-id="5955"></path></svg> 
@@ -106,7 +106,7 @@
                         <span class="Introduction">简介：{{ item.technology }}</span>
                         <a :href="item.label">进入 →</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -158,41 +158,23 @@ const app = new Vue({
         windowimg: '',
         searchQuery: '', // 获取搜索输入框的信息
         showinp: false, // 控制搜索框的显示隐藏
-        cardlist: [
-            {
-                image:'./img/graphicDesign/1.jpg'
-            },
-            {
-                image:'./img/graphicDesign/2.jpg'
-            },
-            {
-                image:'./img/graphicDesign/3.jpg'
-            },
-            {
-                image:'./img/graphicDesign/4.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            },
-            {
-                image:'./img/graphicDesign/5.jpg'
-            }
-        ]
+        cardlist: []
     },
     computed: {},
     methods: {
+        // ==================读取 data.json 数据==================
+        async loadData() {
+            try {
+                let res = await fetch('./database/data.json');
+                let json = await res.json();
+                this.cardlist = json.graphicDesign || [];
+                console.log(this.cardlist)
+            } catch (err) {
+                console.error('加载数据失败', err);
+            }
+        },
+        // ==================读取 data.json 数据 end ==================
+
         // 下载图片
         downloadImage() {
             // 动态下载当前弹窗的图片
@@ -239,6 +221,10 @@ const app = new Vue({
         clearinput() {
             this.searchQuery = ''
         },
+    },
+    // 页面加载时读取JSON
+    mounted() {
+        this.loadData(); // 页面加载时读取JSON
     }
 })
 </script>
