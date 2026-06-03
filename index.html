@@ -262,6 +262,7 @@
       VueWorksList: [],
       VueNotesList: [],
       VueTravelList: [],
+      GraphicDesignList: [],
       // 搜索
       seachdata: [],
       searchQuery: '', // 获取搜索输入框的信息
@@ -275,9 +276,10 @@
           this.VueWorksList = json.workslist || [];
           this.VueNotesList = json.noteslist || [];
           this.VueTravelList = json.travellist || [];
+          this.GraphicDesignList = json.graphicDesign || [];
           this.seachdata = this.VueNotesList
           // 所有数据合并到 seachdata 数组里    
-          this.seachdata = [...this.VueWorksList, ...this.VueNotesList, ...this.VueTravelList]
+          this.seachdata = [...this.VueWorksList, ...this.VueNotesList, ...this.VueTravelList, ...this.GraphicDesignList]
 
           console.log("合并后的数据：",this.seachdata)
         } catch (err) {

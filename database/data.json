@@ -335,33 +335,53 @@
     ],
     "graphicDesign": [
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片1",
             "image":"./img/graphicDesign/1.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片2",
             "image":"./img/graphicDesign/2.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片3",
             "image":"./img/graphicDesign/3.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片4",
             "image":"./img/graphicDesign/4.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片5",
             "image":"./img/graphicDesign/5.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片6",
             "image":"./img/graphicDesign/5.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片7",
             "image":"./img/graphicDesign/5.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片8",
             "image":"./img/graphicDesign/5.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片9",
             "image":"./img/graphicDesign/5.jpg"
         },
         {
+            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
+            "title":"图片10",
             "image":"./img/graphicDesign/5.jpg"
         }
     ]
