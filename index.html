@@ -149,9 +149,12 @@
         </div>
         <div class="scroll-container">
           <!--  -->
-          <!-- v-for="item in noteslist.slice(0, 4)" 限制只显示前四条数据 -->
-          <!-- <a :href="item.label" v-for="item in noteslist.slice(0, 4)" :key="item.id" class="card-link" @click.prevent="noteslook(item)"> -->
-          <a :href="item.label" class="card-link" v-for="item in VueNotesList">
+          <!-- v-for="item in VueNotesList" 先 v-for 渲染全部数据
+           v-if="item.state == 'true'" 再判断。
+            如果state 为 true的数据 -> 渲染
+            如果state 为 flase的数据 -> 不渲染
+           -->
+          <a :href="item.label" class="card-link" v-for="item in VueNotesList" v-if="item.state == 'true'">
             <div class="note-card">
               <div class="card-content">
                 <span class="note-icon">📝</span>
