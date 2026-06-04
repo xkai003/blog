@@ -133,74 +133,92 @@
     ],
     "noteslist": [
         {
+            "label": "https://md-myblog.pages.dev",
+            "title": "markdown 笔记",
+            "time": "2025.07.10",
+            "look": "10",
+            "technology": "这是一个markdown 笔记",
+            "state" : "flase" 
+        },
+        {
             "label": "https://blog-e3z.pages.dev/notes/VueCli_DataSharing/VueCli_DataSharing.html",
             "title": "基于VueCli创建项目及构建数据共享环境",
             "time": "2026.01.01",
             "look": "10",
-            "technology": "这是一个基于VueCli创建项目及构建数据共享环境的实践笔记，里面详细介绍了从零搭建项目→构建多组组件共享的数据环境→创建一个空仓库→提供并访问数据的全过程"
+            "technology": "这是一个基于VueCli创建项目及构建数据共享环境的实践笔记，里面详细介绍了从零搭建项目→构建多组组件共享的数据环境→创建一个空仓库→提供并访问数据的全过程",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/vscolod_github+cloudflare/vscolod_github+cloudflare.html",
             "title": "本地项目上传到github上并部署到cloudflare",
             "time": "2025.10.11",
             "look": "10",
-            "technology": "这篇笔记将教你如何把自己本地的项目上传到github仓库里，并部署到cloudflare"
+            "technology": "这篇笔记将教你如何把自己本地的项目上传到github仓库里，并部署到cloudflare",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/WindTerm_PM2/WindTerm_PM2.html",
             "title": "使用 PM2 部署 Vue 应用指南",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式"
+            "technology": "这篇笔记将教你如何把自己的vue项目上传到自己的服务器上,并设置成开机自启模式",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/pm2+api/pm2+api.html",
             "title": "使用PM2搭建后端api接口",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你如何应用PM2搭建连接数据库的api接口"
+            "technology": "这篇笔记将教你如何应用PM2搭建连接数据库的api接口",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/vue_ServerLocalhost/vue_ServerLocalhost.html",
             "title": "vue项目在服务器临时开启服务",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）"
+            "technology": "这篇笔记将教你如何把自己的vue项目上传到自己的服务器上（此步骤只适应临时挂载，服务器终端一旦关闭就不生效了）",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/vue+MySQL/vue+MySQL.html",
             "title": "Vue项目连接数据库(本地)",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你vue如何链接数据库并渲染信息到页面上"
+            "technology": "这篇笔记将教你vue如何链接数据库并渲染信息到页面上",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/Nginx_HostedWeb/Nginx_HostedWeb.html",
             "title": "Nginx托管静态网页",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你使用Nginx反向代理的方式将你的网页呈现在浏览器上供用户浏览"
+            "technology": "这篇笔记将教你使用Nginx反向代理的方式将你的网页呈现在浏览器上供用户浏览",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/Visual_C++/Visual_C++.html",
             "title": "Visual C++ 6.0 操作步骤",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你怎么使用Visual C++ 6.0软件并创建项目"
+            "technology": "这篇笔记将教你怎么使用Visual C++ 6.0软件并创建项目",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/eclips_JavaWeb/eclips_JavaWeb.html",
             "title": "eclips创建JavaWeb项目流程",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这篇笔记将教你怎么使用eclips创建JavaWeb项目"
+            "technology": "这篇笔记将教你怎么使用eclips创建JavaWeb项目",
+            "state" : "true" 
         },
         {
             "label": "https://blog-e3z.pages.dev/notes/Python_LoveCode/Python_LoveCode.html",
             "title": "Python爱心代码",
             "time": "2025.07.10",
             "look": "10",
-            "technology": "这是一个Python爱心代码"
+            "technology": "这是一个Python爱心代码",
+            "state" : "true" 
         }
     ],
     "travellist": [

@@ -246,8 +246,9 @@
                 try {
                     let res = await fetch('./database/data.json');
                     let json = await res.json();
-                    this.VueWebList = json.noteslist || [];
-                    console.log(this.VueWebList)
+                    // 过滤：只显示state为"true"的数据
+                    this.VueWebList = json.noteslist.filter(item => item.state === "true");
+                    console.log('筛选后数据：', this.VueWebList);
                 } catch (err) {
                     console.error('加载数据失败', err);
                 }
