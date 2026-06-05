@@ -140,41 +140,6 @@
             "state" : "flase" 
         },
         {
-            "label": "https://md-myblog.pages.dev/?file=codenotes.md",
-            "title": "markdown 笔记(codenotes.md)",
-            "time": "2025.07.10",
-            "look": "10",
-            "state" : "flase" 
-        },
-        {
-            "label": "https://md-myblog.pages.dev/?file=operationnotes.md",
-            "title": "markdown 笔记(operationnotes.md)",
-            "time": "2025.07.10",
-            "look": "10",
-            "state" : "flase" 
-        },
-        {
-            "label": "https://md-myblog.pages.dev/?file=javascriptoperation.md",
-            "title": "markdown 笔记(javascriptoperation.md)",
-            "time": "2025.07.10",
-            "look": "10",
-            "state" : "flase" 
-        },
-        {
-            "label": "https://md-myblog.pages.dev/?file=vue2operation.md",
-            "title": "markdown 笔记(vue2operation.md)",
-            "time": "2025.07.10",
-            "look": "10",
-            "state" : "flase" 
-        },
-        {
-            "label": "https://md-myblog.pages.dev/?file=Computer_Level1.md",
-            "title": "markdown 笔记(Computer_Level1.md)",
-            "time": "2025.07.10",
-            "look": "10",
-            "state" : "flase" 
-        },
-        {
             "label": "https://blog-e3z.pages.dev/notes/VueCli_DataSharing/VueCli_DataSharing.html",
             "title": "基于VueCli创建项目及构建数据共享环境",
             "time": "2026.01.01",
