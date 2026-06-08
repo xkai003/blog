@@ -378,28 +378,13 @@
         },
         {
             "label": "https://blog-e3z.pages.dev/graphicDesign.html",
-            "title":"图片6",
-            "image":"./img/graphicDesign/5.jpg"
+            "title":"电商详情页搭建方案",
+            "image":"./img/graphicDesign/电商详情页搭建方案.png"
         },
         {
             "label": "https://blog-e3z.pages.dev/graphicDesign.html",
-            "title":"图片7",
-            "image":"./img/graphicDesign/5.jpg"
-        },
-        {
-            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
-            "title":"图片8",
-            "image":"./img/graphicDesign/5.jpg"
-        },
-        {
-            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
-            "title":"图片9",
-            "image":"./img/graphicDesign/5.jpg"
-        },
-        {
-            "label": "https://blog-e3z.pages.dev/graphicDesign.html",
-            "title":"图片10",
-            "image":"./img/graphicDesign/5.jpg"
+            "title":"合并",
+            "image":"./img/graphicDesign/合并.jpg"
         }
     ]
 }
