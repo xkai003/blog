@@ -73,6 +73,15 @@
                             <a href="#" @click="openwindow(item)">查看详情</a>
                         </div>
                     </div>
+                    <!--  -->
+                    <button class="company" @click="gzjq()">广州九仟网络科技有限公司（{{gzjqwlkjyxgs.length}}）</button>
+                    <div class="overflowy" v-show="gzjqwlkjyxgsShow">
+                        <div v-for="item in gzjqwlkjyxgs" class="diary"> 
+                            <span class="time">{{ item.time}}</span>
+                            <span class="content" v-html="item.content"></span>
+                            <a href="#" @click="openwindow(item)">查看详情</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +115,8 @@
         const app = new Vue({
             el: '#app',
             data: {
-                gzycwlkjyxgsShow: true,// 控制公司列表是收缩与展开
+                gzycwlkjyxgsShow: false,// 控制公司列表是收缩与展开
+                gzjqwlkjyxgsShow: false,// 控制公司列表是收缩与展开
                 window: false, // 控制弹窗的显示与隐藏
                 windowtime: '',
                 windowcontent: '',
@@ -218,11 +228,22 @@
                         content:"9:29处理了【已发货仅退款】订单的导出；10:50完成了JW33BS-01-裸货+组合" 
                     }
                 ],
+                gzjqwlkjyxgs: [
+                    {
+                        time: "2026-6-15",
+                        like: "", 
+                        content:"试岗"
+                    }
+                ]
             },
             methods: {
                 // 公司列表是收缩与展开
                 gzyc() {
                     this.gzycwlkjyxgsShow = !this.gzycwlkjyxgsShow
+                    this.gzjqwlkjyxgsShow = !this.gzjqwlkjyxgsShow
+                },
+                gzjq() {
+                    this.gzjqwlkjyxgsShow = !this.gzjqwlkjyxgsShow
                 },
                 // 打开弹窗
                 openwindow(item) {
